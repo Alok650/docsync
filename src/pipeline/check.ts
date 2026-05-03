@@ -91,13 +91,14 @@ async function generateUpdates(
 
   const client = createLLMClient(config)
   const agent = new DocUpdateAgent(client, config.llm.model)
-  return buildUpdates(retrievalResults, beforeContents, agent)
+  return buildUpdates(retrievalResults, beforeContents, agent, repoDir)
 }
 
 async function buildUpdates(
   results: readonly RetrievalResult[],
   beforeContents: Map<string, string>,
   agent: DocUpdateAgent,
+  repoDir: string,
 ): Promise<ProposedDocUpdate[]> {
   const updates: ProposedDocUpdate[] = []
 
@@ -106,7 +107,11 @@ async function buildUpdates(
     const beforeCode = beforeContents.get(result.change.file) ?? ''
 
     for (const docRef of result.docs) {
-      const docContent = await fs.readFile(docRef.file, 'utf-8').catch(() => null)
+      // Paths in the index are relative to the repo root; resolve for the current environment.
+      const docAbsPath = path.isAbsolute(docRef.file)
+        ? docRef.file
+        : path.resolve(repoDir, docRef.file)
+      const docContent = await fs.readFile(docAbsPath, 'utf-8').catch(() => null)
       if (!docContent) continue
 
       const body = extractSectionBody(docContent, docRef.section)
@@ -120,8 +125,10 @@ async function buildUpdates(
         docSection: toDocSection(docRef, body),
       })
 
+      if (updatedBody === body) continue
+
       updates.push({
-        docFile: docRef.file,
+        docFile: path.relative(repoDir, docAbsPath),
         section: docRef.section,
         beforeBody: body,
         afterBody: updatedBody,

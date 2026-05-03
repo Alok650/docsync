@@ -1,7 +1,7 @@
 {
   "SYMBOL_KIND": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## extractSymbols",
       "lines": [
         9,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## parseSymbols",
       "lines": [
         19,
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## buildMap",
       "lines": [
         27,

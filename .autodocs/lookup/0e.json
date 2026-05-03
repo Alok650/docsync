@@ -1,7 +1,7 @@
 {
   "runCheck": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## runCheck",
       "lines": [
         31,

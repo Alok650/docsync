@@ -1,7 +1,7 @@
 {
   "LANGUAGE": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getParser",
       "lines": [
         23,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## parseSymbols",
       "lines": [
         19,
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## resolveLanguage",
       "lines": [
         15,

@@ -1,7 +1,7 @@
 {
   "DOC_EXTENSIONS": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## resolveLanguage",
       "lines": [
         15,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## buildMap",
       "lines": [
         27,
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## runCheck",
       "lines": [
         31,
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## extractSymbols",
       "lines": [
         9,
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getGitDiff",
       "lines": [
         3,

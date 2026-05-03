@@ -1,7 +1,7 @@
 {
   "AUTODOCS_DIR": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## buildMap",
       "lines": [
         27,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getGitDiff",
       "lines": [
         3,

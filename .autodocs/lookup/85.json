@@ -1,7 +1,7 @@
 {
   "TS_NODE": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getParser",
       "lines": [
         23,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## extractSymbols",
       "lines": [
         9,

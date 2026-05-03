@@ -1,7 +1,7 @@
 {
   "MAP_RELATIVE_PATH": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getGitDiff",
       "lines": [
         3,
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## getParser",
       "lines": [
         23,
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## parseSymbols",
       "lines": [
         19,
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "file": "docs/api.md",
       "section": "## resolveLanguage",
       "lines": [
         15,
