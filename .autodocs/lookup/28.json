@@ -1,0 +1,36 @@
+{
+  "KRNN": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/KRNN/README.md",
+      "section": "# KRNN",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [Quant Model (Paper) Zoo](examples/benchmarks)",
+      "lines": [
+        426,
+        456
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha360 dataset",
+      "lines": [
+        48,
+        89
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

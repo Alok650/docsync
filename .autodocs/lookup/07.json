@@ -1,0 +1,620 @@
+{
+  "get_annual_return_from_positions": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "## Introduction",
+      "lines": [
+        3,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        3,
+        19
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/README.md",
+      "section": "# NOTE",
+      "lines": [
+        8,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        30,
+        54
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Get from source",
+      "lines": [
+        238,
+        255
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "## Using qlib data",
+      "lines": [
+        193,
+        226
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Get High-Frequency Data",
+      "lines": [
+        10,
+        16
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Introduction",
+      "lines": [
+        3,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "### Method `get_changes`",
+      "lines": [
+        44,
+        51
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Get with module",
+      "lines": [
+        228,
+        237
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Help",
+      "lines": [
+        38,
+        43
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "# Get future trading days",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "#### <b>Index start date</b>",
+      "lines": [
+        18,
+        32
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "#### Setting2",
+      "lines": [
+        27,
+        36
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Get Data",
+      "lines": [
+        7,
+        12
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "# daily data",
+      "lines": [
+        18,
+        20
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Download US Data",
+      "lines": [
+        25,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Download CN Simple Data",
+      "lines": [
+        32,
+        37
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "# 1min  data (Optional for running non-high-frequency strategies)",
+      "lines": [
+        21,
+        24
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# or run it for multiple times automatically and get the summarized results.",
+      "lines": [
+        106,
+        110
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Environment",
+      "lines": [
+        29,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "## Benchmarks Performance (predicting the price trend in high-frequency data)",
+      "lines": [
+        35,
+        42
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "#### Setting1",
+      "lines": [
+        17,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "#### 1d from Coingecko",
+      "lines": [
+        19,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "#### 1d from East Money",
+      "lines": [
+        16,
+        19
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/README.md",
+      "section": "## Alpha158 Dataset",
+      "lines": [
+        7,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/tests/dataset_tests/README.md",
+      "section": "# About dataset tests",
+      "lines": [
+        1,
+        3
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "## Parameters",
+      "lines": [
+        18,
+        25
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install from source",
+      "lines": [
+        191,
+        210
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "# Collect Data From Yahoo Finance",
+      "lines": [
+        9,
+        21
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "## Requirements",
+      "lines": [
+        3,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "### using data",
+      "lines": [
+        32,
+        42
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/pit/README.md",
+      "section": "# download from baostock.com",
+      "lines": [
+        18,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "### using data",
+      "lines": [
+        35,
+        45
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha360 dataset",
+      "lines": [
+        120,
+        127
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Importing example data",
+      "lines": [
+        23,
+        39
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "# download from https://api.coingecko.com/api/v3/",
+      "lines": [
+        23,
+        25
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "# download from eastmoney.com",
+      "lines": [
+        20,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### US data",
+      "lines": [
+        48,
+        58
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### CN data",
+      "lines": [
+        59,
+        70
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha158 dataset",
+      "lines": [
+        111,
+        119
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Installation",
+      "lines": [
+        167,
+        181
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "##  Reinforcement Learning: modeling continuous decisions",
+      "lines": [
+        496,
+        500
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Dump & Reload & Reinitialize the Dataset",
+      "lines": [
+        17,
+        21
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### About Reinitialization",
+      "lines": [
+        22,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "# Collect Fund Data",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/pit/README.md",
+      "section": "# Collect Point-in-Time Data",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Automatic update of daily frequency data(from yahoo finance)",
+      "lines": [
+        161,
+        192
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "# Collect Crypto Data",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/SFM/README.md",
+      "section": "# State-Frequency-Memory",
+      "lines": [
+        1,
+        3
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# FAQ",
+      "lines": [
+        145,
+        150
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "## Initiative",
+      "lines": [
+        3,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "## Custom Data Collection",
+      "lines": [
+        14,
+        41
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Experiments",
+      "lines": [
+        14,
+        16
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Background",
+      "lines": [
+        2,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "#### <b>Code Logic</b>",
+      "lines": [
+        33,
+        43
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Performance of Qlib Data Server",
+      "lines": [
+        554,
+        571
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Collector *Baostock high frequency* data to qlib",
+      "lines": [
+        20,
+        82
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Automatic update of daily frequency data (from yahoo finance)",
+      "lines": [
+        256,
+        280
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/SECURITY.md",
+      "section": "## Reporting Security Issues",
+      "lines": [
+        9,
+        32
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha158 dataset",
+      "lines": [
+        25,
+        47
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha360 dataset",
+      "lines": [
+        48,
+        89
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

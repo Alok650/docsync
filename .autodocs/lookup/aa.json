@@ -1,0 +1,68 @@
+{
+  "check_nan_observation": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Common Issues",
+      "lines": [
+        89,
+        94
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Installation",
+      "lines": [
+        167,
+        181
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Automatic update of daily frequency data(from yahoo finance)",
+      "lines": [
+        161,
+        192
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install from source",
+      "lines": [
+        191,
+        210
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    }
+  ]
+}

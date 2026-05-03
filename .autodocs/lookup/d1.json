@@ -1,0 +1,204 @@
+{
+  "make_ix_like": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "# Nested Decision Execution",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "### Data-dependent component",
+      "lines": [
+        53,
+        60
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/Sandwich/README.md",
+      "section": "# Introductions about the settings/configs.",
+      "lines": [
+        5,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# pip install sphinx sphinx_rtd_theme",
+      "lines": [
+        538,
+        546
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/KRNN/README.md",
+      "section": "# Introductions about the settings/configs.",
+      "lines": [
+        5,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "## Initiative",
+      "lines": [
+        3,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Introduction",
+      "lines": [
+        3,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Installation",
+      "lines": [
+        12,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Forecasting: Finding Valuable Signals/Patterns",
+      "lines": [
+        419,
+        425
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/SFM/README.md",
+      "section": "# State-Frequency-Memory",
+      "lines": [
+        1,
+        3
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Quick Start",
+      "lines": [
+        158,
+        166
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Usage (Recommended)",
+      "lines": [
+        24,
+        35
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Contact Us",
+      "lines": [
+        577,
+        587
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Background",
+      "lines": [
+        2,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Guidance",
+      "lines": [
+        594,
+        621
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "## How Has This Been Tested?",
+      "lines": [
+        23,
+        29
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Performance of Qlib Data Server",
+      "lines": [
+        554,
+        571
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Collector *Baostock high frequency* data to qlib",
+      "lines": [
+        20,
+        82
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    }
+  ]
+}

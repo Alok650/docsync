@@ -1,0 +1,140 @@
+{
+  "long_short_backtest": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/LSTM/README.md",
+      "section": "# Long Short-Term Memory (LSTM)",
+      "lines": [
+        1,
+        3
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "## Benchmarks Performance (predicting the price trend in high-frequency data)",
+      "lines": [
+        35,
+        42
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/feature-request.md",
+      "section": "## Alternatives",
+      "lines": [
+        19,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Backtest",
+      "lines": [
+        51,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [RL for order execution](examples/rl_order_execution)",
+      "lines": [
+        501,
+        506
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "### Usage",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "## Usage of the dataset",
+      "lines": [
+        11,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "# RL Example for Order Execution",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "### Usage",
+      "lines": [
+        9,
+        20
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "### Data-dependent component",
+      "lines": [
+        53,
+        60
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Data Preparation",
+      "lines": [
+        211,
+        227
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    }
+  ]
+}

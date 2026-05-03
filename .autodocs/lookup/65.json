@@ -1,0 +1,94 @@
+{
+  "DatasetH": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# FAQ",
+      "lines": [
+        145,
+        150
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Dump & Reload & Reinitialize the Dataset",
+      "lines": [
+        17,
+        21
+      ]
+    }
+  ],
+  "init_task_handler": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/tests/data_mid_layer_tests/README.md",
+      "section": "# Introduction",
+      "lines": [
+        1,
+        6
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Quant Dataset Zoo",
+      "lines": [
+        507,
+        518
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Method",
+      "lines": [
+        5,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Background",
+      "lines": [
+        2,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "#### Setting1",
+      "lines": [
+        17,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Performance of Qlib Data Server",
+      "lines": [
+        554,
+        571
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "get_strategy_executor": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "## Weekly Portfolio Generation and Daily Order Execution",
+      "lines": [
+        5,
+        8
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Introduction",
+      "lines": [
+        3,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## End-to-End Workflow",
+      "lines": [
+        41,
+        48
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Get High-Frequency Data",
+      "lines": [
+        10,
+        16
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "## Introduction",
+      "lines": [
+        3,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Get with module",
+      "lines": [
+        228,
+        237
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        3,
+        19
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Get from source",
+      "lines": [
+        238,
+        255
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Help",
+      "lines": [
+        38,
+        43
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "# Get future trading days",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "## Using qlib data",
+      "lines": [
+        193,
+        226
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        30,
+        54
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Get Data",
+      "lines": [
+        7,
+        12
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "# daily data",
+      "lines": [
+        18,
+        20
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Download US Data",
+      "lines": [
+        25,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### Download CN Simple Data",
+      "lines": [
+        32,
+        37
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "# 1min  data (Optional for running non-high-frequency strategies)",
+      "lines": [
+        21,
+        24
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# or run it for multiple times automatically and get the summarized results.",
+      "lines": [
+        106,
+        110
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Environment",
+      "lines": [
+        29,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Learning Framework",
+      "lines": [
+        519,
+        528
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Framework of Qlib",
+      "lines": [
+        143,
+        157
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "### Method `get_changes`",
+      "lines": [
+        44,
+        51
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Importing example data",
+      "lines": [
+        23,
+        39
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "#### <b>Index start date</b>",
+      "lines": [
+        18,
+        32
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Collector *Baostock high frequency* data to qlib",
+      "lines": [
+        20,
+        82
+      ]
+    }
+  ],
+  "restricted_pickle_load": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Generate Pickle-Style Data",
+      "lines": [
+        13,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Run the Code",
+      "lines": [
+        28,
+        34
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Dump & Reload & Reinitialize the Dataset",
+      "lines": [
+        17,
+        21
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Background",
+      "lines": [
+        5,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Data Preparation",
+      "lines": [
+        211,
+        227
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Performance of Qlib Data Server",
+      "lines": [
+        554,
+        571
+      ]
+    }
+  ]
+}

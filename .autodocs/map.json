@@ -1,0 +1,833 @@
+{
+  "version": 1,
+  "mappings": [
+    {
+      "symbol": "DocUpdateRequest",
+      "file": "/Users/alokprasad/autodocs/src/agent/doc-update-agent.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocUpdateAgent",
+      "file": "/Users/alokprasad/autodocs/src/agent/doc-update-agent.ts",
+      "docs": []
+    },
+    {
+      "symbol": "SYSTEM_PROMPT",
+      "file": "/Users/alokprasad/autodocs/src/agent/prompts.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildUserPrompt",
+      "file": "/Users/alokprasad/autodocs/src/agent/prompts.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLM_PROVIDER",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LLMProvider",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocSyncConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "loadConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "AUTODOCS_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "MAP_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MAP_RELATIVE_PATH",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## parseSymbols",
+          "lines": [
+            19,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LOOKUP_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "WORKFLOW_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": []
+    },
+    {
+      "symbol": "WORKFLOW_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": []
+    },
+    {
+      "symbol": "CONFIG_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": []
+    },
+    {
+      "symbol": "BM25",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "AI",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": []
+    },
+    {
+      "symbol": "GIT",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GITHUB",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LOOKUP",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "CLI",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": []
+    },
+    {
+      "symbol": "diffSymbols",
+      "file": "/Users/alokprasad/autodocs/src/differ/ast-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "parseGitDiff",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "getGitDiff",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getBeforeContent",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "ChangeType",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "SymbolChange",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "ChangedFile",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "MarkdownEditor",
+      "file": "/Users/alokprasad/autodocs/src/editor/markdown-editor.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LANGUAGE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## parseSymbols",
+          "lines": [
+            19,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "Language",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## parseSymbols",
+          "lines": [
+            19,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SYMBOL_KIND",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## parseSymbols",
+          "lines": [
+            19,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SymbolKind",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": []
+    },
+    {
+      "symbol": "resolveLanguage",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "parseSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## parseSymbols",
+          "lines": [
+            19,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "TS_NODE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/node-types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "PY_NODE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/node-types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractPythonSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/python.ts",
+      "docs": []
+    },
+    {
+      "symbol": "extractTypeScriptSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/typescript.ts",
+      "docs": []
+    },
+    {
+      "symbol": "getParser",
+      "file": "/Users/alokprasad/autodocs/src/extractor/loader.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getParser",
+          "lines": [
+            23,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "ExtractedSymbol",
+      "file": "/Users/alokprasad/autodocs/src/extractor/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "createOctokit",
+      "file": "/Users/alokprasad/autodocs/src/github/client.ts",
+      "docs": []
+    },
+    {
+      "symbol": "readGitHubContext",
+      "file": "/Users/alokprasad/autodocs/src/github/context.ts",
+      "docs": []
+    },
+    {
+      "symbol": "GitHubOutput",
+      "file": "/Users/alokprasad/autodocs/src/github/pr-comment.ts",
+      "docs": []
+    },
+    {
+      "symbol": "GitHubContext",
+      "file": "/Users/alokprasad/autodocs/src/github/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "ProposedDocUpdate",
+      "file": "/Users/alokprasad/autodocs/src/github/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "generateWorkflow",
+      "file": "/Users/alokprasad/autodocs/src/github/workflow-generator.ts",
+      "docs": []
+    },
+    {
+      "symbol": "AnthropicClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/anthropic.ts",
+      "docs": []
+    },
+    {
+      "symbol": "createLLMClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/factory.ts",
+      "docs": []
+    },
+    {
+      "symbol": "OpenAIClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/openai.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMMessage",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMCompletionOptions",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "logger",
+      "file": "/Users/alokprasad/autodocs/src/logger.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildMap",
+      "file": "/Users/alokprasad/autodocs/src/map/builder.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "symbolShard",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "computeFingerprint",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildShards",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildLookup",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "readLookupForSymbols",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocRef",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MapEntry",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MapFile",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LookupTable",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "toDocSection",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "updateMapForChangedFiles",
+      "file": "/Users/alokprasad/autodocs/src/map/updater.ts",
+      "docs": []
+    },
+    {
+      "symbol": "writeMapFile",
+      "file": "/Users/alokprasad/autodocs/src/map/writer.ts",
+      "docs": []
+    },
+    {
+      "symbol": "CheckResult",
+      "file": "/Users/alokprasad/autodocs/src/pipeline/check.ts",
+      "docs": []
+    },
+    {
+      "symbol": "runCheck",
+      "file": "/Users/alokprasad/autodocs/src/pipeline/check.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "BM25Retriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/bm25-retriever.ts",
+      "docs": []
+    },
+    {
+      "symbol": "TieredRetriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/index.ts",
+      "docs": []
+    },
+    {
+      "symbol": "StructuralRetriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/structural.ts",
+      "docs": []
+    },
+    {
+      "symbol": "RetrievalResult",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "RetrievalAdapter",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "BM25Result",
+      "file": "/Users/alokprasad/autodocs/src/scanner/bm25.ts",
+      "docs": []
+    },
+    {
+      "symbol": "BM25Matcher",
+      "file": "/Users/alokprasad/autodocs/src/scanner/bm25.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocSection",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": []
+    },
+    {
+      "symbol": "extractSectionBody",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": []
+    },
+    {
+      "symbol": "scanDocs",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": []
+    },
+    {
+      "symbol": "CODE_EXTENSIONS",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "DOC_EXTENSIONS",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## resolveLanguage",
+          "lines": [
+            15,
+            18
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## buildMap",
+          "lines": [
+            27,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## runCheck",
+          "lines": [
+            31,
+            34
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## extractSymbols",
+          "lines": [
+            9,
+            14
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/api.md",
+          "section": "## getGitDiff",
+          "lines": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "findCodeFiles",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": []
+    },
+    {
+      "symbol": "findDocFiles",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": []
+    }
+  ]
+}

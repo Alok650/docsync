@@ -1,0 +1,28 @@
+{
+  "SYMBOL_KIND": [
+    {
+      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "section": "## extractSymbols",
+      "lines": [
+        9,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "section": "## parseSymbols",
+      "lines": [
+        19,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/api.md",
+      "section": "## buildMap",
+      "lines": [
+        27,
+        30
+      ]
+    }
+  ]
+}
