@@ -34089,6 +34089,17 @@ async function generateWorkflow(repoDir) {
 }
 
 // src/github/context.ts
+import { readFileSync } from "fs";
+function readEventBaseSha() {
+  const eventPath = process.env.GITHUB_EVENT_PATH;
+  if (!eventPath) return void 0;
+  try {
+    const event = JSON.parse(readFileSync(eventPath, "utf-8"));
+    return event?.pull_request?.base?.sha;
+  } catch {
+    return void 0;
+  }
+}
 function readGitHubContext() {
   const token = process.env.GITHUB_TOKEN;
   const repository = process.env.GITHUB_REPOSITORY;
@@ -34100,7 +34111,7 @@ function readGitHubContext() {
     owner,
     repo,
     prNumber: parseInt(prNumber, 10),
-    baseRef: process.env.GITHUB_BASE_REF ?? "main",
+    baseRef: readEventBaseSha() ?? process.env.GITHUB_BASE_REF ?? "main",
     token,
     baseUrl: process.env.GITHUB_API_URL
   };

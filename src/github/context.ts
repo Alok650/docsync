@@ -1,4 +1,16 @@
+import { readFileSync } from 'fs'
 import type { GitHubContext } from './types.js'
+
+function readEventBaseSha(): string | undefined {
+  const eventPath = process.env.GITHUB_EVENT_PATH
+  if (!eventPath) return undefined
+  try {
+    const event = JSON.parse(readFileSync(eventPath, 'utf-8'))
+    return event?.pull_request?.base?.sha
+  } catch {
+    return undefined
+  }
+}
 
 /**
  * Resolves `GitHubContext` from CI environment variables.
@@ -18,7 +30,7 @@ export function readGitHubContext(): GitHubContext | null {
     owner,
     repo,
     prNumber: parseInt(prNumber, 10),
-    baseRef: process.env.GITHUB_BASE_REF ?? 'main',
+    baseRef: readEventBaseSha() ?? process.env.GITHUB_BASE_REF ?? 'main',
     token,
     baseUrl: process.env.GITHUB_API_URL,
   }
