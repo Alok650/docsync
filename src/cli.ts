@@ -5,6 +5,7 @@ import path from 'path'
 import readline from 'readline'
 import { extractSymbols } from './extractor/index.js'
 import { buildMap } from './map/builder.js'
+import { findCodeFiles } from './scanner/file-finder.js'
 
 const SYMBOL_NAME_COLUMN_WIDTH = 30
 const MAP_DIR = '.autodocs'
@@ -56,14 +57,7 @@ program
       codeDir = path.resolve(cwd, await prompt(`Where is your code? [${opts.code}] `) || opts.code)
     }
 
-    let codeFiles: string[]
-    try {
-      codeFiles = await findCodeFiles(codeDir)
-    } catch {
-      console.error(`Cannot read code directory: ${codeDir}`)
-      process.exit(1)
-    }
-
+    const codeFiles = await findCodeFiles(codeDir)
     if (codeFiles.length === 0) {
       console.log('No code files found.')
       return
@@ -83,23 +77,6 @@ program
   })
 
 program.parse()
-
-async function findCodeFiles(dir: string): Promise<string[]> {
-  const CODE_EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.py'])
-  const EXCLUDED_DIRS = new Set(['node_modules', 'dist', '.git', '.autodocs'])
-
-  const results: string[] = []
-  const entries = await fs.readdir(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      if (EXCLUDED_DIRS.has(entry.name)) continue
-      results.push(...await findCodeFiles(path.join(dir, entry.name)))
-    } else if (CODE_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) {
-      results.push(path.join(dir, entry.name))
-    }
-  }
-  return results
-}
 
 function prompt(question: string): Promise<string> {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout })

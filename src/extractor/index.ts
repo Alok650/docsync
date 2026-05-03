@@ -9,12 +9,29 @@ import type { ExtractedSymbol, Language } from './types.js'
 export type { ExtractedSymbol, Language }
 export type { SymbolKind } from './types.js'
 
-function resolveLanguage(filePath: string): Language | null {
+const EXTENSION_LANGUAGE_MAP: Readonly<Record<string, Language>> = {
+  '.ts': LANGUAGE.TYPESCRIPT,
+  '.tsx': LANGUAGE.TYPESCRIPT,
+  '.js': LANGUAGE.JAVASCRIPT,
+  '.jsx': LANGUAGE.JAVASCRIPT,
+  '.mjs': LANGUAGE.JAVASCRIPT,
+  '.cjs': LANGUAGE.JAVASCRIPT,
+  '.py': LANGUAGE.PYTHON,
+}
+
+export function resolveLanguage(filePath: string): Language | null {
   const ext = path.extname(filePath).toLowerCase()
-  if (ext === '.ts' || ext === '.tsx') return LANGUAGE.TYPESCRIPT
-  if (ext === '.js' || ext === '.jsx' || ext === '.mjs' || ext === '.cjs') return LANGUAGE.JAVASCRIPT
-  if (ext === '.py') return LANGUAGE.PYTHON
-  return null
+  return EXTENSION_LANGUAGE_MAP[ext] ?? null
+}
+
+export function parseSymbols(tree: import('web-tree-sitter').Parser.Tree, filePath: string, language: Language): ExtractedSymbol[] {
+  switch (language) {
+    case LANGUAGE.TYPESCRIPT:
+    case LANGUAGE.JAVASCRIPT:
+      return extractTypeScriptSymbols(tree, filePath, language)
+    case LANGUAGE.PYTHON:
+      return extractPythonSymbols(tree, filePath)
+  }
 }
 
 export async function extractSymbols(filePath: string): Promise<ExtractedSymbol[]> {
@@ -26,11 +43,5 @@ export async function extractSymbols(filePath: string): Promise<ExtractedSymbol[
   const tree = parser.parse(source)
   if (!tree) return []
 
-  switch (language) {
-    case LANGUAGE.TYPESCRIPT:
-    case LANGUAGE.JAVASCRIPT:
-      return extractTypeScriptSymbols(tree, filePath, language)
-    case LANGUAGE.PYTHON:
-      return extractPythonSymbols(tree, filePath)
-  }
+  return parseSymbols(tree, filePath, language)
 }

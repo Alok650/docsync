@@ -1,20 +1,10 @@
-import path from 'path'
 import { getParser } from '../extractor/loader.js'
-import { extractTypeScriptSymbols } from '../extractor/languages/typescript.js'
-import { extractPythonSymbols } from '../extractor/languages/python.js'
-import type { ExtractedSymbol, Language } from '../extractor/types.js'
+import { resolveLanguage, parseSymbols } from '../extractor/index.js'
+import type { ExtractedSymbol } from '../extractor/types.js'
 import type { SymbolChange } from './types.js'
 
 interface SymbolWithText extends ExtractedSymbol {
   text: string
-}
-
-function resolveLanguage(filePath: string): Language | null {
-  const ext = path.extname(filePath).toLowerCase()
-  if (ext === '.ts' || ext === '.tsx') return 'typescript'
-  if (ext === '.js' || ext === '.jsx' || ext === '.mjs' || ext === '.cjs') return 'javascript'
-  if (ext === '.py') return 'python'
-  return null
 }
 
 async function parseSymbolsWithText(source: string, filePath: string): Promise<SymbolWithText[]> {
@@ -23,9 +13,7 @@ async function parseSymbolsWithText(source: string, filePath: string): Promise<S
 
   const parser = await getParser(language)
   const tree = parser.parse(source)
-  const symbols = language === 'python'
-    ? extractPythonSymbols(tree, filePath)
-    : extractTypeScriptSymbols(tree, filePath, language)
+  const symbols = parseSymbols(tree, filePath, language)
 
   const sourceLines = source.split('\n')
   return symbols.map(s => ({

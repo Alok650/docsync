@@ -1,5 +1,5 @@
 import fs from 'fs/promises'
-import path from 'path'
+import { findDocFiles } from './file-finder.js'
 
 export interface DocSection {
   file: string
@@ -9,22 +9,7 @@ export interface DocSection {
   endLine: number
 }
 
-const MD_EXTENSIONS = new Set(['.md', '.mdx'])
 const HEADING_REGEX = /^#{1,6} .+/
-
-async function findMarkdownFiles(dir: string): Promise<string[]> {
-  const results: string[] = []
-  const entries = await fs.readdir(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const full = path.join(dir, entry.name)
-    if (entry.isDirectory()) {
-      results.push(...await findMarkdownFiles(full))
-    } else if (MD_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) {
-      results.push(full)
-    }
-  }
-  return results
-}
 
 function parseSections(filePath: string, content: string): DocSection[] {
   const lines = content.split('\n')
@@ -65,7 +50,7 @@ function parseSections(filePath: string, content: string): DocSection[] {
 }
 
 export async function scanDocs(docsDir: string): Promise<DocSection[]> {
-  const files = await findMarkdownFiles(docsDir)
+  const files = await findDocFiles(docsDir)
   const sections: DocSection[] = []
 
   for (const file of files) {
