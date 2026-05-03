@@ -1,43 +1,52 @@
-import type { Parser } from 'web-tree-sitter'
-import type { ExtractedSymbol, SymbolKind } from '../types.js'
+import type { Node, Tree } from 'web-tree-sitter'
+import { SYMBOL_KIND } from '../types.js'
+import type { ExtractedSymbol, Language, SymbolKind } from '../types.js'
+import { TS_NODE } from './node-types.js'
+
+const DECLARATION_NODE_TYPES = new Set<string>([
+  TS_NODE.FUNCTION_DECLARATION,
+  TS_NODE.CLASS_DECLARATION,
+  TS_NODE.INTERFACE_DECLARATION,
+  TS_NODE.TYPE_ALIAS_DECLARATION,
+  TS_NODE.LEXICAL_DECLARATION,
+  TS_NODE.VARIABLE_DECLARATION,
+])
+
+const VARIABLE_DECLARATION_TYPES = new Set<string>([
+  TS_NODE.LEXICAL_DECLARATION,
+  TS_NODE.VARIABLE_DECLARATION,
+])
 
 export function extractTypeScriptSymbols(
-  tree: Parser.Tree,
+  tree: Tree,
   file: string,
+  language: Language,
 ): ExtractedSymbol[] {
   const symbols: ExtractedSymbol[] = []
   const root = tree.rootNode
 
   for (const node of root.children) {
-    // export function foo() {}
-    if (node.type === 'export_statement') {
-      const decl = node.children.find(c =>
-        c.type === 'function_declaration' ||
-        c.type === 'class_declaration' ||
-        c.type === 'interface_declaration' ||
-        c.type === 'type_alias_declaration' ||
-        c.type === 'lexical_declaration' ||
-        c.type === 'variable_declaration',
-      )
-      if (!decl) continue
+    if (node.type !== TS_NODE.EXPORT_STATEMENT) continue
 
-      const kind = nodeKind(decl.type)
-      if (!kind) continue
+    const decl = node.children.find((c: Node) => DECLARATION_NODE_TYPES.has(c.type))
+    if (!decl) continue
 
-      if (decl.type === 'lexical_declaration' || decl.type === 'variable_declaration') {
-        for (const child of decl.children) {
-          if (child.type === 'variable_declarator') {
-            const nameNode = child.childForFieldName('name')
-            if (nameNode) {
-              symbols.push(makeSymbol(nameNode.text, kind, file, node))
-            }
+    const kind = nodeKind(decl.type)
+    if (!kind) continue
+
+    if (VARIABLE_DECLARATION_TYPES.has(decl.type)) {
+      for (const child of decl.children) {
+        if (child.type === TS_NODE.VARIABLE_DECLARATOR) {
+          const nameNode = child.childForFieldName('name')
+          if (nameNode) {
+            symbols.push(makeSymbol(nameNode.text, kind, file, node, language))
           }
         }
-      } else {
-        const nameNode = decl.childForFieldName('name')
-        if (nameNode) {
-          symbols.push(makeSymbol(nameNode.text, kind, file, node))
-        }
+      }
+    } else {
+      const nameNode = decl.childForFieldName('name')
+      if (nameNode) {
+        symbols.push(makeSymbol(nameNode.text, kind, file, node, language))
       }
     }
   }
@@ -47,12 +56,12 @@ export function extractTypeScriptSymbols(
 
 function nodeKind(type: string): SymbolKind | null {
   switch (type) {
-    case 'function_declaration': return 'function'
-    case 'class_declaration': return 'class'
-    case 'interface_declaration': return 'interface'
-    case 'type_alias_declaration': return 'type'
-    case 'lexical_declaration':
-    case 'variable_declaration': return 'variable'
+    case TS_NODE.FUNCTION_DECLARATION: return SYMBOL_KIND.FUNCTION
+    case TS_NODE.CLASS_DECLARATION: return SYMBOL_KIND.CLASS
+    case TS_NODE.INTERFACE_DECLARATION: return SYMBOL_KIND.INTERFACE
+    case TS_NODE.TYPE_ALIAS_DECLARATION: return SYMBOL_KIND.TYPE
+    case TS_NODE.LEXICAL_DECLARATION:
+    case TS_NODE.VARIABLE_DECLARATION: return SYMBOL_KIND.VARIABLE
     default: return null
   }
 }
@@ -61,7 +70,8 @@ function makeSymbol(
   name: string,
   kind: SymbolKind,
   file: string,
-  node: Parser.SyntaxNode,
+  node: Node,
+  language: Language,
 ): ExtractedSymbol {
   return {
     name,
@@ -69,6 +79,6 @@ function makeSymbol(
     file,
     startLine: node.startPosition.row + 1,
     endLine: node.endPosition.row + 1,
-    language: 'typescript',
+    language,
   }
 }

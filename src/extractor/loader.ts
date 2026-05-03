@@ -1,5 +1,6 @@
 import { createRequire } from 'module'
 import { Parser, Language as WasmLanguage } from 'web-tree-sitter'
+import { LANGUAGE } from './types.js'
 import type { Language } from './types.js'
 
 const require = createRequire(import.meta.url)
@@ -14,11 +15,11 @@ async function init(): Promise<void> {
 
 function grammarWasmPath(language: Language): string {
   switch (language) {
-    case 'typescript':
+    case LANGUAGE.TYPESCRIPT:
       return require.resolve('tree-sitter-typescript/tree-sitter-typescript.wasm')
-    case 'javascript':
+    case LANGUAGE.JAVASCRIPT:
       return require.resolve('tree-sitter-javascript/tree-sitter-javascript.wasm')
-    case 'python':
+    case LANGUAGE.PYTHON:
       return require.resolve('tree-sitter-python/tree-sitter-python.wasm')
   }
 }

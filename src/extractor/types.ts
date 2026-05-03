@@ -1,12 +1,13 @@
-export type Language = 'typescript' | 'javascript' | 'python'
+import type { Language, SymbolKind } from './constants.js'
 
-export type SymbolKind = 'function' | 'class' | 'method' | 'interface' | 'type' | 'variable'
+export { LANGUAGE, SYMBOL_KIND } from './constants.js'
+export type { Language, SymbolKind } from './constants.js'
 
 export interface ExtractedSymbol {
-  name: string
-  kind: SymbolKind
-  file: string
-  startLine: number
-  endLine: number
-  language: Language
+  readonly name: string
+  readonly kind: SymbolKind
+  readonly file: string
+  readonly startLine: number
+  readonly endLine: number
+  readonly language: Language
 }
