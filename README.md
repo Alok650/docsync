@@ -42,7 +42,7 @@ PR opened / synchronized
 ### 1. Run init in your repo
 
 ```bash
-npx docsync init
+npx @dev_ap/docsync init
 ```
 
 This will:
@@ -134,7 +134,7 @@ git add . && git commit -m "initial"
 ### Step 2 — Initialize docsync
 
 ```bash
-npx docsync init --yes
+npx @dev_ap/docsync init --yes
 ```
 
 You should see:
@@ -157,7 +157,7 @@ git commit -m "chore: docsync init"
 ### Step 3 — Inspect what was indexed
 
 ```bash
-npx docsync symbols src/auth.ts
+npx @dev_ap/docsync symbols src/auth.ts
 ```
 
 ```
@@ -208,7 +208,7 @@ export ANTHROPIC_API_KEY=sk-ant-...
 Run the check without posting to GitHub:
 
 ```bash
-npx docsync check --dry-run
+npx @dev_ap/docsync check --dry-run
 ```
 
 Expected output:
@@ -232,7 +232,7 @@ optional MFA token. If omitted, MFA verification is skipped...
 Without `--dry-run`, docsync posts the comment directly to the PR:
 
 ```bash
-npx docsync check
+npx @dev_ap/docsync check
 ```
 
 ```
@@ -302,7 +302,7 @@ Requires these environment variables (set automatically by the generated GitHub 
 Lists all public symbols extracted from a source file. Useful for verifying docsync can parse your code.
 
 ```bash
-npx docsync symbols src/auth/login.ts
+npx @dev_ap/docsync symbols src/auth/login.ts
 ```
 
 ---
@@ -391,7 +391,7 @@ Compact sharded lookup index used by `docsync check` (the CI hot path). Each fil
 Enable debug-level logging:
 
 ```bash
-AUTODOCS_DEBUG=1 npx docsync check --dry-run
+AUTODOCS_DEBUG=1 npx @dev_ap/docsync check --dry-run
 ```
 
 Common issues:

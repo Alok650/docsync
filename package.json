@@ -1,5 +1,5 @@
 {
-  "name": "docsync",
+  "name": "@dev_ap/docsync",
   "version": "0.1.0",
   "description": "Keeps your documentation in sync with your code — LLM-powered doc updates on every PR",
   "type": "module",
