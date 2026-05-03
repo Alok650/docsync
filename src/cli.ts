@@ -5,7 +5,12 @@ import path from 'path'
 import readline from 'readline'
 import { extractSymbols } from './extractor/index.js'
 import { buildMap } from './map/builder.js'
+import { writeMapFile } from './map/writer.js'
 import { findCodeFiles } from './scanner/file-finder.js'
+import { generateWorkflow } from './github/workflow-generator.js'
+import { runCheck } from './pipeline/check.js'
+import { GitHubOutput, readGitHubContext } from './github/index.js'
+import { loadConfig } from './config.js'
 
 const SYMBOL_NAME_COLUMN_WIDTH = 30
 const MAP_DIR = '.autodocs'
@@ -42,7 +47,7 @@ program
 
 program
   .command('init')
-  .description('Scan codebase and docs, write .autodocs/map.json')
+  .description('Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow')
   .option('--docs <dir>', 'Path to docs directory', 'docs')
   .option('--code <dir>', 'Path to code directory', 'src')
   .option('--yes', 'Skip prompts and use defaults')
@@ -69,11 +74,58 @@ program
     const outDir = path.join(cwd, MAP_DIR)
     await fs.mkdir(outDir, { recursive: true })
     const outFile = path.join(outDir, MAP_FILE)
-    await fs.writeFile(outFile, JSON.stringify(map, null, 2), 'utf-8')
+    await writeMapFile(outFile, map)
 
     const mapped = map.mappings.filter(m => m.docs.length > 0).length
     console.log(`Done. ${map.mappings.length} symbols indexed, ${mapped} mapped to doc sections.`)
     console.log(`Map written to ${path.relative(cwd, outFile)}`)
+
+    const workflowPath = await generateWorkflow(cwd)
+    console.log(`Workflow written to ${path.relative(cwd, workflowPath)}`)
+    console.log('Add ANTHROPIC_API_KEY to your GitHub repository secrets to activate AutoDocs.')
+  })
+
+program
+  .command('check')
+  .description('Check changed symbols against docs and post PR comment')
+  .option('--dry-run', 'Print proposed updates without posting to GitHub')
+  .action(async (opts: { dryRun: boolean }) => {
+    const cwd = process.cwd()
+    const config = await loadConfig(cwd)
+    const ctx = readGitHubContext()
+
+    if (!ctx) {
+      console.error('Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.')
+      process.exit(1)
+    }
+
+    console.log('Running AutoDocs check...')
+    const { updates, skippedFiles } = await runCheck(ctx, config, cwd)
+
+    if (skippedFiles.length > 0) {
+      console.log(`Skipped ${skippedFiles.length} deleted/unreadable files.`)
+    }
+
+    if (updates.length === 0) {
+      console.log('No doc updates needed.')
+      return
+    }
+
+    console.log(`Found ${updates.length} proposed update(s).`)
+
+    if (opts.dryRun) {
+      for (const u of updates) {
+        console.log(`\n${u.docFile} — ${u.section}`)
+        console.log(`  before: ${u.beforeBody.slice(0, 80)}...`)
+        console.log(`  after:  ${u.afterBody.slice(0, 80)}...`)
+      }
+      return
+    }
+
+    const { createOctokit } = await import('./github/client.js')
+    const octokit = createOctokit(ctx)
+    await new GitHubOutput(octokit, ctx).postOrUpdate(updates)
+    console.log('PR comment posted.')
   })
 
 program.parse()

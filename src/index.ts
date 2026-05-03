@@ -26,3 +26,12 @@ export { MarkdownEditor } from './editor/markdown-editor.js'
 
 export { loadConfig } from './config.js'
 export type { AutoDocsConfig, AnthropicProvider } from './config.js'
+
+export { writeMapFile } from './map/writer.js'
+export { updateMapForChangedFiles } from './map/updater.js'
+
+export { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
+export type { GitHubContext, ProposedDocUpdate } from './github/index.js'
+
+export { runCheck } from './pipeline/check.js'
+export type { CheckResult } from './pipeline/check.js'
