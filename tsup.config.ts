@@ -35,5 +35,10 @@ export default defineConfig({
     'tree-sitter-javascript',
     'tree-sitter-python',
   ],
+  // CJS deps (e.g. commander) call require() for Node built-ins inside the ESM bundle.
+  // Inject a real require so those calls resolve instead of throwing.
+  banner: {
+    js: `import { createRequire } from 'module'; const require = createRequire(import.meta.url);`,
+  },
   onSuccess: copyWasm,
 })
