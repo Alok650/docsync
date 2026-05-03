@@ -1,8 +1,6 @@
 import fs from 'fs/promises'
 import type { MapFile } from './types.js'
 
-// Atomic write: write to .tmp then rename(), so readers always see
-// either the old complete file or the new complete file — never a partial write.
 export async function writeMapFile(filePath: string, map: MapFile): Promise<void> {
   const tmpPath = `${filePath}.${process.pid}.tmp`
   const content = JSON.stringify(map, null, 2)

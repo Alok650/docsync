@@ -1,3 +1,5 @@
+import type { DocSection } from '../scanner/doc-scanner.js'
+
 export interface DocRef {
   file: string
   section: string
@@ -13,4 +15,14 @@ export interface MapEntry {
 export interface MapFile {
   version: 1
   mappings: MapEntry[]
+}
+
+export function toDocSection(ref: DocRef, body: string): DocSection {
+  return {
+    file: ref.file,
+    heading: ref.section,
+    body,
+    startLine: ref.lines[0],
+    endLine: ref.lines[1],
+  }
 }

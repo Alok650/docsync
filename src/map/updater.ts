@@ -2,6 +2,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import { extractSymbols } from '../extractor/index.js'
 import { writeMapFile } from './writer.js'
+import type { ExtractedSymbol } from '../extractor/types.js'
 import type { MapFile, MapEntry } from './types.js'
 
 export async function updateMapForChangedFiles(
@@ -14,15 +15,12 @@ export async function updateMapForChangedFiles(
   for (const filePath of changedFiles) {
     const absolutePath = path.resolve(filePath)
 
-    // Remove all existing entries for this file
     map.mappings = map.mappings.filter(m => m.file !== absolutePath)
 
-    // Re-extract current symbols and re-add entries (docs list empty — will be re-matched on next init)
-    let currentSymbols: Awaited<ReturnType<typeof extractSymbols>>
+    let currentSymbols: ExtractedSymbol[]
     try {
       currentSymbols = await extractSymbols(absolutePath)
     } catch {
-      // File was deleted — entries already removed above
       continue
     }
 

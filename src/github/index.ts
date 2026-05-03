@@ -1,5 +1,5 @@
 export { createOctokit } from './client.js'
 export { GitHubOutput } from './pr-comment.js'
 export { generateWorkflow } from './workflow-generator.js'
-export { readGitHubContext } from './types.js'
+export { readGitHubContext } from './context.js'
 export type { GitHubContext, ProposedDocUpdate } from './types.js'

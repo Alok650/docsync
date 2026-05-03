@@ -6,7 +6,7 @@ export interface DocUpdateRequest {
   file: string
   beforeCode: string
   afterCode: string
-  docSection: DocSection & { heading: string }
+  docSection: DocSection
 }
 
 const DEFAULT_MODEL = 'claude-sonnet-4-6'
@@ -41,8 +41,8 @@ export class DocUpdateAgent {
   private readonly client: Pick<Anthropic, 'messages'>
   private readonly model: string
 
-  constructor(client?: Pick<Anthropic, 'messages'>, model = DEFAULT_MODEL) {
-    this.client = client ?? new Anthropic()
+  constructor(client: Pick<Anthropic, 'messages'> = new Anthropic(), model = DEFAULT_MODEL) {
+    this.client = client
     this.model = model
   }
 

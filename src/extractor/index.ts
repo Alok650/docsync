@@ -1,5 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
+import type { Parser } from 'web-tree-sitter'
 import { getParser } from './loader.js'
 import { extractTypeScriptSymbols } from './languages/typescript.js'
 import { extractPythonSymbols } from './languages/python.js'
@@ -24,7 +25,11 @@ export function resolveLanguage(filePath: string): Language | null {
   return EXTENSION_LANGUAGE_MAP[ext] ?? null
 }
 
-export function parseSymbols(tree: import('web-tree-sitter').Parser.Tree, filePath: string, language: Language): ExtractedSymbol[] {
+export function parseSymbols(
+  tree: Parser.Tree,
+  filePath: string,
+  language: Language,
+): ExtractedSymbol[] {
   switch (language) {
     case LANGUAGE.TYPESCRIPT:
     case LANGUAGE.JAVASCRIPT:

@@ -4,12 +4,12 @@ import fs from 'fs/promises'
 import path from 'path'
 import readline from 'readline'
 import { extractSymbols } from './extractor/index.js'
+import type { ExtractedSymbol } from './extractor/types.js'
 import { buildMap } from './map/builder.js'
 import { writeMapFile } from './map/writer.js'
 import { findCodeFiles } from './scanner/file-finder.js'
-import { generateWorkflow } from './github/workflow-generator.js'
+import { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 import { runCheck } from './pipeline/check.js'
-import { GitHubOutput, readGitHubContext } from './github/index.js'
 import { loadConfig } from './config.js'
 
 const SYMBOL_NAME_COLUMN_WIDTH = 30
@@ -28,7 +28,7 @@ program
   .description('Extract public symbols from a source file')
   .action(async (file: string) => {
     const filePath = path.resolve(file)
-    let symbols: Awaited<ReturnType<typeof extractSymbols>>
+    let symbols: ExtractedSymbol[]
     try {
       symbols = await extractSymbols(filePath)
     } catch (err) {
@@ -73,12 +73,11 @@ program
 
     const outDir = path.join(cwd, MAP_DIR)
     await fs.mkdir(outDir, { recursive: true })
-    const outFile = path.join(outDir, MAP_FILE)
-    await writeMapFile(outFile, map)
+    await writeMapFile(path.join(outDir, MAP_FILE), map)
 
     const mapped = map.mappings.filter(m => m.docs.length > 0).length
     console.log(`Done. ${map.mappings.length} symbols indexed, ${mapped} mapped to doc sections.`)
-    console.log(`Map written to ${path.relative(cwd, outFile)}`)
+    console.log(`Map written to ${path.join(MAP_DIR, MAP_FILE)}`)
 
     const workflowPath = await generateWorkflow(cwd)
     console.log(`Workflow written to ${path.relative(cwd, workflowPath)}`)
@@ -122,7 +121,6 @@ program
       return
     }
 
-    const { createOctokit } = await import('./github/client.js')
     const octokit = createOctokit(ctx)
     await new GitHubOutput(octokit, ctx).postOrUpdate(updates)
     console.log('PR comment posted.')
