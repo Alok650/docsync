@@ -23,7 +23,12 @@ jobs:
       - run: pnpm test
 
       - name: Publish to npm
-        run: npm publish --access public
+        run: |
+          if npm view "@dev_ap/docsync@$(node -p "require('./package.json').version")" > /dev/null 2>&1; then
+            echo "Version already published, skipping."
+          else
+            npm publish --access public
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
