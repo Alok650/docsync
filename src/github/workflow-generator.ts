@@ -1,8 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-
-const WORKFLOW_DIR = '.github/workflows'
-const WORKFLOW_FILE = 'autodocs.yml'
+import { WORKFLOW_DIR, WORKFLOW_FILENAME } from '../constants.js'
 
 // Pinned action versions follow GitHub's own starter-workflow conventions.
 // fetch-depth: 0 is required so git diff can reach the base branch.
@@ -30,6 +28,7 @@ jobs:
       - run: pnpm exec autodocs check
         env:
           ANTHROPIC_API_KEY: \${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
           GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: \${{ github.event.pull_request.number }}
           GITHUB_BASE_REF: \${{ github.event.pull_request.base.ref }}
@@ -38,7 +37,7 @@ jobs:
 
 export async function generateWorkflow(repoDir: string): Promise<string> {
   const workflowDir = path.join(repoDir, WORKFLOW_DIR)
-  const workflowPath = path.join(workflowDir, WORKFLOW_FILE)
+  const workflowPath = path.join(workflowDir, WORKFLOW_FILENAME)
 
   await fs.mkdir(workflowDir, { recursive: true })
   await fs.writeFile(workflowPath, generateWorkflowContent(), 'utf-8')

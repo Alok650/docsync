@@ -24,11 +24,20 @@ export type { DocUpdateRequest } from './agent/doc-update-agent.js'
 
 export { MarkdownEditor } from './editor/markdown-editor.js'
 
-export { loadConfig } from './config.js'
-export type { AutoDocsConfig, AnthropicProvider } from './config.js'
+export { loadConfig, LLM_PROVIDER } from './config.js'
+export type { AutoDocsConfig, LLMProvider, LLMConfig } from './config.js'
+
+export { BM25, AI, GIT, GITHUB, LOOKUP, CLI } from './defaults.js'
+
+export { createLLMClient } from './llm/index.js'
+export type { LLMClient, LLMMessage, LLMCompletionOptions } from './llm/index.js'
+export { AnthropicClient } from './llm/index.js'
+export { OpenAIClient } from './llm/index.js'
 
 export { writeMapFile } from './map/writer.js'
 export { updateMapForChangedFiles } from './map/updater.js'
+export { buildLookup, buildShards, readLookupForSymbols, symbolShard, computeFingerprint } from './map/lookup.js'
+export type { LookupTable } from './map/types.js'
 
 export { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 export type { GitHubContext, ProposedDocUpdate } from './github/index.js'

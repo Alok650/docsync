@@ -1,39 +1,57 @@
 import fs from 'fs/promises'
 import path from 'path'
+import { CONFIG_FILENAME } from './constants.js'
+import { AI } from './defaults.js'
+import { logger } from './logger.js'
 
-export type AnthropicProvider = 'anthropic' | 'bedrock' | 'vertex'
+export const LLM_PROVIDER = {
+  ANTHROPIC: 'anthropic',
+  OPENAI: 'openai',
+} as const
+
+export type LLMProvider = (typeof LLM_PROVIDER)[keyof typeof LLM_PROVIDER]
+
+export interface LLMConfig {
+  readonly provider: LLMProvider
+  readonly model: string
+}
 
 export interface AutoDocsConfig {
-  docs: string
-  code: string
-  anthropic: {
-    provider: AnthropicProvider
-    model: string
-    region?: string
-  }
+  readonly docs: string
+  readonly code: string
+  readonly llm: LLMConfig
 }
 
 const DEFAULTS: AutoDocsConfig = {
   docs: 'docs',
   code: 'src',
-  anthropic: {
-    provider: 'anthropic',
-    model: 'claude-sonnet-4-6',
+  llm: {
+    provider: LLM_PROVIDER.ANTHROPIC,
+    model: AI.DEFAULT_MODEL,
   },
 }
 
-const CONFIG_FILENAME = 'autodocs.config.json'
-
+/**
+ * Loads config from `autodocs.config.json` in `cwd`, merging over built-in defaults.
+ * Returns defaults silently if the file is absent; warns if it exists but is invalid JSON.
+ */
 export async function loadConfig(cwd = process.cwd()): Promise<AutoDocsConfig> {
+  let raw: string
   try {
-    const raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), 'utf-8')
+    raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), 'utf-8')
+  } catch {
+    return DEFAULTS
+  }
+
+  try {
     const parsed = JSON.parse(raw) as Partial<AutoDocsConfig>
     return {
       ...DEFAULTS,
       ...parsed,
-      anthropic: { ...DEFAULTS.anthropic, ...parsed.anthropic },
+      llm: { ...DEFAULTS.llm, ...parsed.llm },
     }
   } catch {
+    logger.warn(`${CONFIG_FILENAME} could not be parsed — using defaults.`)
     return DEFAULTS
   }
 }

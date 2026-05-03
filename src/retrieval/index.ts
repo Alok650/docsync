@@ -5,6 +5,10 @@ export { StructuralRetriever } from './structural.js'
 export { BM25Retriever } from './bm25-retriever.js'
 export type { RetrievalResult, RetrievalAdapter } from './types.js'
 
+/**
+ * Queries Tier 1 (structural index) first; falls back to Tier 2 (BM25) if the symbol
+ * isn't mapped. Results with no docs from either tier are filtered out by `retrieveAll`.
+ */
 export class TieredRetriever {
   constructor(
     private readonly tier1: RetrievalAdapter,
@@ -21,7 +25,7 @@ export class TieredRetriever {
     return { change, docs: tier2Docs, tier: 2 }
   }
 
-  async retrieveAll(changes: SymbolChange[]): Promise<RetrievalResult[]> {
+  async retrieveAll(changes: readonly SymbolChange[]): Promise<RetrievalResult[]> {
     const results = await Promise.all(changes.map(c => this.retrieve(c)))
     return results.filter(r => r.docs.length > 0)
   }

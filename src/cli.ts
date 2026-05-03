@@ -11,10 +11,9 @@ import { findCodeFiles } from './scanner/file-finder.js'
 import { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 import { runCheck } from './pipeline/check.js'
 import { loadConfig } from './config.js'
-
-const SYMBOL_NAME_COLUMN_WIDTH = 30
-const MAP_DIR = '.autodocs'
-const MAP_FILE = 'map.json'
+import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH } from './constants.js'
+import { CLI } from './defaults.js'
+import { logger } from './logger.js'
 
 const program = new Command()
 
@@ -32,16 +31,15 @@ program
     try {
       symbols = await extractSymbols(filePath)
     } catch (err) {
-      const message = err instanceof Error ? err.message : String(err)
-      console.error(`Error extracting symbols: ${message}`)
+      logger.error(`Failed to extract symbols: ${err instanceof Error ? err.message : String(err)}`)
       return
     }
     if (symbols.length === 0) {
-      console.log('No symbols found.')
+      logger.info('No symbols found.')
       return
     }
     for (const s of symbols) {
-      console.log(`${s.name.padEnd(SYMBOL_NAME_COLUMN_WIDTH)} [${s.startLine}-${s.endLine}]  (${s.kind})`)
+      process.stdout.write(`${s.name.padEnd(CLI.SYMBOL_COLUMN_WIDTH)} [${s.startLine}-${s.endLine}]  (${s.kind})\n`)
     }
   })
 
@@ -64,24 +62,24 @@ program
 
     const codeFiles = await findCodeFiles(codeDir)
     if (codeFiles.length === 0) {
-      console.log('No code files found.')
+      logger.warn('No code files found.')
       return
     }
 
-    console.log(`Scanning ${codeFiles.length} code files and docs in ${docsDir}...`)
+    logger.info(`Scanning ${codeFiles.length} code files and docs in ${docsDir}...`)
     const map = await buildMap(codeFiles, docsDir)
 
-    const outDir = path.join(cwd, MAP_DIR)
+    const outDir = path.join(cwd, AUTODOCS_DIR)
     await fs.mkdir(outDir, { recursive: true })
-    await writeMapFile(path.join(outDir, MAP_FILE), map)
+    await writeMapFile(path.join(outDir, MAP_FILENAME), map)
 
     const mapped = map.mappings.filter(m => m.docs.length > 0).length
-    console.log(`Done. ${map.mappings.length} symbols indexed, ${mapped} mapped to doc sections.`)
-    console.log(`Map written to ${path.join(MAP_DIR, MAP_FILE)}`)
+    logger.success(`${map.mappings.length} symbols indexed, ${mapped} mapped to doc sections.`)
+    logger.info(`Map written to ${MAP_RELATIVE_PATH}`)
 
     const workflowPath = await generateWorkflow(cwd)
-    console.log(`Workflow written to ${path.relative(cwd, workflowPath)}`)
-    console.log('Add ANTHROPIC_API_KEY to your GitHub repository secrets to activate AutoDocs.')
+    logger.info(`Workflow written to ${path.relative(cwd, workflowPath)}`)
+    logger.info('Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate AutoDocs.')
   })
 
 program
@@ -94,36 +92,37 @@ program
     const ctx = readGitHubContext()
 
     if (!ctx) {
-      console.error('Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.')
+      logger.error('Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.')
       process.exit(1)
     }
 
-    console.log('Running AutoDocs check...')
+    logger.info('Running AutoDocs check...')
     const { updates, skippedFiles } = await runCheck(ctx, config, cwd)
 
     if (skippedFiles.length > 0) {
-      console.log(`Skipped ${skippedFiles.length} deleted/unreadable files.`)
+      logger.warn(`Skipped ${skippedFiles.length} deleted or unreadable file(s).`)
     }
 
     if (updates.length === 0) {
-      console.log('No doc updates needed.')
+      logger.success('No doc updates needed.')
       return
     }
 
-    console.log(`Found ${updates.length} proposed update(s).`)
+    logger.info(`Found ${updates.length} proposed update(s).`)
 
     if (opts.dryRun) {
       for (const u of updates) {
-        console.log(`\n${u.docFile} — ${u.section}`)
-        console.log(`  before: ${u.beforeBody.slice(0, 80)}...`)
-        console.log(`  after:  ${u.afterBody.slice(0, 80)}...`)
+        process.stdout.write(`\n${u.docFile} — ${u.section}\n`)
+        process.stdout.write(`\n--- before\n${u.beforeBody}\n`)
+        process.stdout.write(`\n+++ after\n${u.afterBody}\n`)
+        process.stdout.write(`\n`)
       }
       return
     }
 
     const octokit = createOctokit(ctx)
     await new GitHubOutput(octokit, ctx).postOrUpdate(updates)
-    console.log('PR comment posted.')
+    logger.success('PR comment posted.')
   })
 
 program.parse()

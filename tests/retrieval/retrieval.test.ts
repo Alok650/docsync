@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { StructuralRetriever } from '../../src/retrieval/structural.js'
 import { BM25Retriever } from '../../src/retrieval/bm25-retriever.js'
 import { TieredRetriever } from '../../src/retrieval/index.js'
+import { buildLookup } from '../../src/map/lookup.js'
 import type { MapFile } from '../../src/map/types.js'
 import type { DocSection } from '../../src/scanner/doc-scanner.js'
 import type { SymbolChange } from '../../src/differ/types.js'
@@ -50,24 +51,47 @@ const modified = (symbol: string): SymbolChange => ({
   file: 'src/auth/login.ts',
 })
 
+const LOOKUP = buildLookup(MAP)
+
 describe('StructuralRetriever (Tier 1)', () => {
   it('returns mapped doc sections for a known symbol', async () => {
-    const r = new StructuralRetriever(MAP)
+    const r = new StructuralRetriever(LOOKUP)
     const docs = await r.retrieve(modified('processLogin'))
     expect(docs).toHaveLength(1)
     expect(docs[0].section).toBe('## Login Flow')
   })
 
   it('returns empty array for a symbol with no docs in map', async () => {
-    const r = new StructuralRetriever(MAP)
+    const r = new StructuralRetriever(LOOKUP)
     const docs = await r.retrieve(modified('AuthResult'))
     expect(docs).toHaveLength(0)
   })
 
   it('returns empty array for a symbol not in map at all', async () => {
-    const r = new StructuralRetriever(MAP)
+    const r = new StructuralRetriever(LOOKUP)
     const docs = await r.retrieve(modified('unknownSymbol'))
     expect(docs).toHaveLength(0)
+  })
+
+  it('merges docs when the same symbol exists in multiple files', async () => {
+    const multiMap: MapFile = {
+      version: 1,
+      mappings: [
+        {
+          symbol: 'processLogin',
+          file: 'src/auth/login.ts',
+          docs: [{ file: 'docs/auth.md', section: '## Login Flow', lines: [5, 9] }],
+        },
+        {
+          symbol: 'processLogin',
+          file: 'src/legacy/login.ts',
+          docs: [{ file: 'docs/legacy.md', section: '## Legacy Login', lines: [1, 4] }],
+        },
+      ],
+    }
+    const r = new StructuralRetriever(buildLookup(multiMap))
+    const docs = await r.retrieve(modified('processLogin'))
+    expect(docs).toHaveLength(2)
   })
 })
 
@@ -88,7 +112,7 @@ describe('BM25Retriever (Tier 2)', () => {
 describe('TieredRetriever', () => {
   it('uses Tier 1 when symbol is in map', async () => {
     const retriever = new TieredRetriever(
-      new StructuralRetriever(MAP),
+      new StructuralRetriever(LOOKUP),
       new BM25Retriever(SECTIONS),
     )
     const result = await retriever.retrieve(modified('processLogin'))
@@ -96,19 +120,18 @@ describe('TieredRetriever', () => {
     expect(result.docs[0].section).toBe('## Login Flow')
   })
 
-  it('falls back to Tier 2 for a new symbol not in map', async () => {
+  it('falls back to Tier 2 for a symbol not in the map', async () => {
     const retriever = new TieredRetriever(
-      new StructuralRetriever(MAP),
+      new StructuralRetriever(LOOKUP),
       new BM25Retriever(SECTIONS),
     )
-    // processMFA not in map but BM25 should find auth docs via tokenization
-    const result = await retriever.retrieve({ type: 'added', symbol: 'processLogin', file: 'new.ts' })
-    expect(result.tier).toBe(1) // actually in map — use a truly new symbol
+    const result = await retriever.retrieve(modified('totallyNewSymbol'))
+    expect(result.tier).toBe(2)
   })
 
   it('silently returns empty docs when no tier matches', async () => {
     const retriever = new TieredRetriever(
-      new StructuralRetriever(MAP),
+      new StructuralRetriever(LOOKUP),
       new BM25Retriever(SECTIONS),
     )
     const result = await retriever.retrieve(modified('completelyNewSymbol'))
@@ -117,7 +140,7 @@ describe('TieredRetriever', () => {
 
   it('retrieveAll filters out results with no docs', async () => {
     const retriever = new TieredRetriever(
-      new StructuralRetriever(MAP),
+      new StructuralRetriever(LOOKUP),
       new BM25Retriever(SECTIONS),
     )
     const results = await retriever.retrieveAll([

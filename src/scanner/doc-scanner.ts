@@ -2,16 +2,21 @@ import fs from 'fs/promises'
 import { findDocFiles } from './file-finder.js'
 
 export interface DocSection {
-  file: string
-  heading: string
-  body: string
-  startLine: number
-  endLine: number
+  readonly file: string
+  readonly heading: string
+  readonly body: string
+  readonly startLine: number
+  readonly endLine: number
 }
 
 const HEADING_REGEX = /^#{1,6} .+/
 const HEADING_LEVEL_REGEX = /^(#{1,6})\s/
 const HEADING_PREFIX_REGEX = /^#{1,6}\s+/
+
+function getHeadingDepth(line: string): number {
+  const match = line.match(HEADING_LEVEL_REGEX)
+  return match ? match[1].length : 0
+}
 
 function parseSections(filePath: string, content: string): DocSection[] {
   const lines = content.split('\n')
@@ -59,12 +64,12 @@ export function extractSectionBody(content: string, sectionHeading: string): str
   )
   if (headingIdx === -1) return null
 
-  const headingDepth = (lines[headingIdx].match(HEADING_LEVEL_REGEX) ?? ['', ''])[1].length
+  const headingDepth = getHeadingDepth(lines[headingIdx])
   const bodyLines: string[] = []
 
   for (let i = headingIdx + 1; i < lines.length; i++) {
-    const match = lines[i].match(HEADING_LEVEL_REGEX)
-    if (match && match[1].length <= headingDepth) break
+    const depth = getHeadingDepth(lines[i])
+    if (depth > 0 && depth <= headingDepth) break
     bodyLines.push(lines[i])
   }
 

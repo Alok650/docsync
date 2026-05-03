@@ -1,10 +1,10 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-export const CODE_EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.py'])
-export const DOC_EXTENSIONS = new Set(['.md', '.mdx'])
+export const CODE_EXTENSIONS: ReadonlySet<string> = new Set(['.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.py'])
+export const DOC_EXTENSIONS: ReadonlySet<string> = new Set(['.md', '.mdx'])
 
-const EXCLUDED_DIRS = new Set(['node_modules', 'dist', '.git', '.autodocs'])
+const EXCLUDED_DIRS: ReadonlySet<string> = new Set(['node_modules', 'dist', '.git', '.autodocs'])
 
 export async function findCodeFiles(dir: string): Promise<string[]> {
   return findFiles(dir, CODE_EXTENSIONS)
@@ -14,7 +14,7 @@ export async function findDocFiles(dir: string): Promise<string[]> {
   return findFiles(dir, DOC_EXTENSIONS)
 }
 
-async function findFiles(dir: string, extensions: Set<string>): Promise<string[]> {
+async function findFiles(dir: string, extensions: ReadonlySet<string>): Promise<string[]> {
   const results: string[] = []
 
   let entries

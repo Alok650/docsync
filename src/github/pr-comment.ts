@@ -1,10 +1,11 @@
+import { GITHUB } from '../defaults.js'
 import type { Octokit } from '@octokit/rest'
 import type { GitHubContext, ProposedDocUpdate } from './types.js'
 
 // Embedded in every comment body so we can reliably find and update it.
 const COMMENT_MARKER = '<!-- autodocs-check -->'
 
-function renderComment(updates: ProposedDocUpdate[]): string {
+function renderComment(updates: readonly ProposedDocUpdate[]): string {
   const sections = updates.map(u => {
     const diffLines = renderDiff(u.beforeBody, u.afterBody)
     return [
@@ -32,20 +33,20 @@ function renderDiff(before: string, after: string): string {
   return [...beforeLines, ...afterLines].join('\n')
 }
 
+/** Posts or updates the AutoDocs PR comment. Deletes duplicate comments from prior runs. */
 export class GitHubOutput {
   constructor(
     private readonly octokit: Octokit,
     private readonly ctx: GitHubContext,
   ) {}
 
-  async postOrUpdate(updates: ProposedDocUpdate[]): Promise<void> {
+  async postOrUpdate(updates: readonly ProposedDocUpdate[]): Promise<void> {
     if (updates.length === 0) return
 
     const body = renderComment(updates)
     const existing = await this.findExistingComments()
 
     if (existing.length > 0) {
-      // Update the first match; delete any duplicates from prior runs
       await this.octokit.issues.updateComment({
         owner: this.ctx.owner,
         repo: this.ctx.repo,
@@ -74,7 +75,7 @@ export class GitHubOutput {
       owner: this.ctx.owner,
       repo: this.ctx.repo,
       issue_number: this.ctx.prNumber,
-      per_page: 100,
+      per_page: GITHUB.COMMENTS_PER_PAGE,
     })
     return comments.filter(c => c.body?.includes(COMMENT_MARKER))
   }

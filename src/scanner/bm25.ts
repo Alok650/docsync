@@ -1,13 +1,10 @@
+import { BM25 } from '../defaults.js'
 import type { DocSection } from './doc-scanner.js'
 
 export interface BM25Result {
-  section: DocSection
-  score: number
+  readonly section: DocSection
+  readonly score: number
 }
-
-const BM25_K1 = 1.5
-const BM25_B = 0.75
-const MIN_SCORE = 0.001
 
 function tokenize(text: string): string[] {
   return text
@@ -24,13 +21,13 @@ function termFrequencies(tokens: string[]): Map<string, number> {
 }
 
 export class BM25Matcher {
-  private readonly sections: DocSection[]
+  private readonly sections: readonly DocSection[]
   private readonly docTokens: string[][]
   private readonly docFreqs: Map<string, number>[]
   private readonly idf: Map<string, number>
   private readonly avgDocLen: number
 
-  constructor(sections: DocSection[]) {
+  constructor(sections: readonly DocSection[]) {
     this.sections = sections
     this.docTokens = sections.map(s => tokenize(s.heading + ' ' + s.body))
     this.docFreqs = this.docTokens.map(termFrequencies)
@@ -68,12 +65,12 @@ export class BM25Matcher {
         const tf = freq.get(term) ?? 0
         if (tf === 0) continue
         const idf = this.idf.get(term) ?? 0
-        const numerator = tf * (BM25_K1 + 1)
-        const denominator = tf + BM25_K1 * (1 - BM25_B + BM25_B * (docLen / this.avgDocLen))
+        const numerator = tf * (BM25.K1 + 1)
+        const denominator = tf + BM25.K1 * (1 - BM25.B + BM25.B * (docLen / this.avgDocLen))
         score += idf * (numerator / denominator)
       }
 
-      if (score > MIN_SCORE) {
+      if (score > BM25.CORPUS_MIN_SCORE) {
         results.push({ section: this.sections[i], score })
       }
     }

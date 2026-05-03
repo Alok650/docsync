@@ -20,11 +20,13 @@ const EXTENSION_LANGUAGE_MAP: Readonly<Record<string, Language>> = {
   '.py': LANGUAGE.PYTHON,
 }
 
+/** Returns the language for a given file path, or `null` for unsupported extensions. */
 export function resolveLanguage(filePath: string): Language | null {
   const ext = path.extname(filePath).toLowerCase()
   return EXTENSION_LANGUAGE_MAP[ext] ?? null
 }
 
+/** Dispatches an already-parsed AST to the appropriate language extractor. */
 export function parseSymbols(
   tree: Parser.Tree,
   filePath: string,
@@ -39,6 +41,10 @@ export function parseSymbols(
   }
 }
 
+/**
+ * Reads `filePath`, parses it with the WASM grammar, and returns all public symbols.
+ * Returns `[]` for unsupported file extensions — never throws for that case.
+ */
 export async function extractSymbols(filePath: string): Promise<ExtractedSymbol[]> {
   const language = resolveLanguage(filePath)
   if (!language) return []

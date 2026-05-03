@@ -3,6 +3,10 @@ import { scanDocs } from '../scanner/doc-scanner.js'
 import { BM25Matcher } from '../scanner/bm25.js'
 import type { MapFile, MapEntry, DocRef } from './types.js'
 
+/**
+ * Builds a fresh `MapFile` by scanning all `codeFiles` and matching symbols to
+ * doc sections via BM25. All existing mappings are replaced.
+ */
 export async function buildMap(codeFiles: string[], docsDir: string): Promise<MapFile> {
   const [allSections, allSymbols] = await Promise.all([
     scanDocs(docsDir),

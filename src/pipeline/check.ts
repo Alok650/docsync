@@ -8,19 +8,23 @@ import { TieredRetriever } from '../retrieval/index.js'
 import { DocUpdateAgent } from '../agent/doc-update-agent.js'
 import { scanDocs, extractSectionBody } from '../scanner/doc-scanner.js'
 import { toDocSection } from '../map/types.js'
-import type { MapFile } from '../map/types.js'
+import { readLookupForSymbols } from '../map/lookup.js'
+import { createLLMClient } from '../llm/factory.js'
 import type { SymbolChange } from '../differ/types.js'
 import type { GitHubContext, ProposedDocUpdate } from '../github/types.js'
 import type { AutoDocsConfig } from '../config.js'
 import type { RetrievalResult } from '../retrieval/types.js'
 
-const MAP_PATH = '.autodocs/map.json'
-
 export interface CheckResult {
-  updates: ProposedDocUpdate[]
-  skippedFiles: string[]
+  readonly updates: readonly ProposedDocUpdate[]
+  /** Files that were in the diff but could not be read (deleted, permission error, etc.). */
+  readonly skippedFiles: readonly string[]
 }
 
+/**
+ * Main pipeline entry point: diffs the PR against `baseRef`, retrieves relevant doc sections,
+ * calls the LLM agent for each changed symbol, and returns proposed updates.
+ */
 export async function runCheck(
   ctx: GitHubContext,
   config: AutoDocsConfig,
@@ -34,9 +38,9 @@ export async function runCheck(
 }
 
 interface CollectedChanges {
-  changes: SymbolChange[]
-  skippedFiles: string[]
-  beforeContents: Map<string, string>
+  readonly changes: readonly SymbolChange[]
+  readonly skippedFiles: readonly string[]
+  readonly beforeContents: Map<string, string>
 }
 
 async function collectChanges(repoDir: string, baseRef: string): Promise<CollectedChanges> {
@@ -68,28 +72,30 @@ async function collectChanges(repoDir: string, baseRef: string): Promise<Collect
 }
 
 async function generateUpdates(
-  changes: SymbolChange[],
+  changes: readonly SymbolChange[],
   beforeContents: Map<string, string>,
   repoDir: string,
   config: AutoDocsConfig,
 ): Promise<ProposedDocUpdate[]> {
-  const [mapFile, docSections] = await Promise.all([
-    readMapFile(repoDir),
+  const symbolNames = changes.map(c => c.symbol)
+  const [lookup, docSections] = await Promise.all([
+    readLookupForSymbols(repoDir, symbolNames),
     scanDocs(path.resolve(repoDir, config.docs)),
   ])
 
   const retriever = new TieredRetriever(
-    new StructuralRetriever(mapFile),
+    new StructuralRetriever(lookup),
     new BM25Retriever(docSections),
   )
   const retrievalResults = await retriever.retrieveAll(changes)
 
-  const agent = new DocUpdateAgent()
+  const client = createLLMClient(config)
+  const agent = new DocUpdateAgent(client, config.llm.model)
   return buildUpdates(retrievalResults, beforeContents, agent)
 }
 
 async function buildUpdates(
-  results: RetrievalResult[],
+  results: readonly RetrievalResult[],
   beforeContents: Map<string, string>,
   agent: DocUpdateAgent,
 ): Promise<ProposedDocUpdate[]> {
@@ -126,13 +132,4 @@ async function buildUpdates(
   }
 
   return updates
-}
-
-async function readMapFile(repoDir: string): Promise<MapFile> {
-  try {
-    const raw = await fs.readFile(path.join(repoDir, MAP_PATH), 'utf-8')
-    return JSON.parse(raw) as MapFile
-  } catch {
-    return { version: 1, mappings: [] }
-  }
 }
