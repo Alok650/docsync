@@ -20,7 +20,10 @@ const EXTENSION_LANGUAGE_MAP: Readonly<Record<string, Language>> = {
   '.py': LANGUAGE.PYTHON,
 }
 
-/** Returns the language for a given file path, or `null` for unsupported extensions. */
+/**
+ * Returns the language for a given file path, or `null` for unsupported extensions.
+ * Supported: TypeScript (.ts, .tsx), JavaScript (.js, .jsx, .mjs, .cjs), Python (.py).
+ */
 export function resolveLanguage(filePath: string): Language | null {
   const ext = path.extname(filePath).toLowerCase()
   return EXTENSION_LANGUAGE_MAP[ext] ?? null
