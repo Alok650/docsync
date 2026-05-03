@@ -3,7 +3,7 @@ import type { Octokit } from '@octokit/rest'
 import type { GitHubContext, ProposedDocUpdate } from './types.js'
 
 // Embedded in every comment body so we can reliably find and update it.
-const COMMENT_MARKER = '<!-- autodocs-check -->'
+const COMMENT_MARKER = '<!-- docsync-check -->'
 
 function renderComment(updates: readonly ProposedDocUpdate[]): string {
   const sections = updates.map(u => {
@@ -15,13 +15,13 @@ function renderComment(updates: readonly ProposedDocUpdate[]): string {
       diffLines,
       '```',
       '',
-      `To apply: comment \`/autodocs apply ${u.symbolName}\` — or dismiss with \`/autodocs dismiss\`.`,
+      `To apply: comment \`/docsync apply ${u.symbolName}\` — or dismiss with \`/docsync dismiss\`.`,
     ].join('\n')
   })
 
   return [
     COMMENT_MARKER,
-    '**AutoDocs** detected doc sections that may need updating.',
+    '**DocSync** detected doc sections that may need updating.',
     '',
     sections.join('\n\n---\n\n'),
   ].join('\n')
@@ -33,7 +33,7 @@ function renderDiff(before: string, after: string): string {
   return [...beforeLines, ...afterLines].join('\n')
 }
 
-/** Posts or updates the AutoDocs PR comment. Deletes duplicate comments from prior runs. */
+/** Posts or updates the DocSync PR comment. Deletes duplicate comments from prior runs. */
 export class GitHubOutput {
   constructor(
     private readonly octokit: Octokit,

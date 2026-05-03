@@ -16,13 +16,13 @@ export interface LLMConfig {
   readonly model: string
 }
 
-export interface AutoDocsConfig {
+export interface DocSyncConfig {
   readonly docs: string
   readonly code: string
   readonly llm: LLMConfig
 }
 
-const DEFAULTS: AutoDocsConfig = {
+const DEFAULTS: DocSyncConfig = {
   docs: 'docs',
   code: 'src',
   llm: {
@@ -35,7 +35,7 @@ const DEFAULTS: AutoDocsConfig = {
  * Loads config from `autodocs.config.json` in `cwd`, merging over built-in defaults.
  * Returns defaults silently if the file is absent; warns if it exists but is invalid JSON.
  */
-export async function loadConfig(cwd = process.cwd()): Promise<AutoDocsConfig> {
+export async function loadConfig(cwd = process.cwd()): Promise<DocSyncConfig> {
   let raw: string
   try {
     raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), 'utf-8')
@@ -44,7 +44,7 @@ export async function loadConfig(cwd = process.cwd()): Promise<AutoDocsConfig> {
   }
 
   try {
-    const parsed = JSON.parse(raw) as Partial<AutoDocsConfig>
+    const parsed = JSON.parse(raw) as Partial<DocSyncConfig>
     return {
       ...DEFAULTS,
       ...parsed,

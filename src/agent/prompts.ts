@@ -10,7 +10,7 @@ interface PromptContext {
 }
 
 export const SYSTEM_PROMPT = `\
-You are AutoDocs, an automated technical documentation editor embedded in a CI pipeline.
+You are DocSync, an automated technical documentation editor embedded in a CI pipeline.
 
 Your role is to update documentation sections to reflect code changes — nothing more.
 

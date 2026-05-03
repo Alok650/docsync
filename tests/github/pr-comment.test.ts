@@ -50,7 +50,7 @@ describe('GitHubOutput', () => {
   })
 
   it('updates the existing comment when marker is found', async () => {
-    const octokit = makeOctokit([{ id: 101, body: '<!-- autodocs-check -->\nold content' }])
+    const octokit = makeOctokit([{ id: 101, body: '<!-- docsync-check -->\nold content' }])
     await new GitHubOutput(octokit as never, CTX).postOrUpdate([UPDATE])
     expect(octokit.issues.updateComment).toHaveBeenCalledOnce()
     expect(octokit.issues.createComment).not.toHaveBeenCalled()
@@ -58,8 +58,8 @@ describe('GitHubOutput', () => {
 
   it('deletes duplicate comments keeping only the first', async () => {
     const octokit = makeOctokit([
-      { id: 101, body: '<!-- autodocs-check -->' },
-      { id: 102, body: '<!-- autodocs-check -->' },
+      { id: 101, body: '<!-- docsync-check -->' },
+      { id: 102, body: '<!-- docsync-check -->' },
     ])
     await new GitHubOutput(octokit as never, CTX).postOrUpdate([UPDATE])
     expect(octokit.issues.updateComment).toHaveBeenCalledOnce()
@@ -83,7 +83,7 @@ describe('GitHubOutput', () => {
       return Promise.resolve({})
     })
     await new GitHubOutput(octokit as never, CTX).postOrUpdate([UPDATE])
-    expect(capturedBody).toContain('<!-- autodocs-check -->')
+    expect(capturedBody).toContain('<!-- docsync-check -->')
     expect(capturedBody).toContain('## Login Flow')
     expect(capturedBody).toContain('- Accepts username and password.')
     expect(capturedBody).toContain('+ Accepts username, password, and optional MFA token.')

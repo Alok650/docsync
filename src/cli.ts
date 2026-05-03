@@ -18,7 +18,7 @@ import { logger } from './logger.js'
 const program = new Command()
 
 program
-  .name('autodocs')
+  .name('docsync')
   .description('Automatic documentation maintenance for codebases')
   .version('0.1.0')
 
@@ -45,7 +45,7 @@ program
 
 program
   .command('init')
-  .description('Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow')
+  .description('Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow file')
   .option('--docs <dir>', 'Path to docs directory', 'docs')
   .option('--code <dir>', 'Path to code directory', 'src')
   .option('--yes', 'Skip prompts and use defaults')
@@ -79,7 +79,7 @@ program
 
     const workflowPath = await generateWorkflow(cwd)
     logger.info(`Workflow written to ${path.relative(cwd, workflowPath)}`)
-    logger.info('Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate AutoDocs.')
+    logger.info('Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate DocSync.')
   })
 
 program
@@ -96,7 +96,7 @@ program
       process.exit(1)
     }
 
-    logger.info('Running AutoDocs check...')
+    logger.info('Running DocSync check...')
     const { updates, skippedFiles } = await runCheck(ctx, config, cwd)
 
     if (skippedFiles.length > 0) {

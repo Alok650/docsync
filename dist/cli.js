@@ -12459,7 +12459,7 @@ function createOctokit(ctx) {
 }
 
 // src/github/pr-comment.ts
-var COMMENT_MARKER = "<!-- autodocs-check -->";
+var COMMENT_MARKER = "<!-- docsync-check -->";
 function renderComment(updates) {
   const sections = updates.map((u3) => {
     const diffLines = renderDiff(u3.beforeBody, u3.afterBody);
@@ -12470,12 +12470,12 @@ function renderComment(updates) {
       diffLines,
       "```",
       "",
-      `To apply: comment \`/autodocs apply ${u3.symbolName}\` \u2014 or dismiss with \`/autodocs dismiss\`.`
+      `To apply: comment \`/docsync apply ${u3.symbolName}\` \u2014 or dismiss with \`/docsync dismiss\`.`
     ].join("\n");
   });
   return [
     COMMENT_MARKER,
-    "**AutoDocs** detected doc sections that may need updating.",
+    "**DocSync** detected doc sections that may need updating.",
     "",
     sections.join("\n\n---\n\n")
   ].join("\n");
@@ -12728,7 +12728,7 @@ var TieredRetriever = class {
 };
 
 // src/agent/prompts.ts
-var SYSTEM_PROMPT = `You are AutoDocs, an automated technical documentation editor embedded in a CI pipeline.
+var SYSTEM_PROMPT = `You are DocSync, an automated technical documentation editor embedded in a CI pipeline.
 
 Your role is to update documentation sections to reflect code changes \u2014 nothing more.
 
@@ -13915,7 +13915,7 @@ var consola = createConsola2();
 
 // src/logger.ts
 var logger = createConsola2({
-  level: process.env.AUTODOCS_DEBUG ? 4 : 3
+  level: process.env.DOCSYNC_DEBUG ? 4 : 3
   // 4 = debug, 3 = info
 });
 
@@ -27482,7 +27482,7 @@ async function buildUpdates(results, beforeContents, agent) {
 
 // src/cli.ts
 var program2 = new Command();
-program2.name("autodocs").description("Automatic documentation maintenance for codebases").version("0.1.0");
+program2.name("docsync").description("Automatic documentation maintenance for codebases").version("0.1.0");
 program2.command("symbols <file>").description("Extract public symbols from a source file").action(async (file) => {
   const filePath = path11.resolve(file);
   let symbols;
@@ -27501,7 +27501,7 @@ program2.command("symbols <file>").description("Extract public symbols from a so
 `);
   }
 });
-program2.command("init").description("Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow").option("--docs <dir>", "Path to docs directory", "docs").option("--code <dir>", "Path to code directory", "src").option("--yes", "Skip prompts and use defaults").action(async (opts) => {
+program2.command("init").description("Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow file").option("--docs <dir>", "Path to docs directory", "docs").option("--code <dir>", "Path to code directory", "src").option("--yes", "Skip prompts and use defaults").action(async (opts) => {
   const cwd = process.cwd();
   let docsDir = path11.resolve(cwd, opts.docs);
   let codeDir = path11.resolve(cwd, opts.code);
@@ -27524,7 +27524,7 @@ program2.command("init").description("Scan codebase and docs, write .autodocs/ma
   logger.info(`Map written to ${MAP_RELATIVE_PATH}`);
   const workflowPath = await generateWorkflow(cwd);
   logger.info(`Workflow written to ${path11.relative(cwd, workflowPath)}`);
-  logger.info("Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate AutoDocs.");
+  logger.info("Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate DocSync.");
 });
 program2.command("check").description("Check changed symbols against docs and post PR comment").option("--dry-run", "Print proposed updates without posting to GitHub").action(async (opts) => {
   const cwd = process.cwd();
@@ -27534,7 +27534,7 @@ program2.command("check").description("Check changed symbols against docs and po
     logger.error("Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.");
     process.exit(1);
   }
-  logger.info("Running AutoDocs check...");
+  logger.info("Running DocSync check...");
   const { updates, skippedFiles } = await runCheck(ctx, config, cwd);
   if (skippedFiles.length > 0) {
     logger.warn(`Skipped ${skippedFiles.length} deleted or unreadable file(s).`);

@@ -12,7 +12,7 @@ import { readLookupForSymbols } from '../map/lookup.js'
 import { createLLMClient } from '../llm/factory.js'
 import type { SymbolChange } from '../differ/types.js'
 import type { GitHubContext, ProposedDocUpdate } from '../github/types.js'
-import type { AutoDocsConfig } from '../config.js'
+import type { DocSyncConfig } from '../config.js'
 import type { RetrievalResult } from '../retrieval/types.js'
 
 export interface CheckResult {
@@ -27,7 +27,7 @@ export interface CheckResult {
  */
 export async function runCheck(
   ctx: GitHubContext,
-  config: AutoDocsConfig,
+  config: DocSyncConfig,
   repoDir = process.cwd(),
 ): Promise<CheckResult> {
   const { changes, skippedFiles, beforeContents } = await collectChanges(repoDir, ctx.baseRef)
@@ -75,7 +75,7 @@ async function generateUpdates(
   changes: readonly SymbolChange[],
   beforeContents: Map<string, string>,
   repoDir: string,
-  config: AutoDocsConfig,
+  config: DocSyncConfig,
 ): Promise<ProposedDocUpdate[]> {
   const symbolNames = changes.map(c => c.symbol)
   const [lookup, docSections] = await Promise.all([

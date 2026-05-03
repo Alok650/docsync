@@ -5520,7 +5520,7 @@ var TieredRetriever = class {
 };
 
 // src/agent/prompts.ts
-var SYSTEM_PROMPT = `You are AutoDocs, an automated technical documentation editor embedded in a CI pipeline.
+var SYSTEM_PROMPT = `You are DocSync, an automated technical documentation editor embedded in a CI pipeline.
 
 Your role is to update documentation sections to reflect code changes \u2014 nothing more.
 
@@ -16745,7 +16745,7 @@ var consola = createConsola2();
 
 // src/logger.ts
 var logger = createConsola2({
-  level: process.env.AUTODOCS_DEBUG ? 4 : 3
+  level: process.env.DOCSYNC_DEBUG ? 4 : 3
   // 4 = debug, 3 = info
 });
 
@@ -33985,7 +33985,7 @@ function createOctokit(ctx) {
 }
 
 // src/github/pr-comment.ts
-var COMMENT_MARKER = "<!-- autodocs-check -->";
+var COMMENT_MARKER = "<!-- docsync-check -->";
 function renderComment(updates) {
   const sections = updates.map((u3) => {
     const diffLines = renderDiff(u3.beforeBody, u3.afterBody);
@@ -33996,12 +33996,12 @@ function renderComment(updates) {
       diffLines,
       "```",
       "",
-      `To apply: comment \`/autodocs apply ${u3.symbolName}\` \u2014 or dismiss with \`/autodocs dismiss\`.`
+      `To apply: comment \`/docsync apply ${u3.symbolName}\` \u2014 or dismiss with \`/docsync dismiss\`.`
     ].join("\n");
   });
   return [
     COMMENT_MARKER,
-    "**AutoDocs** detected doc sections that may need updating.",
+    "**DocSync** detected doc sections that may need updating.",
     "",
     sections.join("\n\n---\n\n")
   ].join("\n");

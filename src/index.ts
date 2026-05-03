@@ -25,7 +25,7 @@ export type { DocUpdateRequest } from './agent/doc-update-agent.js'
 export { MarkdownEditor } from './editor/markdown-editor.js'
 
 export { loadConfig, LLM_PROVIDER } from './config.js'
-export type { AutoDocsConfig, LLMProvider, LLMConfig } from './config.js'
+export type { DocSyncConfig, LLMProvider, LLMConfig } from './config.js'
 
 export { BM25, AI, GIT, GITHUB, LOOKUP, CLI } from './defaults.js'
 
