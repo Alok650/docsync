@@ -7,6 +7,7 @@ const require = createRequire(import.meta.url)
 function copyWasm() {
   mkdirSync('dist', { recursive: true })
   const files = [
+    ['web-tree-sitter/web-tree-sitter.wasm',               'web-tree-sitter.wasm'],
     ['tree-sitter-typescript/tree-sitter-typescript.wasm', 'tree-sitter-typescript.wasm'],
     ['tree-sitter-javascript/tree-sitter-javascript.wasm', 'tree-sitter-javascript.wasm'],
     ['tree-sitter-python/tree-sitter-python.wasm',         'tree-sitter-python.wasm'],
@@ -30,7 +31,6 @@ export default defineConfig({
   // WASM files are copied into dist/ via onSuccess and referenced by import.meta.url.
   noExternal: [/.*/],
   external: [
-    'web-tree-sitter',
     'tree-sitter-typescript',
     'tree-sitter-javascript',
     'tree-sitter-python',
