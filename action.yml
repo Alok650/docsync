@@ -1,5 +1,5 @@
-name: AutoDocs
-description: Proposes documentation updates when code changes on a pull request
+name: DocSync
+description: Keeps your documentation in sync with your code — LLM-powered doc updates on every PR
 author: Alok650
 
 inputs:
