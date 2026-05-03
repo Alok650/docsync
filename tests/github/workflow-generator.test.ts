@@ -19,7 +19,7 @@ describe('generateWorkflow', () => {
     const outPath = await generateWorkflow(tmpDir)
     const stat = await fs.stat(outPath)
     expect(stat.isFile()).toBe(true)
-    expect(outPath).toContain('.github/workflows/autodocs.yml')
+    expect(outPath).toContain('.github/workflows/docsync.yml')
   })
 
   it('generates valid YAML with required keys', async () => {
@@ -30,14 +30,13 @@ describe('generateWorkflow', () => {
     expect(content).toContain('actions/checkout@v4')
     expect(content).toContain('fetch-depth: 0')
     expect(content).toContain('ANTHROPIC_API_KEY')
-    expect(content).toContain('GITHUB_TOKEN')
-    expect(content).toContain('PR_NUMBER')
+    expect(content).toContain('Alok650/docsync@v1')
   })
 
   it('creates intermediate directories if they do not exist', async () => {
     const nested = path.join(tmpDir, 'deep', 'repo')
     await generateWorkflow(nested)
-    const workflowPath = path.join(nested, '.github/workflows/autodocs.yml')
+    const workflowPath = path.join(nested, '.github/workflows/docsync.yml')
     const stat = await fs.stat(workflowPath)
     expect(stat.isFile()).toBe(true)
   })

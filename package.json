@@ -1,14 +1,16 @@
 {
-  "name": "autodocs",
+  "name": "docsync",
   "version": "0.1.0",
-  "description": "Automatic documentation maintenance for codebases",
+  "description": "Keeps your documentation in sync with your code — LLM-powered doc updates on every PR",
   "type": "module",
   "bin": {
+    "docsync": "./dist/cli.js",
     "autodocs": "./dist/cli.js"
   },
   "main": "./dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "action.yml"
   ],
   "scripts": {
     "build": "tsup",
@@ -21,7 +23,15 @@
   },
   "packageManager": "pnpm@10.33.2",
   "keywords": ["documentation", "docs", "llm", "ai", "github-actions", "typescript", "python"],
-  "author": "",
+  "author": "Alok650",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alok650/docsync.git"
+  },
+  "homepage": "https://github.com/Alok650/docsync#readme",
+  "bugs": {
+    "url": "https://github.com/Alok650/docsync/issues"
+  },
   "license": "ISC",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",

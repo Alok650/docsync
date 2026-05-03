@@ -19,19 +19,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: Alok650/docsync@v1
         with:
-          node-version: '20'
-          cache: 'pnpm'
-      - run: npm install -g pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm exec autodocs check
-        env:
-          ANTHROPIC_API_KEY: \${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
-          GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: \${{ github.event.pull_request.number }}
-          GITHUB_BASE_REF: \${{ github.event.pull_request.base.ref }}
+          anthropic-api-key: \${{ secrets.ANTHROPIC_API_KEY }}
+          openai-api-key: \${{ secrets.OPENAI_API_KEY }}
 `
 }
 

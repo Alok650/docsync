@@ -10,6 +10,6 @@ export const MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`
 export const LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`
 
 export const WORKFLOW_DIR = '.github/workflows'
-export const WORKFLOW_FILENAME = 'autodocs.yml'
+export const WORKFLOW_FILENAME = 'docsync.yml'
 
-export const CONFIG_FILENAME = 'autodocs.config.json'
+export const CONFIG_FILENAME = 'docsync.config.json'
