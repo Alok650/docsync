@@ -36,9 +36,9 @@ export default defineConfig({
     'tree-sitter-python',
   ],
   // CJS deps (e.g. commander) call require() for Node built-ins inside the ESM bundle.
-  // Inject a real require so those calls resolve instead of throwing.
+  // Alias avoids colliding with tsup's own `import { createRequire }` emitted for loader.ts.
   banner: {
-    js: `import { createRequire } from 'module'; const require = createRequire(import.meta.url);`,
+    js: `import { createRequire as __createRequire } from 'module'; const require = __createRequire(import.meta.url);`,
   },
   onSuccess: copyWasm,
 })
