@@ -1,0 +1,176 @@
+{
+  "parse_position": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        55,
+        57
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/cn_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        12,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/us_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        12,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        58,
+        62
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/cn_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        15,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/us_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        15,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        14,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    }
+  ],
+  "DataLoader": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Background",
+      "lines": [
+        5,
+        11
+      ]
+    }
+  ],
+  "epsilon_change": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Common Issues",
+      "lines": [
+        89,
+        94
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "## Motivation and Context",
+      "lines": [
+        19,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/README.md",
+      "section": "# Introduction",
+      "lines": [
+        1,
+        6
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Background",
+      "lines": [
+        5,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## [Adapting to Market Dynamics](examples/benchmarks_dynamic)",
+      "lines": [
+        487,
+        495
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "# Collect Data From Yahoo Finance",
+      "lines": [
+        9,
+        21
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Background",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    }
+  ]
+}

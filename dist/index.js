@@ -974,13 +974,13 @@ var GitHubOutput = class {
 import fs8 from "fs/promises";
 import path7 from "path";
 function generateWorkflowContent() {
-  return `name: AutoDocs
+  return `name: DocSync
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  autodocs:
+  docsync:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write

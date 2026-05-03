@@ -5,13 +5,13 @@ import { WORKFLOW_DIR, WORKFLOW_FILENAME } from '../constants.js'
 // Pinned action versions follow GitHub's own starter-workflow conventions.
 // fetch-depth: 0 is required so git diff can reach the base branch.
 function generateWorkflowContent(): string {
-  return `name: AutoDocs
+  return `name: DocSync
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  autodocs:
+  docsync:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write

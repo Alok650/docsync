@@ -1,0 +1,92 @@
+{
+  "ADD": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "## Custom Data Collection",
+      "lines": [
+        14,
+        41
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Additional Notes",
+      "lines": [
+        39,
+        42
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/feature-request.md",
+      "section": "## Additional Notes",
+      "lines": [
+        23,
+        25
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ADD/README.md",
+      "section": "# ADD",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "## Types of changes",
+      "lines": [
+        34,
+        39
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [Quant Model (Paper) Zoo](examples/benchmarks)",
+      "lines": [
+        426,
+        456
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "### Alpha360 dataset",
+      "lines": [
+        48,
+        89
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

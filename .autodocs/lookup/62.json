@@ -1,0 +1,36 @@
+{
+  "SYSTEM_PROMPT": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Key files for contributors",
+      "lines": [
+        421,
+        431
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/tests/fixtures/docs/authentication.md",
+      "section": "# Authentication",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        110,
+        120
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### Dependencies",
+      "lines": [
+        212,
+        226
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "datetime_groupby_apply": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# FAQ",
+      "lines": [
+        145,
+        150
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "## Initiative",
+      "lines": [
+        3,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

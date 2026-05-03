@@ -1,6 +1,5 @@
 node_modules/
 *.js.map
-.autodocs/
 *.tgz
 .DS_Store
 docs/

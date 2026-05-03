@@ -1,0 +1,3500 @@
+{
+  "version": 1,
+  "mappings": [
+    {
+      "symbol": "DocUpdateRequest",
+      "file": "/Users/alokprasad/autodocs/src/agent/doc-update-agent.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocUpdateAgent",
+      "file": "/Users/alokprasad/autodocs/src/agent/doc-update-agent.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SYSTEM_PROMPT",
+      "file": "/Users/alokprasad/autodocs/src/agent/prompts.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Key files for contributors",
+          "lines": [
+            421,
+            431
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/tests/fixtures/docs/authentication.md",
+          "section": "# Authentication",
+          "lines": [
+            1,
+            4
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "buildUserPrompt",
+      "file": "/Users/alokprasad/autodocs/src/agent/prompts.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLM_PROVIDER",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding an LLM provider",
+          "lines": [
+            441,
+            448
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Key files for contributors",
+          "lines": [
+            421,
+            431
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "# docsync",
+          "lines": [
+            1,
+            6
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync check`",
+          "lines": [
+            280,
+            299
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Configuration",
+          "lines": [
+            246,
+            264
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LLMProvider",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "AutoDocsConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "loadConfig",
+      "file": "/Users/alokprasad/autodocs/src/config.ts",
+      "docs": []
+    },
+    {
+      "symbol": "AUTODOCS_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 2 — Map Building (`autodocs init`)",
+          "lines": [
+            31,
+            34
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### One-time setup (~2 minutes)",
+          "lines": [
+            269,
+            286
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Every PR after setup",
+          "lines": [
+            294,
+            299
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Output",
+          "lines": [
+            18,
+            20
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Generated workflow",
+          "lines": [
+            166,
+            184
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Comment format",
+          "lines": [
+            137,
+            150
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "# AutoDocs — Milestones",
+          "lines": [
+            1,
+            6
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Index files",
+          "lines": [
+            350,
+            353
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            62,
+            66
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            151,
+            155
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "# AutoDocs — Product Requirements Document",
+          "lines": [
+            1,
+            8
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+          "lines": [
+            156,
+            159
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            185,
+            189
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 3 — Inspect what was indexed",
+          "lines": [
+            157,
+            169
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.6 Map Maintenance",
+          "lines": [
+            113,
+            118
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.2 Change Detection — `autodocs check`",
+          "lines": [
+            76,
+            82
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 4. User Personas",
+          "lines": [
+            42,
+            54
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 14. Open Questions",
+          "lines": [
+            351,
+            361
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 1. Problem Statement",
+          "lines": [
+            9,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "MAP_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.6 Map Maintenance",
+          "lines": [
+            113,
+            118
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+          "lines": [
+            156,
+            159
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 2 — Map Building (`autodocs init`)",
+          "lines": [
+            31,
+            34
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            62,
+            66
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### map.json shape",
+          "lines": [
+            42,
+            61
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 3 — Inspect what was indexed",
+          "lines": [
+            157,
+            169
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Summary",
+          "lines": [
+            190,
+            203
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### One-time setup (~2 minutes)",
+          "lines": [
+            269,
+            286
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 3. Open a pull request",
+          "lines": [
+            68,
+            83
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `map.json`",
+          "lines": [
+            354,
+            373
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 11. Success Metrics",
+          "lines": [
+            315,
+            326
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 14. Open Questions",
+          "lines": [
+            351,
+            361
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 12. Research Foundation",
+          "lines": [
+            327,
+            338
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "MAP_RELATIVE_PATH",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `map.json`",
+          "lines": [
+            354,
+            373
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Configuration",
+          "lines": [
+            246,
+            264
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 14. Open Questions",
+          "lines": [
+            351,
+            361
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 12. Research Foundation",
+          "lines": [
+            327,
+            338
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.6 Map Maintenance",
+          "lines": [
+            113,
+            118
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+          "lines": [
+            156,
+            159
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 2 — Map Building (`autodocs init`)",
+          "lines": [
+            31,
+            34
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            62,
+            66
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### map.json shape",
+          "lines": [
+            42,
+            61
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 3 — Inspect what was indexed",
+          "lines": [
+            157,
+            169
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Summary",
+          "lines": [
+            190,
+            203
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### One-time setup (~2 minutes)",
+          "lines": [
+            269,
+            286
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 3. Open a pull request",
+          "lines": [
+            68,
+            83
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 11. Success Metrics",
+          "lines": [
+            315,
+            326
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LOOKUP_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `lookup/<shard>.json`",
+          "lines": [
+            374,
+            388
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "WORKFLOW_DIR",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## GitHub Actions workflow",
+          "lines": [
+            310,
+            349
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Generated workflow",
+          "lines": [
+            166,
+            184
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 2. Goals",
+          "lines": [
+            23,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "WORKFLOW_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## GitHub Actions workflow",
+          "lines": [
+            310,
+            349
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Generated workflow",
+          "lines": [
+            166,
+            184
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 2. Goals",
+          "lines": [
+            23,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "CONFIG_FILENAME",
+      "file": "/Users/alokprasad/autodocs/src/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding an LLM provider",
+          "lines": [
+            441,
+            448
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 13. Out of Scope (v1)",
+          "lines": [
+            339,
+            350
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 2. Goals",
+          "lines": [
+            23,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Configuration",
+          "lines": [
+            246,
+            264
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 4. User Personas",
+          "lines": [
+            42,
+            54
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 14. Open Questions",
+          "lines": [
+            351,
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "BM25",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 12. Research Foundation",
+          "lines": [
+            327,
+            338
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Key files for contributors",
+          "lines": [
+            421,
+            431
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 14. Open Questions",
+          "lines": [
+            351,
+            361
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "AI",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GIT",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Error Handling",
+          "lines": [
+            122,
+            133
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 4 — Simulate a code change",
+          "lines": [
+            170,
+            195
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.2 Change Detection — `autodocs check`",
+          "lines": [
+            76,
+            82
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 3 — Git Diff + AST-Level Change Detection",
+          "lines": [
+            67,
+            70
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Development setup",
+          "lines": [
+            411,
+            420
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Output",
+          "lines": [
+            76,
+            85
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## GitHub Actions workflow",
+          "lines": [
+            310,
+            349
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 1 — Create a sample project",
+          "lines": [
+            88,
+            114
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            71,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# private — must NOT appear in output",
+          "lines": [
+            328,
+            400
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GITHUB",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync check`",
+          "lines": [
+            280,
+            299
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            160,
+            165
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Generated workflow",
+          "lines": [
+            166,
+            184
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 5 — Run a dry-run check locally",
+          "lines": [
+            196,
+            229
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### One-time setup (~2 minutes)",
+          "lines": [
+            269,
+            286
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+          "lines": [
+            156,
+            159
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Zero changes required to",
+          "lines": [
+            287,
+            293
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Development setup",
+          "lines": [
+            411,
+            420
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Prerequisites",
+          "lines": [
+            32,
+            39
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 2. Add your API key to GitHub secrets",
+          "lines": [
+            61,
+            67
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Summary",
+          "lines": [
+            190,
+            203
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## GitHub Actions workflow",
+          "lines": [
+            310,
+            349
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LOOKUP",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `lookup/<shard>.json`",
+          "lines": [
+            374,
+            388
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "CLI",
+      "file": "/Users/alokprasad/autodocs/src/defaults.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## M1 Done When",
+          "lines": [
+            858,
+            864
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "diffSymbols",
+      "file": "/Users/alokprasad/autodocs/src/differ/ast-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "parseGitDiff",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "getGitDiff",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "getBeforeContent",
+      "file": "/Users/alokprasad/autodocs/src/differ/git-differ.ts",
+      "docs": []
+    },
+    {
+      "symbol": "ChangeType",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "SymbolChange",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "ChangedFile",
+      "file": "/Users/alokprasad/autodocs/src/differ/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MarkdownEditor",
+      "file": "/Users/alokprasad/autodocs/src/editor/markdown-editor.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            121,
+            125
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "LANGUAGE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.7 Language Support (v1)",
+          "lines": [
+            119,
+            122
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            11,
+            17
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "Language",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.7 Language Support (v1)",
+          "lines": [
+            119,
+            122
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            11,
+            17
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Dependencies",
+          "lines": [
+            212,
+            226
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SYMBOL_KIND",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            71,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 5 — Doc Update Agent (Claude API)",
+          "lines": [
+            106,
+            109
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 1 — Project Scaffold + Symbol Extraction",
+          "lines": [
+            7,
+            10
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.6 Map Maintenance",
+          "lines": [
+            113,
+            118
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "# docsync",
+          "lines": [
+            1,
+            6
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.4 Doc Update Generation",
+          "lines": [
+            101,
+            107
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `map.json`",
+          "lines": [
+            354,
+            373
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Summary",
+          "lines": [
+            190,
+            203
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 12. Research Foundation",
+          "lines": [
+            327,
+            338
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SymbolKind",
+      "file": "/Users/alokprasad/autodocs/src/extractor/constants.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "resolveLanguage",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": []
+    },
+    {
+      "symbol": "parseSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/index.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "TS_NODE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/node-types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## M1 Done When",
+          "lines": [
+            858,
+            864
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding an LLM provider",
+          "lines": [
+            441,
+            448
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Key files for contributors",
+          "lines": [
+            421,
+            431
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Prerequisites",
+          "lines": [
+            32,
+            39
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Output",
+          "lines": [
+            18,
+            20
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 4 — Simulate a code change",
+          "lines": [
+            170,
+            195
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync symbols <file>`",
+          "lines": [
+            300,
+            309
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 3 — Inspect what was indexed",
+          "lines": [
+            157,
+            169
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 1 — Create a sample project",
+          "lines": [
+            88,
+            114
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 4: Fixture Files",
+          "lines": [
+            270,
+            327
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "PY_NODE",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/node-types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## M1 Done When",
+          "lines": [
+            858,
+            864
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 4: Fixture Files",
+          "lines": [
+            270,
+            327
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Prerequisites",
+          "lines": [
+            32,
+            39
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## File Structure",
+          "lines": [
+            13,
+            40
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 3: WASM Loader",
+          "lines": [
+            200,
+            269
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 7: CLI Command",
+          "lines": [
+            786,
+            857
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 1: Project Scaffold",
+          "lines": [
+            41,
+            162
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractPythonSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/python.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractTypeScriptSymbols",
+      "file": "/Users/alokprasad/autodocs/src/extractor/languages/typescript.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getParser",
+      "file": "/Users/alokprasad/autodocs/src/extractor/loader.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 5: TypeScript Extractor",
+          "lines": [
+            401,
+            630
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "ExtractedSymbol",
+      "file": "/Users/alokprasad/autodocs/src/extractor/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 2: Types",
+          "lines": [
+            163,
+            199
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "createOctokit",
+      "file": "/Users/alokprasad/autodocs/src/github/client.ts",
+      "docs": []
+    },
+    {
+      "symbol": "readGitHubContext",
+      "file": "/Users/alokprasad/autodocs/src/github/context.ts",
+      "docs": []
+    },
+    {
+      "symbol": "GitHubOutput",
+      "file": "/Users/alokprasad/autodocs/src/github/pr-comment.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GitHubContext",
+      "file": "/Users/alokprasad/autodocs/src/github/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "ProposedDocUpdate",
+      "file": "/Users/alokprasad/autodocs/src/github/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "generateWorkflow",
+      "file": "/Users/alokprasad/autodocs/src/github/workflow-generator.ts",
+      "docs": []
+    },
+    {
+      "symbol": "AnthropicClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/anthropic.ts",
+      "docs": []
+    },
+    {
+      "symbol": "createLLMClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/factory.ts",
+      "docs": []
+    },
+    {
+      "symbol": "OpenAIClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/openai.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMMessage",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMCompletionOptions",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LLMClient",
+      "file": "/Users/alokprasad/autodocs/src/llm/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding an LLM provider",
+          "lines": [
+            441,
+            448
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Key files for contributors",
+          "lines": [
+            421,
+            431
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "logger",
+      "file": "/Users/alokprasad/autodocs/src/logger.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildMap",
+      "file": "/Users/alokprasad/autodocs/src/map/builder.ts",
+      "docs": []
+    },
+    {
+      "symbol": "symbolShard",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "computeFingerprint",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildShards",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "buildLookup",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "readLookupForSymbols",
+      "file": "/Users/alokprasad/autodocs/src/map/lookup.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocRef",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MapEntry",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "MapFile",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "LookupTable",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "toDocSection",
+      "file": "/Users/alokprasad/autodocs/src/map/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "updateMapForChangedFiles",
+      "file": "/Users/alokprasad/autodocs/src/map/updater.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `map.json`",
+          "lines": [
+            354,
+            373
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "writeMapFile",
+      "file": "/Users/alokprasad/autodocs/src/map/writer.ts",
+      "docs": []
+    },
+    {
+      "symbol": "CheckResult",
+      "file": "/Users/alokprasad/autodocs/src/pipeline/check.ts",
+      "docs": []
+    },
+    {
+      "symbol": "runCheck",
+      "file": "/Users/alokprasad/autodocs/src/pipeline/check.ts",
+      "docs": []
+    },
+    {
+      "symbol": "BM25Retriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/bm25-retriever.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "TieredRetriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/index.ts",
+      "docs": []
+    },
+    {
+      "symbol": "StructuralRetriever",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/structural.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "RetrievalResult",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/types.ts",
+      "docs": []
+    },
+    {
+      "symbol": "RetrievalAdapter",
+      "file": "/Users/alokprasad/autodocs/src/retrieval/types.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "BM25Result",
+      "file": "/Users/alokprasad/autodocs/src/scanner/bm25.ts",
+      "docs": []
+    },
+    {
+      "symbol": "BM25Matcher",
+      "file": "/Users/alokprasad/autodocs/src/scanner/bm25.ts",
+      "docs": []
+    },
+    {
+      "symbol": "DocSection",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "extractSectionBody",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": []
+    },
+    {
+      "symbol": "scanDocs",
+      "file": "/Users/alokprasad/autodocs/src/scanner/doc-scanner.ts",
+      "docs": []
+    },
+    {
+      "symbol": "CODE_EXTENSIONS",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.4 Doc Update Generation",
+          "lines": [
+            101,
+            107
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 3. Non-Goals (v1)",
+          "lines": [
+            31,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/tests/fixtures/docs/unrelated.md",
+          "section": "## CI Pipeline",
+          "lines": [
+            3,
+            6
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync init`",
+          "lines": [
+            267,
+            279
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+          "lines": [
+            156,
+            159
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Zero changes required to",
+          "lines": [
+            287,
+            293
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            121,
+            125
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 1 — Project Scaffold + Symbol Extraction",
+          "lines": [
+            7,
+            10
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync symbols <file>`",
+          "lines": [
+            300,
+            309
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            185,
+            189
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.5 Output Modes",
+          "lines": [
+            108,
+            112
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 13. Out of Scope (v1)",
+          "lines": [
+            339,
+            350
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "# docsync",
+          "lines": [
+            1,
+            6
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 12. Research Foundation",
+          "lines": [
+            327,
+            338
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 2. Goals",
+          "lines": [
+            23,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 4 — Simulate a code change",
+          "lines": [
+            170,
+            195
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Configuration",
+          "lines": [
+            246,
+            264
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            130,
+            136
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 11. Success Metrics",
+          "lines": [
+            315,
+            326
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 4. User Personas",
+          "lines": [
+            42,
+            54
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 1. Problem Statement",
+          "lines": [
+            9,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "# M1: Symbol Extraction Implementation Plan",
+          "lines": [
+            1,
+            12
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 8. Configuration — `autodocs.config.json`",
+          "lines": [
+            227,
+            266
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+          "section": "## Task 6: Python Extractor",
+          "lines": [
+            631,
+            785
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "DOC_EXTENSIONS",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": [
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Adding a language",
+          "lines": [
+            432,
+            440
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 5 — Doc Update Agent (Claude API)",
+          "lines": [
+            106,
+            109
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.4 Doc Update Generation",
+          "lines": [
+            101,
+            107
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 3. Non-Goals (v1)",
+          "lines": [
+            31,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            35,
+            41
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 11. Success Metrics",
+          "lines": [
+            315,
+            326
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.8 Doc Format Support (v1)",
+          "lines": [
+            123,
+            128
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.2 Change Detection — `autodocs check`",
+          "lines": [
+            76,
+            82
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 4 — Retrieval (Tier 1 + Tier 2)",
+          "lines": [
+            91,
+            94
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            101,
+            105
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 6 — Output: PR Comment",
+          "lines": [
+            126,
+            129
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Zero changes required to",
+          "lines": [
+            287,
+            293
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            121,
+            125
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Milestone 2 — Map Building (`autodocs init`)",
+          "lines": [
+            31,
+            34
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            95,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Done when",
+          "lines": [
+            185,
+            189
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.5 Output Modes",
+          "lines": [
+            108,
+            112
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Tasks",
+          "lines": [
+            110,
+            120
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 5. Solution Overview",
+          "lines": [
+            55,
+            64
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 1. Problem Statement",
+          "lines": [
+            9,
+            22
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 7. Technical Architecture",
+          "lines": [
+            129,
+            173
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "### Comment format",
+          "lines": [
+            137,
+            150
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## Debugging",
+          "lines": [
+            389,
+            408
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 15. Appendix — File Structure After Init",
+          "lines": [
+            362,
+            377
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 2. Goals",
+          "lines": [
+            23,
+            30
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 3. Open a pull request",
+          "lines": [
+            68,
+            83
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### 1. Run init in your repo",
+          "lines": [
+            42,
+            60
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.3 Three-Tier Retrieval",
+          "lines": [
+            83,
+            100
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### 6.1 Initialisation — `autodocs init`",
+          "lines": [
+            67,
+            75
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "## How it works",
+          "lines": [
+            7,
+            31
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### Step 2 — Initialize docsync",
+          "lines": [
+            134,
+            156
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 10. Non-Functional Requirements",
+          "lines": [
+            300,
+            314
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+          "section": "## Summary",
+          "lines": [
+            190,
+            203
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "## 4. User Personas",
+          "lines": [
+            42,
+            54
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/PRD.md",
+          "section": "### Adapter Interfaces",
+          "lines": [
+            174,
+            211
+          ]
+        },
+        {
+          "file": "/Users/alokprasad/autodocs/README.md",
+          "section": "### `docsync check`",
+          "lines": [
+            280,
+            299
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "findCodeFiles",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": []
+    },
+    {
+      "symbol": "findDocFiles",
+      "file": "/Users/alokprasad/autodocs/src/scanner/file-finder.ts",
+      "docs": []
+    }
+  ]
+}

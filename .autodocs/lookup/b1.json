@@ -1,0 +1,20 @@
+{
+  "LLMClient": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Adding an LLM provider",
+      "lines": [
+        441,
+        448
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Key files for contributors",
+      "lines": [
+        421,
+        431
+      ]
+    }
+  ]
+}

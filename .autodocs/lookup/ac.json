@@ -1,0 +1,838 @@
+{
+  "run": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# or run it for multiple times automatically and get the summarized results.",
+      "lines": [
+        106,
+        110
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "## Run the Workflow",
+      "lines": [
+        7,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        12,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Run the Code",
+      "lines": [
+        28,
+        34
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Query Examples",
+      "lines": [
+        40,
+        48
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        5,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Run the Code",
+      "lines": [
+        16,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# you can either run the model once",
+      "lines": [
+        103,
+        105
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/README.md",
+      "section": "# Requirements",
+      "lines": [
+        1,
+        7
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "### Notes",
+      "lines": [
+        10,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/pit/README.md",
+      "section": "# download from baostock.com",
+      "lines": [
+        18,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Backtest",
+      "lines": [
+        51,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Requirements",
+      "lines": [
+        30,
+        36
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Generate Pickle-Style Data",
+      "lines": [
+        13,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Environment",
+      "lines": [
+        29,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### About Reinitialization",
+      "lines": [
+        22,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Installation",
+      "lines": [
+        12,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install from source",
+      "lines": [
+        191,
+        210
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Quick Start",
+      "lines": [
+        158,
+        166
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Framework of Qlib",
+      "lines": [
+        143,
+        157
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# or run it for multiple times automatically and get the summarized results.",
+      "lines": [
+        106,
+        110
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "## Run the Workflow",
+      "lines": [
+        7,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        12,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Run the Code",
+      "lines": [
+        28,
+        34
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Query Examples",
+      "lines": [
+        40,
+        48
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        5,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Run the Code",
+      "lines": [
+        16,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# you can either run the model once",
+      "lines": [
+        103,
+        105
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/README.md",
+      "section": "# Requirements",
+      "lines": [
+        1,
+        7
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "### Notes",
+      "lines": [
+        10,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/pit/README.md",
+      "section": "# download from baostock.com",
+      "lines": [
+        18,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Backtest",
+      "lines": [
+        51,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Requirements",
+      "lines": [
+        30,
+        36
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Generate Pickle-Style Data",
+      "lines": [
+        13,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Environment",
+      "lines": [
+        29,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### About Reinitialization",
+      "lines": [
+        22,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Installation",
+      "lines": [
+        12,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install from source",
+      "lines": [
+        191,
+        210
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Quick Start",
+      "lines": [
+        158,
+        166
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Framework of Qlib",
+      "lines": [
+        143,
+        157
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# or run it for multiple times automatically and get the summarized results.",
+      "lines": [
+        106,
+        110
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "## Run the Workflow",
+      "lines": [
+        7,
+        9
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        12,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### Run the Code",
+      "lines": [
+        28,
+        34
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Query Examples",
+      "lines": [
+        40,
+        48
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        5,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Run the Code",
+      "lines": [
+        16,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# you can either run the model once",
+      "lines": [
+        103,
+        105
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/README.md",
+      "section": "# Requirements",
+      "lines": [
+        1,
+        7
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TFT/README.md",
+      "section": "### Notes",
+      "lines": [
+        10,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/pit/README.md",
+      "section": "# download from baostock.com",
+      "lines": [
+        18,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Backtest",
+      "lines": [
+        51,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Requirements",
+      "lines": [
+        30,
+        36
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Generate Pickle-Style Data",
+      "lines": [
+        13,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "## Environment",
+      "lines": [
+        29,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/highfreq/README.md",
+      "section": "### About Reinitialization",
+      "lines": [
+        22,
+        27
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/orderbook_data/README.md",
+      "section": "# Installation",
+      "lines": [
+        12,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install from source",
+      "lines": [
+        191,
+        210
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Quick Start",
+      "lines": [
+        158,
+        166
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## Preparation",
+      "lines": [
+        16,
+        40
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Framework of Qlib",
+      "lines": [
+        143,
+        157
+      ]
+    }
+  ],
+  "Mine_estimator": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Forecasting: Finding Valuable Signals/Patterns",
+      "lines": [
+        419,
+        425
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "LLM_PROVIDER": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Adding an LLM provider",
+      "lines": [
+        441,
+        448
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Key files for contributors",
+      "lines": [
+        421,
+        431
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "# docsync",
+      "lines": [
+        1,
+        6
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### `docsync check`",
+      "lines": [
+        280,
+        299
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## Configuration",
+      "lines": [
+        246,
+        264
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## How it works",
+      "lines": [
+        7,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 10. Non-Functional Requirements",
+      "lines": [
+        300,
+        314
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        110,
+        120
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 8. Configuration — `autodocs.config.json`",
+      "lines": [
+        227,
+        266
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "LSTM": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ALSTM/README.md",
+      "section": "# ALSTM",
+      "lines": [
+        1,
+        10
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [Quant Model (Paper) Zoo](examples/benchmarks)",
+      "lines": [
+        426,
+        456
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ALSTM/README.md",
+      "section": "# ALSTM",
+      "lines": [
+        1,
+        10
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [Quant Model (Paper) Zoo](examples/benchmarks)",
+      "lines": [
+        426,
+        456
+      ]
+    }
+  ],
+  "loss_fn": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Common Issues",
+      "lines": [
+        89,
+        94
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Method",
+      "lines": [
+        5,
+        13
+      ]
+    }
+  ]
+}

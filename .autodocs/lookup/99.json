@@ -1,0 +1,134 @@
+{
+  "Date": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "# normalize",
+      "lines": [
+        26,
+        28
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "# dump data",
+      "lines": [
+        29,
+        34
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/fill_cn_1min_data/README.md",
+      "section": "## Parameters",
+      "lines": [
+        16,
+        24
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        14,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
+      "section": "# Introduction",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "# normalize",
+      "lines": [
+        23,
+        25
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/fund/README.md",
+      "section": "# dump data",
+      "lines": [
+        26,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "#### <b>Index start date</b>",
+      "lines": [
+        18,
+        32
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Automatic update of daily frequency data(from yahoo finance)",
+      "lines": [
+        161,
+        192
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "### Option 2: Generate qlib data from dolthub",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Automatic update of daily frequency data (from yahoo finance)",
+      "lines": [
+        256,
+        280
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Collector *Baostock high frequency* data to qlib",
+      "lines": [
+        20,
+        82
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/baostock_5min/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        3,
+        19
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Collector *YahooFinance* data to qlib",
+      "lines": [
+        55,
+        160
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        30,
+        54
+      ]
+    }
+  ],
+  "Ensemble": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/DoubleEnsemble/README.md",
+      "section": "# DoubleEnsemble",
+      "lines": [
+        1,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "BM25": [
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 12. Research Foundation",
+      "lines": [
+        327,
+        338
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.3 Three-Tier Retrieval",
+      "lines": [
+        83,
+        100
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        95,
+        100
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## Debugging",
+      "lines": [
+        389,
+        408
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### 1. Run init in your repo",
+      "lines": [
+        42,
+        60
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## How it works",
+      "lines": [
+        7,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        35,
+        41
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Key files for contributors",
+      "lines": [
+        421,
+        431
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 14. Open Questions",
+      "lines": [
+        351,
+        361
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 7. Technical Architecture",
+      "lines": [
+        129,
+        173
+      ]
+    }
+  ]
+}

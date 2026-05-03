@@ -1,0 +1,156 @@
+{
+  "SYMBOL_KIND": [
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 6: Python Extractor",
+      "lines": [
+        631,
+        785
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        71,
+        75
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "## Milestone 5 — Doc Update Agent (Claude API)",
+      "lines": [
+        106,
+        109
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "## Milestone 1 — Project Scaffold + Symbol Extraction",
+      "lines": [
+        7,
+        10
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 7: CLI Command",
+      "lines": [
+        786,
+        857
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.6 Map Maintenance",
+      "lines": [
+        113,
+        118
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "# docsync",
+      "lines": [
+        1,
+        6
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.4 Doc Update Generation",
+      "lines": [
+        101,
+        107
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "# M1: Symbol Extraction Implementation Plan",
+      "lines": [
+        1,
+        12
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### `docsync init`",
+      "lines": [
+        267,
+        279
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### `map.json`",
+      "lines": [
+        354,
+        373
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.3 Three-Tier Retrieval",
+      "lines": [
+        83,
+        100
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        35,
+        41
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        110,
+        120
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "## Summary",
+      "lines": [
+        190,
+        203
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 12. Research Foundation",
+      "lines": [
+        327,
+        338
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 7. Technical Architecture",
+      "lines": [
+        129,
+        173
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## Debugging",
+      "lines": [
+        389,
+        408
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 5: TypeScript Extractor",
+      "lines": [
+        401,
+        630
+      ]
+    }
+  ]
+}

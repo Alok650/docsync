@@ -1,0 +1,196 @@
+{
+  "GIT": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## Error Handling",
+      "lines": [
+        122,
+        133
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Step 4 — Simulate a code change",
+      "lines": [
+        170,
+        195
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.2 Change Detection — `autodocs check`",
+      "lines": [
+        76,
+        82
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 7. Technical Architecture",
+      "lines": [
+        129,
+        173
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### 1. Run init in your repo",
+      "lines": [
+        42,
+        60
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "## Milestone 3 — Git Diff + AST-Level Change Detection",
+      "lines": [
+        67,
+        70
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Development setup",
+      "lines": [
+        411,
+        420
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Step 2 — Initialize docsync",
+      "lines": [
+        134,
+        156
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 2: Types",
+      "lines": [
+        163,
+        199
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Output",
+      "lines": [
+        76,
+        85
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## GitHub Actions workflow",
+      "lines": [
+        310,
+        349
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### Dependencies",
+      "lines": [
+        212,
+        226
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Step 1 — Create a sample project",
+      "lines": [
+        88,
+        114
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
+      "section": "### Tasks",
+      "lines": [
+        71,
+        75
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "# private — must NOT appear in output",
+      "lines": [
+        328,
+        400
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "### 6.1 Initialisation — `autodocs init`",
+      "lines": [
+        67,
+        75
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## How it works",
+      "lines": [
+        7,
+        31
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 1: Project Scaffold",
+      "lines": [
+        41,
+        162
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 7: CLI Command",
+      "lines": [
+        786,
+        857
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/PRD.md",
+      "section": "## 5. Solution Overview",
+      "lines": [
+        55,
+        64
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 3: WASM Loader",
+      "lines": [
+        200,
+        269
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "## Debugging",
+      "lines": [
+        389,
+        408
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 6: Python Extractor",
+      "lines": [
+        631,
+        785
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 5: TypeScript Extractor",
+      "lines": [
+        401,
+        630
+      ]
+    }
+  ]
+}

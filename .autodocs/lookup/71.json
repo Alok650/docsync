@@ -1,0 +1,22 @@
+{
+  "parseSymbols": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### Adding a language",
+      "lines": [
+        432,
+        440
+      ]
+    }
+  ],
+  "extractPythonSymbols": [
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 6: Python Extractor",
+      "lines": [
+        631,
+        785
+      ]
+    }
+  ]
+}

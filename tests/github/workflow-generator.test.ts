@@ -25,7 +25,7 @@ describe('generateWorkflow', () => {
   it('generates valid YAML with required keys', async () => {
     const outPath = await generateWorkflow(tmpDir)
     const content = await fs.readFile(outPath, 'utf-8')
-    expect(content).toContain('name: AutoDocs')
+    expect(content).toContain('name: DocSync')
     expect(content).toContain('pull_request')
     expect(content).toContain('actions/checkout@v4')
     expect(content).toContain('fetch-depth: 0')

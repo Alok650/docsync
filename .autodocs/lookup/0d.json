@@ -1,0 +1,180 @@
+{
+  "main": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/KRNN/README.md",
+      "section": "# KRNN",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/Sandwich/README.md",
+      "section": "# Sandwich",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Install with pip",
+      "lines": [
+        182,
+        190
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crowd_source/README.md",
+      "section": "## FAQ and other info",
+      "lines": [
+        31,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Main Challenges & Solutions in Quant Research",
+      "lines": [
+        415,
+        418
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Experimental Result",
+      "lines": [
+        37,
+        38
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "## Custom Data Collection",
+      "lines": [
+        14,
+        41
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Experiments",
+      "lines": [
+        14,
+        16
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Contact Us",
+      "lines": [
+        577,
+        587
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Automatic update of daily frequency data (from yahoo finance)",
+      "lines": [
+        256,
+        280
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Usage (Recommended)",
+      "lines": [
+        24,
+        35
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "### Method",
+      "lines": [
+        5,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "#### Setting2",
+      "lines": [
+        27,
+        36
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Guidance",
+      "lines": [
+        594,
+        621
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Get from source",
+      "lines": [
+        238,
+        255
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Automatic update of daily frequency data(from yahoo finance)",
+      "lines": [
+        161,
+        192
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
+      "section": "#### Setting1",
+      "lines": [
+        17,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/yahoo/README.md",
+      "section": "### Get Qlib data(`bin file`)",
+      "lines": [
+        30,
+        54
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

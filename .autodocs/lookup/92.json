@@ -1,0 +1,308 @@
+{
+  "parse_backtest_config": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Backtest",
+      "lines": [
+        51,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Gap between backtest and training pipeline's testing",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Training",
+      "lines": [
+        34,
+        50
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        55,
+        57
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/cn_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        12,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/us_index/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        12,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# create new config and set the benchmark to csi500",
+      "lines": [
+        98,
+        102
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/br_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        58,
+        62
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/cn_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        15,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/us_index/README.md",
+      "section": "# parse new companies",
+      "lines": [
+        15,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/contrib/future_trading_date_collector/README.md",
+      "section": "# parse instruments, using in qlib/instruments.",
+      "lines": [
+        14,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [RL for order execution](examples/rl_order_execution)",
+      "lines": [
+        501,
+        506
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "### Usage",
+      "lines": [
+        25,
+        30
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/portfolio/README.md",
+      "section": "## End-to-End Workflow",
+      "lines": [
+        41,
+        48
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# Introduction",
+      "lines": [
+        3,
+        14
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/crypto/README.md",
+      "section": "## Usage of the dataset",
+      "lines": [
+        11,
+        13
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Usage (Recommended)",
+      "lines": [
+        24,
+        35
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "# RL Example for Order Execution",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/nested_decision_execution/README.md",
+      "section": "### Usage",
+      "lines": [
+        9,
+        20
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# you can either run the model once",
+      "lines": [
+        103,
+        105
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/data_collector/README.md",
+      "section": "### Data-dependent component",
+      "lines": [
+        53,
+        60
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/LightGBM/README.md",
+      "section": "# Introductions about the settings/configs.",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/scripts/README.md",
+      "section": "### US data",
+      "lines": [
+        48,
+        58
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Checking the health of the data",
+      "lines": [
+        281,
+        318
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GeneralPtNN/README.md",
+      "section": "# TODO",
+      "lines": [
+        15,
+        20
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
+      "section": "## Run the Code",
+      "lines": [
+        5,
+        17
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/DDG-DA/README.md",
+      "section": "# Run the Code",
+      "lines": [
+        16,
+        26
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run a single model",
+      "lines": [
+        457,
+        466
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/PULL_REQUEST_TEMPLATE.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        15
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "### Generate Pickle-Style Data",
+      "lines": [
+        13,
+        33
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Docker images",
+      "lines": [
+        319,
+        350
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rl_order_execution/README.md",
+      "section": "## Benchmarks (TBD)",
+      "lines": [
+        89,
+        101
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Contributing",
+      "lines": [
+        128,
+        144
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Results",
+      "lines": [
+        62,
+        88
+      ]
+    }
+  ]
+}

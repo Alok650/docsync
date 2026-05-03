@@ -1,0 +1,38 @@
+{
+  "NestedExecutor": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Learning Framework",
+      "lines": [
+        519,
+        528
+      ]
+    }
+  ],
+  "TRA": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "## Usage (Recommended)",
+      "lines": [
+        24,
+        35
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Running",
+      "lines": [
+        40,
+        61
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### [Quant Model (Paper) Zoo](examples/benchmarks)",
+      "lines": [
+        426,
+        456
+      ]
+    }
+  ]
+}

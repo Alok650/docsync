@@ -1,0 +1,12 @@
+{
+  "updateMapForChangedFiles": [
+    {
+      "file": "/Users/alokprasad/autodocs/README.md",
+      "section": "### `map.json`",
+      "lines": [
+        354,
+        373
+      ]
+    }
+  ]
+}

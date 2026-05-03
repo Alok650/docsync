@@ -1,0 +1,134 @@
+{
+  "report_graph": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GATs/README.md",
+      "section": "# GATs",
+      "lines": [
+        1,
+        5
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/IGMTF/README.md",
+      "section": "# IGMTF",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/HIST/README.md",
+      "section": "# HIST",
+      "lines": [
+        1,
+        3
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/documentation.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        6
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/.github/ISSUE_TEMPLATE/bug-report.md",
+      "section": "(preamble)",
+      "lines": [
+        1,
+        7
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/SECURITY.md",
+      "section": "## Reporting Security Issues",
+      "lines": [
+        9,
+        32
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Break change",
+      "lines": [
+        479,
+        486
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/SECURITY.md",
+      "section": "## Security",
+      "lines": [
+        3,
+        8
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Auto Quant Research Workflow",
+      "lines": [
+        351,
+        411
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "# Framework of Qlib",
+      "lines": [
+        143,
+        157
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
+      "section": "### Results",
+      "lines": [
+        62,
+        88
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
+      "section": "# Benchmarks Performance",
+      "lines": [
+        1,
+        22
+      ]
+    }
+  ],
+  "complex_parallel": [
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "## Forecasting: Finding Valuable Signals/Patterns",
+      "lines": [
+        419,
+        425
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Run multiple models",
+      "lines": [
+        467,
+        478
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/DoubleEnsemble/README.md",
+      "section": "# DoubleEnsemble",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
+      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "lines": [
+        14,
+        136
+      ]
+    }
+  ]
+}

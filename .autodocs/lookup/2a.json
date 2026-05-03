@@ -1,0 +1,28 @@
+{
+  "extractSymbols": [
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 7: CLI Command",
+      "lines": [
+        786,
+        857
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 6: Python Extractor",
+      "lines": [
+        631,
+        785
+      ]
+    },
+    {
+      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
+      "section": "## Task 5: TypeScript Extractor",
+      "lines": [
+        401,
+        630
+      ]
+    }
+  ]
+}
