@@ -12624,8 +12624,9 @@ function parseGitDiff(diffOutput) {
   }
   return files;
 }
-function getGitDiff(repoDir, base = GIT.DEFAULT_BASE_REF) {
-  const output = execSync(`git diff ${base}...HEAD -- . ':(exclude)${AUTODOCS_DIR}'`, {
+function getGitDiff(repoDir, base = GIT.DEFAULT_BASE_REF, extraExcludes = []) {
+  const excludes = [AUTODOCS_DIR, ...extraExcludes].map((p) => `':(exclude)${p}'`).join(" ");
+  const output = execSync(`git diff ${base}...HEAD -- . ${excludes}`, {
     cwd: repoDir,
     encoding: "utf-8",
     maxBuffer: MAX_DIFF_BYTES
