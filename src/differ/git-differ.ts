@@ -34,9 +34,15 @@ export function parseGitDiff(diffOutput: string): ChangedFile[] {
   return files
 }
 
-export function getGitDiff(repoDir: string, base = GIT.DEFAULT_BASE_REF): ChangedFile[] {
-  // Exclude the generated index dir so its churn never triggers doc updates.
-  const output = execSync(`git diff ${base}...HEAD -- . ':(exclude)${AUTODOCS_DIR}'`, {
+export function getGitDiff(
+  repoDir: string,
+  base = GIT.DEFAULT_BASE_REF,
+  extraExcludes: string[] = [],
+): ChangedFile[] {
+  const excludes = [AUTODOCS_DIR, ...extraExcludes]
+    .map(p => `':(exclude)${p}'`)
+    .join(' ')
+  const output = execSync(`git diff ${base}...HEAD -- . ${excludes}`, {
     cwd: repoDir,
     encoding: UTF8,
     maxBuffer: MAX_DIFF_BYTES,
