@@ -10,9 +10,12 @@ import { writeMapFile } from './map/writer.js'
 import { findCodeFiles } from './scanner/file-finder.js'
 import { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 import { runCheck } from './pipeline/check.js'
+import { runApply, runDismiss } from './pipeline/apply.js'
 import { loadConfig } from './config.js'
-import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH } from './constants.js'
-import { CLI } from './defaults.js'
+import { generateDocs } from './generator/index.js'
+import { createLLMClient } from './llm/factory.js'
+import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH, UTF8 } from './constants.js'
+import { CLI, GENERATE } from './defaults.js'
 import { logger } from './logger.js'
 
 const program = new Command()
@@ -83,6 +86,57 @@ program
   })
 
 program
+  .command('generate')
+  .description('Generate API docs, llms.txt, and context7.json from source code using an LLM')
+  .option('--out <file>', 'Output markdown file', GENERATE.DEFAULT_OUT)
+  .option('--code <dir>', 'Path to code directory', 'src')
+  .option('--concurrency <n>', 'Max parallel LLM calls', String(GENERATE.CONCURRENCY))
+  .action(async (opts: { out: string; code: string; concurrency: string }) => {
+    const cwd = process.cwd()
+    const config = await loadConfig(cwd)
+    const client = createLLMClient(config)
+
+    const codeDir = path.resolve(cwd, opts.code)
+    const outPath = path.resolve(cwd, opts.out)
+    const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || GENERATE.CONCURRENCY)
+
+    // Derive project title/description from package.json if present
+    let projectTitle = path.basename(cwd)
+    let projectDescription = `${projectTitle} API reference.`
+    try {
+      const pkg = JSON.parse(await fs.readFile(path.join(cwd, 'package.json'), UTF8))
+      if (pkg.name) projectTitle = pkg.name
+      if (pkg.description) projectDescription = pkg.description
+    } catch { /* no package.json — use directory name */ }
+
+    logger.info(`Generating docs for ${path.relative(cwd, codeDir) || '.'} (${concurrency} parallel calls)...`)
+
+    const { symbolCount, fileCount } = await generateDocs({
+      codeDir, outPath, repoDir: cwd, projectTitle, projectDescription, client,
+      model: config.llm.model, concurrency,
+    })
+
+    if (symbolCount === 0) {
+      logger.warn('No symbols found. Check that --code points to your source directory.')
+      return
+    }
+
+    logger.success(`Documented ${symbolCount} symbols across ${fileCount} files → ${path.relative(cwd, outPath)}`)
+    logger.success(`llms.txt written to ${path.join(path.relative(cwd, cwd), 'llms.txt')}`)
+    logger.success(`context7.json written — submit your repo at https://context7.com/add-package`)
+
+    // Rebuild the lookup index so `docsync check` works immediately
+    logger.info('Rebuilding symbol index...')
+    const docsDir = path.dirname(outPath)
+    const codeFiles = await findCodeFiles(codeDir)
+    const map = await buildMap(codeFiles, docsDir)
+    const outDir = path.join(cwd, AUTODOCS_DIR)
+    await fs.mkdir(outDir, { recursive: true })
+    await writeMapFile(path.join(outDir, MAP_FILENAME), map)
+    logger.success(`${map.mappings.filter(m => m.docs.length > 0).length} symbols mapped. Index written to ${MAP_RELATIVE_PATH}`)
+  })
+
+program
   .command('check')
   .description('Check changed symbols against docs and post PR comment')
   .option('--dry-run', 'Print proposed updates without posting to GitHub')
@@ -123,6 +177,32 @@ program
     const octokit = createOctokit(ctx)
     await new GitHubOutput(octokit, ctx).postOrUpdate(updates)
     logger.success('PR comment posted.')
+  })
+
+program
+  .command('handle-comment')
+  .description('Handle a /docsync PR comment — routes apply or dismiss based on DOCSYNC_COMMENT env var')
+  .action(async () => {
+    const comment = (process.env.DOCSYNC_COMMENT ?? '').trim()
+    const cwd = process.cwd()
+    const config = await loadConfig(cwd)
+    const ctx = readGitHubContext()
+
+    if (!ctx) {
+      logger.error('Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.')
+      process.exit(1)
+    }
+
+    if (comment === '/docsync dismiss') {
+      await runDismiss(ctx)
+    } else if (comment.startsWith('/docsync apply')) {
+      const symbolsStr = comment.replace('/docsync apply', '').trim()
+      const symbols = symbolsStr ? symbolsStr.split(/\s+/) : []
+      await runApply(symbols, ctx, cwd)
+    } else {
+      logger.error(`Unrecognised command: "${comment}". Expected "/docsync apply [symbol]" or "/docsync dismiss".`)
+      process.exit(1)
+    }
   })
 
 program.parse()

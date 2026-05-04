@@ -1,0 +1,30 @@
+{
+  "buildLookup": [
+    {
+      "file": "docs/api.md",
+      "section": "#### buildLookup",
+      "lines": [
+        417,
+        421
+      ]
+    }
+  ],
+  "findDocFiles": [
+    {
+      "file": "docs/api.md",
+      "section": "#### findDocFiles",
+      "lines": [
+        559,
+        563
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### scanDocs",
+      "lines": [
+        537,
+        541
+      ]
+    }
+  ]
+}

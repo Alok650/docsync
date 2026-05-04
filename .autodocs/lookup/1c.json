@@ -1,0 +1,54 @@
+{
+  "GENERATE": [
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateRequest",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
+      "lines": [
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE",
+      "lines": [
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateAgent",
+      "lines": [
+        24,
+        28
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE_SYSTEM_PROMPT",
+      "lines": [
+        31,
+        35
+      ]
+    }
+  ],
+  "generateDocs": [
+    {
+      "file": "docs/api.md",
+      "section": "#### generateDocs",
+      "lines": [
+        303,
+        307
+      ]
+    }
+  ]
+}

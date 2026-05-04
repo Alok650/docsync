@@ -1,19 +1,59 @@
 {
   "LLMClient": [
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Adding an LLM provider",
+      "file": "docs/api.md",
+      "section": "#### LLMClient",
       "lines": [
-        441,
-        448
+        381,
+        385
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Key files for contributors",
+      "file": "docs/api.md",
+      "section": "#### createLLMClient",
       "lines": [
-        421,
-        431
+        357,
+        361
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
+      "lines": [
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateAgent",
+      "lines": [
+        24,
+        28
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateOptions",
+      "lines": [
+        298,
+        302
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### OpenAIClient",
+      "lines": [
+        364,
+        368
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AnthropicClient",
+      "lines": [
+        350,
+        354
       ]
     }
   ]

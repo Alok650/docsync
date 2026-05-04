@@ -3,11 +3,11 @@ import { resolveLanguage, parseSymbols } from '../extractor/index.js'
 import type { ExtractedSymbol } from '../extractor/types.js'
 import type { SymbolChange } from './types.js'
 
-interface SymbolWithText extends ExtractedSymbol {
+export interface SymbolWithText extends ExtractedSymbol {
   text: string
 }
 
-async function parseSymbolsWithText(source: string, filePath: string): Promise<SymbolWithText[]> {
+export async function parseSymbolsWithText(source: string, filePath: string): Promise<SymbolWithText[]> {
   const language = resolveLanguage(filePath)
   if (!language) return []
 

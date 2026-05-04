@@ -1,3 +1,5 @@
+export const UTF8 = 'utf-8' as const
+
 export const AUTODOCS_DIR = '.autodocs'
 
 // map.json — full bidirectional index (symbol+file → docs). Used by init/update.
@@ -11,5 +13,6 @@ export const LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`
 
 export const WORKFLOW_DIR = '.github/workflows'
 export const WORKFLOW_FILENAME = 'docsync.yml'
+export const APPLY_WORKFLOW_FILENAME = 'docsync-apply.yml'
 
 export const CONFIG_FILENAME = 'docsync.config.json'

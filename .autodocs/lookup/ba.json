@@ -2,10 +2,18 @@
   "ProposedDocUpdate": [
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### ProposedDocUpdate",
       "lines": [
-        31,
-        34
+        336,
+        340
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GitHubOutput",
+      "lines": [
+        324,
+        328
       ]
     }
   ]

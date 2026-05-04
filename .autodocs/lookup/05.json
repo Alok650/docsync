@@ -1,59 +1,67 @@
 {
   "WORKFLOW_DIR": [
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_DIR",
       "lines": [
-        160,
-        165
+        102,
+        106
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "## GitHub Actions workflow",
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_FILENAME",
       "lines": [
-        310,
-        349
+        107,
+        111
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Generated workflow",
+      "file": "docs/api.md",
+      "section": "#### generateWorkflow",
       "lines": [
-        166,
-        184
+        343,
+        347
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### `docsync init`",
+      "file": "docs/api.md",
+      "section": "#### LOOKUP_DIR",
       "lines": [
-        267,
-        279
+        97,
+        101
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 2. Goals",
+      "file": "docs/api.md",
+      "section": "#### AUTODOCS_DIR",
       "lines": [
-        23,
-        30
+        82,
+        86
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Step 2 — Initialize docsync",
+      "file": "docs/api.md",
+      "section": "#### MAP_RELATIVE_PATH",
       "lines": [
-        134,
-        156
+        92,
+        96
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "## Debugging",
+      "file": "docs/api.md",
+      "section": "#### findCodeFiles",
       "lines": [
-        389,
-        408
+        554,
+        558
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### writeMapFile",
+      "lines": [
+        463,
+        467
       ]
     }
   ]

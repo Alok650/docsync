@@ -2,10 +2,50 @@
   "BM25": [
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### BM25",
       "lines": [
-        27,
-        30
+        119,
+        123
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Matcher",
+      "lines": [
+        520,
+        524
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Retriever",
+      "lines": [
+        482,
+        486
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Result",
+      "lines": [
+        515,
+        519
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalResult",
+      "lines": [
+        503,
+        507
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildMap",
+      "lines": [
+        395,
+        399
       ]
     }
   ]

@@ -2,10 +2,10 @@
   "runCheck": [
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### runCheck",
       "lines": [
-        31,
-        34
+        475,
+        479
       ]
     }
   ]

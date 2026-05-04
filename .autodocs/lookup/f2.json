@@ -1,19 +1,141 @@
 {
-  "CONFIG_FILENAME": [
+  "GENERATE_SYSTEM_PROMPT": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## File Structure",
+      "file": "docs/api.md",
+      "section": "#### GENERATE_SYSTEM_PROMPT",
       "lines": [
-        13,
+        31,
+        35
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateAgent",
+      "lines": [
+        24,
+        28
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
+      "lines": [
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### SYSTEM_PROMPT",
+      "lines": [
+        43,
+        47
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildGenerateUserPrompt",
+      "lines": [
+        36,
         40
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## Task 1: Project Scaffold",
+      "file": "docs/api.md",
+      "section": "#### DocGenerateRequest",
       "lines": [
-        41,
-        162
+        7,
+        11
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LOOKUP_DIR",
+      "lines": [
+        97,
+        101
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE",
+      "lines": [
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMCompletionOptions",
+      "lines": [
+        376,
+        380
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildUserPrompt",
+      "lines": [
+        48,
+        52
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### OpenAIClient",
+      "lines": [
+        364,
+        368
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AnthropicClient",
+      "lines": [
+        350,
+        354
+      ]
+    }
+  ],
+  "CONFIG_FILENAME": [
+    {
+      "file": "docs/api.md",
+      "section": "#### CONFIG_FILENAME",
+      "lines": [
+        112,
+        116
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_FILENAME",
+      "lines": [
+        107,
+        111
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_FILENAME",
+      "lines": [
+        87,
+        91
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_RELATIVE_PATH",
+      "lines": [
+        92,
+        96
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AI",
+      "lines": [
+        124,
+        128
       ]
     }
   ]

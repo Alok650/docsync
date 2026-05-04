@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
-import { CONFIG_FILENAME } from './constants.js'
-import { AI } from './defaults.js'
+import { CONFIG_FILENAME, UTF8 } from './constants.js'
+import { AI, CHECK } from './defaults.js'
 import { logger } from './logger.js'
 
 export const LLM_PROVIDER = {
@@ -20,6 +20,8 @@ export interface DocSyncConfig {
   readonly docs: string
   readonly code: string
   readonly llm: LLMConfig
+  /** Maximum proposed doc updates per PR. Defaults to CHECK.MAX_UPDATES_PER_PR. */
+  readonly maxUpdatesPerPr: number
 }
 
 const DEFAULTS: DocSyncConfig = {
@@ -29,6 +31,7 @@ const DEFAULTS: DocSyncConfig = {
     provider: LLM_PROVIDER.ANTHROPIC,
     model: AI.DEFAULT_MODEL,
   },
+  maxUpdatesPerPr: CHECK.MAX_UPDATES_PER_PR,
 }
 
 /**
@@ -38,7 +41,7 @@ const DEFAULTS: DocSyncConfig = {
 export async function loadConfig(cwd = process.cwd()): Promise<DocSyncConfig> {
   let raw: string
   try {
-    raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), 'utf-8')
+    raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), UTF8)
   } catch {
     return DEFAULTS
   }
@@ -49,6 +52,7 @@ export async function loadConfig(cwd = process.cwd()): Promise<DocSyncConfig> {
       ...DEFAULTS,
       ...parsed,
       llm: { ...DEFAULTS.llm, ...parsed.llm },
+      maxUpdatesPerPr: parsed.maxUpdatesPerPr ?? DEFAULTS.maxUpdatesPerPr,
     }
   } catch {
     logger.warn(`${CONFIG_FILENAME} could not be parsed — using defaults.`)

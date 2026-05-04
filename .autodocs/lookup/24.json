@@ -2,10 +2,34 @@
   "DocSyncConfig": [
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### createLLMClient",
       "lines": [
-        31,
-        34
+        357,
+        361
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocSyncConfig",
+      "lines": [
+        70,
+        74
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### loadConfig",
+      "lines": [
+        75,
+        79
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### runCheck",
+      "lines": [
+        475,
+        479
       ]
     }
   ]

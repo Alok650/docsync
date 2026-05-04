@@ -1,93 +1,11 @@
 {
-  "auto_init": [
+  "LLMConfig": [
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
-      "section": "### Running",
+      "file": "docs/api.md",
+      "section": "#### LLMConfig",
       "lines": [
-        40,
-        61
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "## Auto Quant Research Workflow",
-      "lines": [
-        351,
-        411
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
-      "lines": [
-        14,
-        136
-      ]
-    }
-  ],
-  "ALSTM": [
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ALSTM/README.md",
-      "section": "# ALSTM",
-      "lines": [
-        1,
-        10
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
-      "section": "### Running",
-      "lines": [
-        40,
-        61
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
-      "section": "### Alpha158 dataset",
-      "lines": [
-        25,
-        47
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
-      "section": "### Alpha360 dataset",
-      "lines": [
-        48,
-        89
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ALSTM/README.md",
-      "section": "# ALSTM",
-      "lines": [
-        1,
-        10
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TRA/README.md",
-      "section": "### Running",
-      "lines": [
-        40,
-        61
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
-      "section": "### Alpha158 dataset",
-      "lines": [
-        25,
-        47
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/README.md",
-      "section": "### Alpha360 dataset",
-      "lines": [
-        48,
-        89
+        65,
+        69
       ]
     }
   ]

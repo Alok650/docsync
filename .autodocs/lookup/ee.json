@@ -2,10 +2,10 @@
   "resolveLanguage": [
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### resolveLanguage",
       "lines": [
-        15,
-        18
+        236,
+        240
       ]
     }
   ]

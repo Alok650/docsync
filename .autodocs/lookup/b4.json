@@ -1,0 +1,20 @@
+{
+  "BM25Result": [
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Result",
+      "lines": [
+        515,
+        519
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Matcher",
+      "lines": [
+        520,
+        524
+      ]
+    }
+  ]
+}

@@ -1,27 +1,19 @@
 {
   "AI": [
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### AI",
       "lines": [
-        110,
-        120
+        124,
+        128
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 7. Technical Architecture",
+      "file": "docs/api.md",
+      "section": "#### GENERATE_SYSTEM_PROMPT",
       "lines": [
-        129,
-        173
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### Dependencies",
-      "lines": [
-        212,
-        226
+        31,
+        35
       ]
     }
   ]

@@ -5001,6 +5001,17 @@ async function getParser(language) {
   return parser;
 }
 
+// src/constants.ts
+var UTF8 = "utf-8";
+var AUTODOCS_DIR = ".autodocs";
+var MAP_FILENAME = "map.json";
+var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
+var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
+var WORKFLOW_DIR = ".github/workflows";
+var WORKFLOW_FILENAME = "docsync.yml";
+var APPLY_WORKFLOW_FILENAME = "docsync-apply.yml";
+var CONFIG_FILENAME = "docsync.config.json";
+
 // src/extractor/languages/node-types.ts
 var TS_NODE = {
   EXPORT_STATEMENT: "export_statement",
@@ -5142,7 +5153,7 @@ function parseSymbols(tree, filePath, language) {
 async function extractSymbols(filePath) {
   const language = resolveLanguage(filePath);
   if (!language) return [];
-  const source = await fs2.readFile(filePath, "utf-8");
+  const source = await fs2.readFile(filePath, UTF8);
   const parser = await getParser(language);
   const tree = parser.parse(source);
   if (!tree) return [];
@@ -5248,7 +5259,7 @@ async function scanDocs(docsDir) {
   const files = await findDocFiles(docsDir);
   const sections = [];
   for (const file of files) {
-    const content3 = await fs4.readFile(file, "utf-8");
+    const content3 = await fs4.readFile(file, UTF8);
     sections.push(...parseSections(file, content3));
   }
   return sections;
@@ -5294,6 +5305,11 @@ var LOOKUP = {
 var CLI = {
   // Column width for symbol names in the `autodocs symbols` output table.
   SYMBOL_COLUMN_WIDTH: 30
+};
+var CHECK = {
+  // Maximum proposed updates per PR. Excess updates are silently dropped (first-N wins).
+  // Prevents runaway LLM spend on PRs that touch many documented symbols.
+  MAX_UPDATES_PER_PR: 10
 };
 
 // src/scanner/bm25.ts
@@ -5418,17 +5434,6 @@ async function diffSymbols(filePath, before, after) {
 
 // src/differ/git-differ.ts
 import { execSync } from "child_process";
-
-// src/constants.ts
-var AUTODOCS_DIR = ".autodocs";
-var MAP_FILENAME = "map.json";
-var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
-var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
-var WORKFLOW_DIR = ".github/workflows";
-var WORKFLOW_FILENAME = "docsync.yml";
-var CONFIG_FILENAME = "docsync.config.json";
-
-// src/differ/git-differ.ts
 var DIFF_FILE_HEADER = /^diff --git a\/.+ b\/(.+)$/;
 var HUNK_HEADER = /^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/;
 var MAX_DIFF_BYTES = 100 * 1024 * 1024;
@@ -5457,7 +5462,7 @@ function getGitDiff(repoDir, base = GIT.DEFAULT_BASE_REF, extraExcludes = []) {
   const excludes = [AUTODOCS_DIR, ...extraExcludes].map((p) => `':(exclude)${p}'`).join(" ");
   const output = execSync(`git diff ${base}...HEAD -- . ${excludes}`, {
     cwd: repoDir,
-    encoding: "utf-8",
+    encoding: UTF8,
     maxBuffer: MAX_DIFF_BYTES
   });
   return parseGitDiff(output);
@@ -5466,7 +5471,7 @@ async function getBeforeContent(repoDir, filePath, base = GIT.DEFAULT_BASE_REF) 
   try {
     return execSync(`git show ${base}:${filePath}`, {
       cwd: repoDir,
-      encoding: "utf-8"
+      encoding: UTF8
     });
   } catch {
     return "";
@@ -16764,12 +16769,13 @@ var DEFAULTS = {
   llm: {
     provider: LLM_PROVIDER.ANTHROPIC,
     model: AI.DEFAULT_MODEL
-  }
+  },
+  maxUpdatesPerPr: CHECK.MAX_UPDATES_PER_PR
 };
 async function loadConfig(cwd = process.cwd()) {
   let raw;
   try {
-    raw = await fs5.readFile(path5.join(cwd, CONFIG_FILENAME), "utf-8");
+    raw = await fs5.readFile(path5.join(cwd, CONFIG_FILENAME), UTF8);
   } catch {
     return DEFAULTS;
   }
@@ -16778,7 +16784,8 @@ async function loadConfig(cwd = process.cwd()) {
     return {
       ...DEFAULTS,
       ...parsed,
-      llm: { ...DEFAULTS.llm, ...parsed.llm }
+      llm: { ...DEFAULTS.llm, ...parsed.llm },
+      maxUpdatesPerPr: parsed.maxUpdatesPerPr ?? DEFAULTS.maxUpdatesPerPr
     };
   } catch {
     logger.warn(`${CONFIG_FILENAME} could not be parsed \u2014 using defaults.`);
@@ -30282,7 +30289,7 @@ async function readLookupForSymbols(repoDir, symbolNames) {
   const entries = await Promise.all(
     shardIds.map(async (shard) => {
       try {
-        const raw = await fs6.readFile(path8.join(lookupDir, `${shard}.json`), "utf-8");
+        const raw = await fs6.readFile(path8.join(lookupDir, `${shard}.json`), UTF8);
         return Object.entries(JSON.parse(raw));
       } catch {
         return [];
@@ -30307,7 +30314,7 @@ async function writeMapFile(filePath, map4) {
 async function atomicWrite(filePath, content3) {
   const tmpPath = `${filePath}.${process.pid}.tmp`;
   try {
-    await fs7.writeFile(tmpPath, content3, "utf-8");
+    await fs7.writeFile(tmpPath, content3, UTF8);
     await fs7.rename(tmpPath, filePath);
   } catch (err2) {
     await fs7.unlink(tmpPath).catch(() => {
@@ -30317,10 +30324,24 @@ async function atomicWrite(filePath, content3) {
 }
 
 // src/map/updater.ts
-import fs8 from "fs/promises";
 import path10 from "path";
+
+// src/utils/fs.ts
+import fs8 from "fs/promises";
+async function readFileSafe(filePath) {
+  try {
+    return await fs8.readFile(filePath, UTF8);
+  } catch {
+    return null;
+  }
+}
+async function readFileOrEmpty(filePath) {
+  return await readFileSafe(filePath) ?? "";
+}
+
+// src/map/updater.ts
 async function updateMapForChangedFiles(mapFilePath, changedFiles) {
-  const raw = await fs8.readFile(mapFilePath, "utf-8");
+  const raw = await readFileOrEmpty(mapFilePath);
   let map4 = JSON.parse(raw);
   for (const filePath of changedFiles) {
     const absolutePath = path10.resolve(filePath);
@@ -30336,7 +30357,7 @@ async function updateMapForChangedFiles(mapFilePath, changedFiles) {
       map4 = { ...map4, mappings: remaining };
       continue;
     }
-    const content3 = await fs8.readFile(absolutePath, "utf-8").catch(() => "");
+    const content3 = await readFileOrEmpty(absolutePath);
     const newEntries = currentSymbols.map((s2) => {
       const symbolText = content3.split("\n").slice(s2.startLine - 1, s2.endLine).join("\n");
       const fingerprint = computeFingerprint(symbolText);
@@ -33990,6 +34011,19 @@ function createOctokit(ctx) {
 
 // src/github/pr-comment.ts
 var COMMENT_MARKER = "<!-- docsync-check -->";
+var DATA_PREFIX = "<!-- docsync-data:";
+var DATA_SUFFIX = " -->";
+function embedData(updates) {
+  const stored = updates.map((u3) => ({
+    symbolName: u3.symbolName,
+    docFile: u3.docFile,
+    section: u3.section,
+    beforeBody: u3.beforeBody,
+    afterBody: u3.afterBody,
+    symbolFile: u3.symbolFile
+  }));
+  return DATA_PREFIX + Buffer.from(JSON.stringify(stored)).toString("base64") + DATA_SUFFIX;
+}
 function renderComment(updates) {
   const sections = updates.map((u3) => {
     const diffLines = renderDiff(u3.beforeBody, u3.afterBody);
@@ -34007,7 +34041,9 @@ function renderComment(updates) {
     COMMENT_MARKER,
     "**DocSync** detected doc sections that may need updating.",
     "",
-    sections.join("\n\n---\n\n")
+    sections.join("\n\n---\n\n"),
+    "",
+    embedData(updates)
   ].join("\n");
 }
 function renderDiff(before, after) {
@@ -34049,6 +34085,43 @@ var GitHubOutput = class {
       });
     }
   }
+  /** Returns the first DocSync comment on the PR, or null if none exists. */
+  async findComment() {
+    const existing = await this.findExistingComments();
+    return existing[0] ?? null;
+  }
+  /** Updates the comment to reflect applied symbols. Deletes it when all are done. */
+  async markApplied(applied, remaining, commentId) {
+    if (remaining.length === 0) {
+      const appliedList = applied.map((s2) => `\`${s2}\``).join(", ");
+      await this.octokit.issues.updateComment({
+        owner: this.ctx.owner,
+        repo: this.ctx.repo,
+        comment_id: commentId,
+        body: `${COMMENT_MARKER}
+**DocSync** \u2713 Applied: ${appliedList}.`
+      });
+      return;
+    }
+    const body2 = renderComment(remaining);
+    await this.octokit.issues.updateComment({
+      owner: this.ctx.owner,
+      repo: this.ctx.repo,
+      comment_id: commentId,
+      body: body2
+    });
+  }
+  /** Deletes the DocSync comment (dismiss). */
+  async dismiss() {
+    const existing = await this.findExistingComments();
+    for (const comment of existing) {
+      await this.octokit.issues.deleteComment({
+        owner: this.ctx.owner,
+        repo: this.ctx.repo,
+        comment_id: comment.id
+      });
+    }
+  }
   async findExistingComments() {
     const comments = await this.octokit.paginate(this.octokit.issues.listComments, {
       owner: this.ctx.owner,
@@ -34056,14 +34129,14 @@ var GitHubOutput = class {
       issue_number: this.ctx.prNumber,
       per_page: GITHUB.COMMENTS_PER_PAGE
     });
-    return comments.filter((c3) => c3.body?.includes(COMMENT_MARKER));
+    return comments.filter((c3) => c3.body?.includes(COMMENT_MARKER)).map((c3) => ({ id: c3.id, body: c3.body ?? "" }));
   }
 };
 
 // src/github/workflow-generator.ts
 import fs9 from "fs/promises";
 import path11 from "path";
-function generateWorkflowContent() {
+function checkWorkflowContent() {
   return `name: DocSync
 on:
   pull_request:
@@ -34084,12 +34157,51 @@ jobs:
           openai-api-key: \${{ secrets.OPENAI_API_KEY }}
 `;
 }
+function applyWorkflowContent() {
+  return `name: DocSync Apply
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  apply:
+    if: >
+      github.event.issue.pull_request != null &&
+      (startsWith(github.event.comment.body, '/docsync apply') ||
+       github.event.comment.body == '/docsync dismiss')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Get PR branch
+        id: pr
+        run: |
+          HEAD_REF=$(gh api repos/$GITHUB_REPOSITORY/pulls/\${{ github.event.issue.number }} --jq '.head.ref')
+          echo "head_ref=$HEAD_REF" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: \${{ github.token }}
+      - uses: actions/checkout@v4
+        with:
+          ref: \${{ steps.pr.outputs.head_ref }}
+          token: \${{ github.token }}
+      - uses: Alok650/docsync@v1
+        with:
+          anthropic-api-key: \${{ secrets.ANTHROPIC_API_KEY }}
+          openai-api-key: \${{ secrets.OPENAI_API_KEY }}
+          comment-body: \${{ github.event.comment.body }}
+`;
+}
 async function generateWorkflow(repoDir) {
   const workflowDir = path11.join(repoDir, WORKFLOW_DIR);
-  const workflowPath = path11.join(workflowDir, WORKFLOW_FILENAME);
   await fs9.mkdir(workflowDir, { recursive: true });
-  await fs9.writeFile(workflowPath, generateWorkflowContent(), "utf-8");
-  return workflowPath;
+  const checkPath = path11.join(workflowDir, WORKFLOW_FILENAME);
+  const applyPath = path11.join(workflowDir, APPLY_WORKFLOW_FILENAME);
+  await Promise.all([
+    fs9.writeFile(checkPath, checkWorkflowContent(), UTF8),
+    fs9.writeFile(applyPath, applyWorkflowContent(), UTF8)
+  ]);
+  return checkPath;
 }
 
 // src/github/context.ts
@@ -34098,7 +34210,7 @@ function readEventBaseSha() {
   const eventPath = process.env.GITHUB_EVENT_PATH;
   if (!eventPath) return void 0;
   try {
-    const event = JSON.parse(readFileSync(eventPath, "utf-8"));
+    const event = JSON.parse(readFileSync(eventPath, UTF8));
     return event?.pull_request?.base?.sha;
   } catch {
     return void 0;
@@ -34122,7 +34234,6 @@ function readGitHubContext() {
 }
 
 // src/pipeline/check.ts
-import fs10 from "fs/promises";
 import path12 from "path";
 
 // src/map/types.ts
@@ -34153,7 +34264,7 @@ async function collectChanges(repoDir, baseRef) {
       const absolutePath = path12.join(repoDir, file);
       const [before, after] = await Promise.all([
         getBeforeContent(repoDir, file, baseRef),
-        fs10.readFile(absolutePath, "utf-8").catch(() => "")
+        readFileOrEmpty(absolutePath)
       ]);
       if (!after) {
         skippedFiles.push(file);
@@ -34179,16 +34290,18 @@ async function generateUpdates(changes, beforeContents, repoDir, config) {
   const retrievalResults = await retriever.retrieveAll(changes);
   const client = createLLMClient(config);
   const agent = new DocUpdateAgent(client, config.llm.model);
-  return buildUpdates(retrievalResults, beforeContents, agent, repoDir);
+  return buildUpdates(retrievalResults, beforeContents, agent, repoDir, config.maxUpdatesPerPr);
 }
-async function buildUpdates(results, beforeContents, agent, repoDir) {
+async function buildUpdates(results, beforeContents, agent, repoDir, maxUpdates) {
   const updates = [];
   for (const result of results) {
-    const afterCode = await fs10.readFile(result.change.file, "utf-8").catch(() => "");
+    if (updates.length >= maxUpdates) break;
+    const afterCode = await readFileOrEmpty(result.change.file);
     const beforeCode = beforeContents.get(result.change.file) ?? "";
     for (const docRef of result.docs) {
+      if (updates.length >= maxUpdates) break;
       const docAbsPath = path12.isAbsolute(docRef.file) ? docRef.file : path12.resolve(repoDir, docRef.file);
-      const docContent = await fs10.readFile(docAbsPath, "utf-8").catch(() => null);
+      const docContent = await readFileSafe(docAbsPath);
       if (!docContent) continue;
       const body2 = extractSectionBody(docContent, docRef.section);
       if (!body2) continue;

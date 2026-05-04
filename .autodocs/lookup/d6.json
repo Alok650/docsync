@@ -1,0 +1,78 @@
+{
+  "LLMMessage": [
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMMessage",
+      "lines": [
+        371,
+        375
+      ]
+    }
+  ],
+  "DocRef": [
+    {
+      "file": "docs/api.md",
+      "section": "#### toDocSection",
+      "lines": [
+        449,
+        453
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocRef",
+      "lines": [
+        429,
+        433
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalAdapter",
+      "lines": [
+        508,
+        512
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LookupTable",
+      "lines": [
+        444,
+        448
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildLookup",
+      "lines": [
+        417,
+        421
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildShards",
+      "lines": [
+        412,
+        416
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
+      "lines": [
+        496,
+        500
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Retriever",
+      "lines": [
+        482,
+        486
+      ]
+    }
+  ]
+}

@@ -1,115 +1,71 @@
 {
-  "Rolling": [
+  "SymbolWithText": [
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "# Rolling Process Data",
+      "file": "docs/api.md",
+      "section": "#### SymbolWithText",
       "lines": [
-        1,
-        4
+        156,
+        160
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "## Background",
+      "file": "docs/api.md",
+      "section": "#### parseSymbolsWithText",
       "lines": [
-        5,
-        11
+        161,
+        165
+      ]
+    }
+  ],
+  "LookupTable": [
+    {
+      "file": "docs/api.md",
+      "section": "#### LookupTable",
+      "lines": [
+        444,
+        448
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
-      "section": "## Run the Code",
+      "file": "docs/api.md",
+      "section": "#### buildLookup",
       "lines": [
-        5,
-        17
+        417,
+        421
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "## Run the Code",
+      "file": "docs/api.md",
+      "section": "#### buildShards",
       "lines": [
-        12,
-        17
+        412,
+        416
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
-      "section": "# Introduction",
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
       "lines": [
-        1,
-        4
+        496,
+        500
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/README.md",
-      "section": "## Alpha158 Dataset",
+      "file": "docs/api.md",
+      "section": "#### readLookupForSymbols",
       "lines": [
-        7,
-        27
+        422,
+        426
       ]
-    },
+    }
+  ],
+  "extractSectionBody": [
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
+      "file": "docs/api.md",
+      "section": "#### extractSectionBody",
       "lines": [
-        14,
-        136
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "# Rolling Process Data",
-      "lines": [
-        1,
-        4
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "## Background",
-      "lines": [
-        5,
-        11
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
-      "section": "## Run the Code",
-      "lines": [
-        5,
-        17
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/rolling_process_data/README.md",
-      "section": "## Run the Code",
-      "lines": [
-        12,
-        17
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/baseline/README.md",
-      "section": "# Introduction",
-      "lines": [
-        1,
-        4
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks_dynamic/README.md",
-      "section": "## Alpha158 Dataset",
-      "lines": [
-        7,
-        27
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
-      "lines": [
-        14,
-        136
+        532,
+        536
       ]
     }
   ]

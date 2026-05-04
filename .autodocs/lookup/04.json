@@ -2,10 +2,10 @@
   "getGitDiff": [
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### getGitDiff",
       "lines": [
-        3,
-        8
+        178,
+        182
       ]
     }
   ]

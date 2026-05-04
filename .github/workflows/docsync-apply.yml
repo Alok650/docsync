@@ -1,0 +1,32 @@
+name: DocSync Apply
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  apply:
+    if: >
+      github.event.issue.pull_request != null &&
+      (startsWith(github.event.comment.body, '/docsync apply') ||
+       github.event.comment.body == '/docsync dismiss')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Get PR branch
+        id: pr
+        run: |
+          HEAD_REF=$(gh api repos/$GITHUB_REPOSITORY/pulls/${{ github.event.issue.number }} --jq '.head.ref')
+          echo "head_ref=$HEAD_REF" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
+          token: ${{ github.token }}
+      - uses: Alok650/docsync@v1
+        with:
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          comment-body: ${{ github.event.comment.body }}

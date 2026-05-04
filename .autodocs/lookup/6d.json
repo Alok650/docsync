@@ -2,26 +2,234 @@
   "SYMBOL_KIND": [
     {
       "file": "docs/api.md",
-      "section": "## extractSymbols",
+      "section": "#### SymbolKind",
       "lines": [
-        9,
-        14
+        229,
+        233
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## parseSymbols",
+      "section": "#### SYMBOL_KIND",
+      "lines": [
+        224,
+        228
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### SymbolChange",
+      "lines": [
+        195,
+        199
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateRequest",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ExtractedSymbol",
+      "lines": [
+        286,
+        290
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateRequest",
       "lines": [
         19,
-        22
+        23
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### CLI",
       "lines": [
-        27,
-        30
+        144,
+        148
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildLookup",
+      "lines": [
+        417,
+        421
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### readLookupForSymbols",
+      "lines": [
+        422,
+        426
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### SymbolWithText",
+      "lines": [
+        156,
+        160
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractPythonSymbols",
+      "lines": [
+        265,
+        269
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildGenerateUserPrompt",
+      "lines": [
+        36,
+        40
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildShards",
+      "lines": [
+        412,
+        416
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### diffSymbols",
+      "lines": [
+        166,
+        170
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractTypeScriptSymbols",
+      "lines": [
+        272,
+        276
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### symbolShard",
+      "lines": [
+        402,
+        406
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalAdapter",
+      "lines": [
+        508,
+        512
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ProposedDocUpdate",
+      "lines": [
+        336,
+        340
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
+      "lines": [
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalResult",
+      "lines": [
+        503,
+        507
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MapEntry",
+      "lines": [
+        434,
+        438
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE",
+      "lines": [
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
+      "lines": [
+        496,
+        500
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LOOKUP",
+      "lines": [
+        139,
+        143
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Matcher",
+      "lines": [
+        520,
+        524
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildUserPrompt",
+      "lines": [
+        48,
+        52
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateDocs",
+      "lines": [
+        303,
+        307
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Retriever",
+      "lines": [
+        482,
+        486
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildMap",
+      "lines": [
+        395,
+        399
       ]
     }
   ]

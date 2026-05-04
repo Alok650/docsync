@@ -2,10 +2,36 @@
   "ChangedFile": [
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### ChangedFile",
       "lines": [
-        3,
-        8
+        200,
+        204
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### getGitDiff",
+      "lines": [
+        178,
+        182
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseGitDiff",
+      "lines": [
+        173,
+        177
+      ]
+    }
+  ],
+  "BM25Retriever": [
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Retriever",
+      "lines": [
+        482,
+        486
       ]
     }
   ]

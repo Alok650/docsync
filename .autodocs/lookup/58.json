@@ -1,0 +1,20 @@
+{
+  "buildShards": [
+    {
+      "file": "docs/api.md",
+      "section": "#### buildLookup",
+      "lines": [
+        417,
+        421
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildShards",
+      "lines": [
+        412,
+        416
+      ]
+    }
+  ]
+}

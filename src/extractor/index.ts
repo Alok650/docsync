@@ -2,6 +2,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import type { Parser } from 'web-tree-sitter'
 import { getParser } from './loader.js'
+import { UTF8 } from '../constants.js'
 import { extractTypeScriptSymbols } from './languages/typescript.js'
 import { extractPythonSymbols } from './languages/python.js'
 import { LANGUAGE } from './types.js'
@@ -49,7 +50,7 @@ export async function extractSymbols(filePath: string): Promise<ExtractedSymbol[
   const language = resolveLanguage(filePath)
   if (!language) return []
 
-  const source = await fs.readFile(filePath, 'utf-8')
+  const source = await fs.readFile(filePath, UTF8)
   const parser = await getParser(language)
   const tree = parser.parse(source)
   if (!tree) return []

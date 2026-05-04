@@ -1,0 +1,20 @@
+{
+  "RetrievalResult": [
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalResult",
+      "lines": [
+        503,
+        507
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### TieredRetriever",
+      "lines": [
+        489,
+        493
+      ]
+    }
+  ]
+}

@@ -1,35 +1,83 @@
 {
   "SYSTEM_PROMPT": [
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Key files for contributors",
+      "file": "docs/api.md",
+      "section": "#### GENERATE_SYSTEM_PROMPT",
       "lines": [
-        421,
-        431
+        31,
+        35
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/tests/fixtures/docs/authentication.md",
-      "section": "# Authentication",
+      "file": "docs/api.md",
+      "section": "#### SYSTEM_PROMPT",
       "lines": [
-        1,
-        4
+        43,
+        47
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### DocUpdateAgent",
       "lines": [
-        110,
-        120
+        24,
+        28
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### Dependencies",
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
       "lines": [
-        212,
-        226
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildGenerateUserPrompt",
+      "lines": [
+        36,
+        40
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LOOKUP_DIR",
+      "lines": [
+        97,
+        101
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMCompletionOptions",
+      "lines": [
+        376,
+        380
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildUserPrompt",
+      "lines": [
+        48,
+        52
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### OpenAIClient",
+      "lines": [
+        364,
+        368
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AnthropicClient",
+      "lines": [
+        350,
+        354
       ]
     }
   ]

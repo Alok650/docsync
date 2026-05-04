@@ -2,26 +2,130 @@
   "Language": [
     {
       "file": "docs/api.md",
-      "section": "## getParser",
+      "section": "#### Language",
       "lines": [
-        23,
-        26
+        219,
+        223
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## parseSymbols",
+      "section": "#### resolveLanguage",
       "lines": [
-        19,
-        22
+        236,
+        240
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### getParser",
       "lines": [
-        15,
-        18
+        279,
+        283
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbols",
+      "lines": [
+        241,
+        245
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractSymbols",
+      "lines": [
+        246,
+        250
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbolsWithText",
+      "lines": [
+        161,
+        165
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractTypeScriptSymbols",
+      "lines": [
+        272,
+        276
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMClient",
+      "lines": [
+        381,
+        385
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMConfig",
+      "lines": [
+        65,
+        69
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LANGUAGE",
+      "lines": [
+        214,
+        218
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLM_PROVIDER",
+      "lines": [
+        55,
+        59
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMCompletionOptions",
+      "lines": [
+        376,
+        380
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocSyncConfig",
+      "lines": [
+        70,
+        74
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ExtractedSymbol",
+      "lines": [
+        286,
+        290
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMMessage",
+      "lines": [
+        371,
+        375
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateOptions",
+      "lines": [
+        298,
+        302
       ]
     }
   ]

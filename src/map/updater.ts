@@ -1,6 +1,7 @@
-import fs from 'fs/promises'
 import path from 'path'
 import { extractSymbols } from '../extractor/index.js'
+import { readFileOrEmpty } from '../utils/fs.js'
+import { UTF8 } from '../constants.js'
 import { writeMapFile } from './writer.js'
 import { computeFingerprint } from './lookup.js'
 import { logger } from '../logger.js'
@@ -16,7 +17,7 @@ export async function updateMapForChangedFiles(
   mapFilePath: string,
   changedFiles: string[],
 ): Promise<MapFile> {
-  const raw = await fs.readFile(mapFilePath, 'utf-8')
+  const raw = await readFileOrEmpty(mapFilePath)
   let map = JSON.parse(raw) as MapFile
 
   for (const filePath of changedFiles) {
@@ -37,7 +38,7 @@ export async function updateMapForChangedFiles(
       continue
     }
 
-    const content = await fs.readFile(absolutePath, 'utf-8').catch(() => '')
+    const content = await readFileOrEmpty(absolutePath)
 
     const newEntries: MapEntry[] = currentSymbols.map(s => {
       const symbolText = content.split('\n').slice(s.startLine - 1, s.endLine).join('\n')

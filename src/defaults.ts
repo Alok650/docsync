@@ -63,3 +63,20 @@ export const CLI = {
   // Column width for symbol names in the `autodocs symbols` output table.
   SYMBOL_COLUMN_WIDTH: 30,
 } as const
+
+// docsync check / CI pipeline settings.
+export const CHECK = {
+  // Maximum proposed updates per PR. Excess updates are silently dropped (first-N wins).
+  // Prevents runaway LLM spend on PRs that touch many documented symbols.
+  MAX_UPDATES_PER_PR: 10,
+} as const
+
+// docsync generate settings.
+export const GENERATE = {
+  // Max parallel LLM calls during symbol documentation generation.
+  CONCURRENCY: 5,
+  // Default output path for generated API docs (relative to cwd).
+  DEFAULT_OUT: 'docs/api.md',
+  // Max tokens for initial doc generation (wider than update budget).
+  MAX_TOKENS: 512,
+} as const

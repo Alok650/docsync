@@ -2,10 +2,50 @@
   "GitHubContext": [
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### GIT",
       "lines": [
-        31,
-        34
+        129,
+        133
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### createOctokit",
+      "lines": [
+        310,
+        314
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GitHubContext",
+      "lines": [
+        331,
+        335
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### runCheck",
+      "lines": [
+        475,
+        479
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GitHubOutput",
+      "lines": [
+        324,
+        328
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### readGitHubContext",
+      "lines": [
+        317,
+        321
       ]
     }
   ]

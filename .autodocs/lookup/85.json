@@ -2,18 +2,26 @@
   "TS_NODE": [
     {
       "file": "docs/api.md",
-      "section": "## getParser",
+      "section": "#### TS_NODE",
       "lines": [
-        23,
-        26
+        253,
+        257
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## extractSymbols",
+      "section": "#### PY_NODE",
       "lines": [
-        9,
-        14
+        258,
+        262
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### CODE_EXTENSIONS",
+      "lines": [
+        544,
+        548
       ]
     }
   ]

@@ -2,34 +2,274 @@
   "MAP_RELATIVE_PATH": [
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### MAP_RELATIVE_PATH",
       "lines": [
-        3,
-        8
+        92,
+        96
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## getParser",
+      "section": "#### WORKFLOW_DIR",
       "lines": [
-        23,
-        26
+        102,
+        106
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## parseSymbols",
+      "section": "#### resolveLanguage",
+      "lines": [
+        236,
+        240
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_FILENAME",
+      "lines": [
+        87,
+        91
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### updateMapForChangedFiles",
+      "lines": [
+        456,
+        460
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE",
+      "lines": [
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### runCheck",
+      "lines": [
+        475,
+        479
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### getBeforeContent",
+      "lines": [
+        183,
+        187
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MapFile",
+      "lines": [
+        439,
+        443
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalResult",
+      "lines": [
+        503,
+        507
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildMap",
+      "lines": [
+        395,
+        399
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildShards",
+      "lines": [
+        412,
+        416
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### writeMapFile",
+      "lines": [
+        463,
+        467
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25",
+      "lines": [
+        119,
+        123
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
+      "lines": [
+        496,
+        500
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocSyncConfig",
+      "lines": [
+        70,
+        74
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ChangedFile",
+      "lines": [
+        200,
+        204
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateWorkflow",
+      "lines": [
+        343,
+        347
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LOOKUP_DIR",
+      "lines": [
+        97,
+        101
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### findCodeFiles",
+      "lines": [
+        554,
+        558
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateRequest",
       "lines": [
         19,
-        22
+        23
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### DocSection",
       "lines": [
-        15,
-        18
+        527,
+        531
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateRequest",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### scanDocs",
+      "lines": [
+        537,
+        541
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateResult",
+      "lines": [
+        293,
+        297
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ExtractedSymbol",
+      "lines": [
+        286,
+        290
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractPythonSymbols",
+      "lines": [
+        265,
+        269
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### getParser",
+      "lines": [
+        279,
+        283
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbolsWithText",
+      "lines": [
+        161,
+        165
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateOptions",
+      "lines": [
+        298,
+        302
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### getGitDiff",
+      "lines": [
+        178,
+        182
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateDocs",
+      "lines": [
+        303,
+        307
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### readLookupForSymbols",
+      "lines": [
+        422,
+        426
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseGitDiff",
+      "lines": [
+        173,
+        177
       ]
     }
   ]

@@ -1,0 +1,20 @@
+{
+  "GenerateResult": [
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateResult",
+      "lines": [
+        293,
+        297
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateDocs",
+      "lines": [
+        303,
+        307
+      ]
+    }
+  ]
+}

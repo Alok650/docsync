@@ -1,35 +1,19 @@
 {
-  "Attention": [
+  "symbolShard": [
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/ALSTM/README.md",
-      "section": "# ALSTM",
+      "file": "docs/api.md",
+      "section": "#### symbolShard",
       "lines": [
-        1,
-        10
+        402,
+        406
       ]
     },
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/GATs/README.md",
-      "section": "# GATs",
+      "file": "docs/api.md",
+      "section": "#### buildShards",
       "lines": [
-        1,
-        5
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/examples/benchmarks/TCTS/README.md",
-      "section": "### Background",
-      "lines": [
-        2,
-        4
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "## Installation",
-      "lines": [
-        167,
-        181
+        412,
+        416
       ]
     }
   ]

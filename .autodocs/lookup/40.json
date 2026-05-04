@@ -1,43 +1,109 @@
 {
+  "WORKFLOW_FILENAME": [
+    {
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_FILENAME",
+      "lines": [
+        107,
+        111
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateWorkflow",
+      "lines": [
+        343,
+        347
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_DIR",
+      "lines": [
+        102,
+        106
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### CONFIG_FILENAME",
+      "lines": [
+        112,
+        116
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_FILENAME",
+      "lines": [
+        87,
+        91
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_RELATIVE_PATH",
+      "lines": [
+        92,
+        96
+      ]
+    }
+  ],
   "DOC_EXTENSIONS": [
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### DOC_EXTENSIONS",
       "lines": [
-        15,
-        18
+        549,
+        553
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### findDocFiles",
       "lines": [
-        27,
-        30
+        559,
+        563
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### CODE_EXTENSIONS",
       "lines": [
-        31,
-        34
+        544,
+        548
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## extractSymbols",
+      "section": "#### findCodeFiles",
       "lines": [
-        9,
-        14
+        554,
+        558
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### GENERATE",
       "lines": [
-        3,
-        8
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### updateMapForChangedFiles",
+      "lines": [
+        456,
+        460
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildMap",
+      "lines": [
+        395,
+        399
       ]
     }
   ]

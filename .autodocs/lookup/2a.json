@@ -2,18 +2,10 @@
   "extractSymbols": [
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### extractSymbols",
       "lines": [
-        15,
-        18
-      ]
-    },
-    {
-      "file": "docs/api.md",
-      "section": "## extractSymbols",
-      "lines": [
-        9,
-        14
+        246,
+        250
       ]
     }
   ]
