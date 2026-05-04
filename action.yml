@@ -9,6 +9,10 @@ inputs:
   openai-api-key:
     description: OpenAI API key (required when using the openai provider)
     required: false
+  comment-body:
+    description: PR comment body — set by the docsync-apply workflow to trigger apply/dismiss
+    required: false
+    default: ''
 
 runs:
   using: composite
@@ -16,14 +20,20 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
-    - run: node ${{ github.action_path }}/dist/cli.js check
+    - run: |
+        if [ -n "$DOCSYNC_COMMENT" ]; then
+          node ${{ github.action_path }}/dist/cli.js handle-comment
+        else
+          node ${{ github.action_path }}/dist/cli.js check
+        fi
       shell: bash
       env:
         ANTHROPIC_API_KEY: ${{ inputs.anthropic-api-key }}
         OPENAI_API_KEY: ${{ inputs.openai-api-key }}
         GITHUB_TOKEN: ${{ github.token }}
-        PR_NUMBER: ${{ github.event.pull_request.number }}
+        PR_NUMBER: ${{ github.event.pull_request.number || github.event.issue.number }}
         GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
+        DOCSYNC_COMMENT: ${{ inputs.comment-body }}
 
 branding:
   icon: book-open

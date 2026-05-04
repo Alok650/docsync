@@ -11,5 +11,6 @@ export const LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`
 
 export const WORKFLOW_DIR = '.github/workflows'
 export const WORKFLOW_FILENAME = 'docsync.yml'
+export const APPLY_WORKFLOW_FILENAME = 'docsync-apply.yml'
 
 export const CONFIG_FILENAME = 'docsync.config.json'

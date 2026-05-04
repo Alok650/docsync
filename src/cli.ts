@@ -10,6 +10,7 @@ import { writeMapFile } from './map/writer.js'
 import { findCodeFiles } from './scanner/file-finder.js'
 import { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 import { runCheck } from './pipeline/check.js'
+import { runApply, runDismiss } from './pipeline/apply.js'
 import { loadConfig } from './config.js'
 import { generateDocs } from './generator/index.js'
 import { createLLMClient } from './llm/factory.js'
@@ -176,6 +177,32 @@ program
     const octokit = createOctokit(ctx)
     await new GitHubOutput(octokit, ctx).postOrUpdate(updates)
     logger.success('PR comment posted.')
+  })
+
+program
+  .command('handle-comment')
+  .description('Handle a /docsync PR comment — routes apply or dismiss based on DOCSYNC_COMMENT env var')
+  .action(async () => {
+    const comment = (process.env.DOCSYNC_COMMENT ?? '').trim()
+    const cwd = process.cwd()
+    const config = await loadConfig(cwd)
+    const ctx = readGitHubContext()
+
+    if (!ctx) {
+      logger.error('Missing GitHub context. Set GITHUB_TOKEN, GITHUB_REPOSITORY, and PR_NUMBER.')
+      process.exit(1)
+    }
+
+    if (comment === '/docsync dismiss') {
+      await runDismiss(ctx)
+    } else if (comment.startsWith('/docsync apply')) {
+      const symbolsStr = comment.replace('/docsync apply', '').trim()
+      const symbols = symbolsStr ? symbolsStr.split(/\s+/) : []
+      await runApply(symbols, ctx, cwd)
+    } else {
+      logger.error(`Unrecognised command: "${comment}". Expected "/docsync apply [symbol]" or "/docsync dismiss".`)
+      process.exit(1)
+    }
   })
 
 program.parse()

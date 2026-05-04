@@ -64,6 +64,13 @@ export const CLI = {
   SYMBOL_COLUMN_WIDTH: 30,
 } as const
 
+// docsync check / CI pipeline settings.
+export const CHECK = {
+  // Maximum proposed updates per PR. Excess updates are silently dropped (first-N wins).
+  // Prevents runaway LLM spend on PRs that touch many documented symbols.
+  MAX_UPDATES_PER_PR: 10,
+} as const
+
 // docsync generate settings.
 export const GENERATE = {
   // Max parallel LLM calls during symbol documentation generation.

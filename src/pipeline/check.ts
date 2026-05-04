@@ -91,7 +91,7 @@ async function generateUpdates(
 
   const client = createLLMClient(config)
   const agent = new DocUpdateAgent(client, config.llm.model)
-  return buildUpdates(retrievalResults, beforeContents, agent, repoDir)
+  return buildUpdates(retrievalResults, beforeContents, agent, repoDir, config.maxUpdatesPerPr)
 }
 
 async function buildUpdates(
@@ -99,14 +99,17 @@ async function buildUpdates(
   beforeContents: Map<string, string>,
   agent: DocUpdateAgent,
   repoDir: string,
+  maxUpdates: number,
 ): Promise<ProposedDocUpdate[]> {
   const updates: ProposedDocUpdate[] = []
 
   for (const result of results) {
+    if (updates.length >= maxUpdates) break
     const afterCode = await fs.readFile(result.change.file, 'utf-8').catch(() => '')
     const beforeCode = beforeContents.get(result.change.file) ?? ''
 
     for (const docRef of result.docs) {
+      if (updates.length >= maxUpdates) break
       // Paths in the index are relative to the repo root; resolve for the current environment.
       const docAbsPath = path.isAbsolute(docRef.file)
         ? docRef.file
