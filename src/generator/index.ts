@@ -114,19 +114,95 @@ async function writeLlmsTxt(
   description: string,
 ): Promise<void> {
   const docsRel = path.relative(repoDir, docsOutPath)
-  const content = [
+  const hasReadme = await fs.access(path.join(repoDir, 'README.md')).then(() => true).catch(() => false)
+  const apiContent = await fs.readFile(docsOutPath, 'utf-8').catch(() => '')
+  const moduleGroups = extractModuleGroups(apiContent, docsRel)
+
+  const lines: string[] = [
     `# ${title}`,
     '',
     `> ${description}`,
     '',
     '## Docs',
-    `- [API Reference](${docsRel}): Full API reference, generated and maintained by DocSync.`,
     '',
-    '## Optional',
-    '- [Source Code](src): TypeScript/JavaScript/Python source files.',
-  ].join('\n')
+  ]
 
-  await fs.writeFile(path.join(repoDir, 'llms.txt'), content + '\n', 'utf-8')
+  if (hasReadme) {
+    lines.push(
+      '- [Overview & Quick Start](README.md): Installation, prerequisites, and a two-minute setup guide.',
+      `- [Commands](README.md#commands): CLI reference — \`generate\`, \`init\`, \`check\`, \`symbols\`.`,
+      `- [Configuration](README.md#configuration): Provider, model, and path overrides via config file.`,
+      `- [GitHub Actions Workflow](README.md#github-actions-workflow): The generated workflow and required secrets.`,
+      `- [Debugging](README.md#debugging): Common failure modes and fixes.`,
+      `- [Full API Reference](${docsRel}): Symbol-level docs for every exported function, class, and type.`,
+    )
+  } else {
+    lines.push(`- [API Reference](${docsRel}): Full API reference, generated and maintained by DocSync.`)
+  }
+
+  if (moduleGroups.length > 0) {
+    lines.push('', '## Optional', '')
+    for (const { label, link, summary } of moduleGroups) {
+      lines.push(`- [${label}](${link}): ${summary}`)
+    }
+    lines.push('- [Source Code](src): TypeScript/JavaScript/Python source files.')
+  } else {
+    lines.push('', '## Optional', '- [Source Code](src): TypeScript/JavaScript/Python source files.')
+  }
+
+  await fs.writeFile(path.join(repoDir, 'llms.txt'), lines.join('\n') + '\n', 'utf-8')
+}
+
+interface ModuleGroup { label: string; link: string; summary: string }
+
+function extractModuleGroups(apiContent: string, docsRel: string): ModuleGroup[] {
+  // Parse level-3 headings that look like file paths: ### `src/foo/bar.ts`
+  const fileHeadingRe = /^### `([^`]+)`$/gm
+  const seen = new Set<string>()
+  const groups: ModuleGroup[] = []
+
+  for (const match of apiContent.matchAll(fileHeadingRe)) {
+    const filePath = match[1]
+    const parts = filePath.split('/')
+    const topDir = parts.length >= 2 ? parts.slice(0, 2).join('/') : filePath
+    if (seen.has(topDir)) continue
+    seen.add(topDir)
+
+    const label = toModuleLabel(topDir)
+    const anchor = toGitHubAnchor(filePath)
+    const summary = toModuleSummary(topDir)
+    if (label) groups.push({ label, link: `${docsRel}${anchor}`, summary })
+  }
+
+  return groups
+}
+
+const MODULE_META: Record<string, { label: string; summary: string }> = {
+  'src/agent':     { label: 'LLM Agents',          summary: 'DocGenerateAgent and DocUpdateAgent — LLM calls for doc generation and updates.' },
+  'src/config':    { label: 'Configuration',        summary: 'DocSyncConfig schema and loadConfig — reading provider, model, and path settings.' },
+  'src/cli':       { label: 'CLI',                  summary: 'Command definitions for generate, init, check, and symbols.' },
+  'src/differ':    { label: 'Diffing',              summary: 'getGitDiff and diffSymbols — changed file and AST-level symbol detection.' },
+  'src/editor':    { label: 'Document Editing',     summary: 'MarkdownEditor.replaceSection — in-place heading replacement in Markdown files.' },
+  'src/extractor': { label: 'Symbol Extraction',    summary: 'Tree-sitter based extractor for TypeScript, JavaScript, and Python symbols.' },
+  'src/generator': { label: 'Doc Generation',       summary: 'generateDocs pipeline — LLM-powered initial docs, llms.txt, and context7.json.' },
+  'src/github':    { label: 'GitHub Integration',   summary: 'PR comment posting, context reading, and workflow file generation.' },
+  'src/llm':       { label: 'LLM Clients',          summary: 'LLMClient interface and Anthropic/OpenAI adapters.' },
+  'src/map':       { label: 'Symbol Map',           summary: 'buildMap and writeMapFile — the bidirectional symbol→doc index.' },
+  'src/pipeline':  { label: 'CI Pipeline',          summary: 'runCheck — three-stage diff→lookup→LLM pipeline run in GitHub Actions.' },
+  'src/scanner':   { label: 'File Scanner',         summary: 'findCodeFiles — discovers supported source files under a directory.' },
+}
+
+function toModuleLabel(topDir: string): string {
+  return MODULE_META[topDir]?.label ?? ''
+}
+
+function toModuleSummary(topDir: string): string {
+  return MODULE_META[topDir]?.summary ?? 'Source module.'
+}
+
+function toGitHubAnchor(filePath: string): string {
+  const slug = filePath.toLowerCase().replace(/[^a-z0-9 -]/g, '').replace(/ +/g, '-')
+  return `#${slug}`
 }
 
 // ─── context7.json ───────────────────────────────────────────────────────────

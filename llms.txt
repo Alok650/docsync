@@ -1,9 +1,22 @@
 # @dev_ap/docsync
 
-> Keeps your documentation in sync with your code — LLM-powered doc updates on every PR
+> Keeps your documentation in sync with your code — LLM-powered doc updates on every PR.
 
 ## Docs
-- [API Reference](docs/api.md): Full API reference, generated and maintained by DocSync.
+
+- [Overview & Quick Start](README.md): Installation, prerequisites, and a two-minute setup guide.
+- [Commands](README.md#commands): CLI reference — `generate`, `init`, `check`, `symbols`.
+- [Configuration](README.md#configuration): Provider, model, and path overrides via `docsync.config.json`.
+- [GitHub Actions Workflow](README.md#github-actions-workflow): The generated workflow file and required repository secrets.
+- [Debugging](README.md#debugging): Common failure modes and how to fix them.
+- [Full API Reference](docs/api.md): Symbol-level docs for every exported function, class, and type.
 
 ## Optional
+
+- [LLM Agents](docs/api.md#srcagentdoc-generate-agentts): `DocGenerateAgent` and `DocUpdateAgent` — how docsync calls LLMs to generate and update docs.
+- [Symbol Extraction](docs/api.md#srcextractorindexts): Tree-sitter based extractor for TypeScript, JavaScript, and Python symbols.
+- [Diffing](docs/api.md#srcdifferast-differts): `getGitDiff` and `diffSymbols` — changed file and AST-level symbol detection.
+- [CI Pipeline](docs/api.md#srcpipelinecheckts): `runCheck` — three-stage diff→lookup→LLM pipeline run in GitHub Actions.
+- [GitHub Integration](docs/api.md#srcgithubpr-commentts): PR comment posting, context reading, and workflow file generation.
+- [Doc Generation](docs/api.md#srcgeneratorindexts): `generateDocs` — initial LLM-powered docs, llms.txt, and context7.json in one command.
 - [Source Code](src): TypeScript/JavaScript/Python source files.
