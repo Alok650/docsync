@@ -11,8 +11,10 @@ import { findCodeFiles } from './scanner/file-finder.js'
 import { createOctokit, GitHubOutput, generateWorkflow, readGitHubContext } from './github/index.js'
 import { runCheck } from './pipeline/check.js'
 import { loadConfig } from './config.js'
+import { generateDocs } from './generator/index.js'
+import { createLLMClient } from './llm/factory.js'
 import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH } from './constants.js'
-import { CLI } from './defaults.js'
+import { CLI, GENERATE } from './defaults.js'
 import { logger } from './logger.js'
 
 const program = new Command()
@@ -80,6 +82,57 @@ program
     const workflowPath = await generateWorkflow(cwd)
     logger.info(`Workflow written to ${path.relative(cwd, workflowPath)}`)
     logger.info('Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate DocSync.')
+  })
+
+program
+  .command('generate')
+  .description('Generate API docs, llms.txt, and context7.json from source code using an LLM')
+  .option('--out <file>', 'Output markdown file', GENERATE.DEFAULT_OUT)
+  .option('--code <dir>', 'Path to code directory', 'src')
+  .option('--concurrency <n>', 'Max parallel LLM calls', String(GENERATE.CONCURRENCY))
+  .action(async (opts: { out: string; code: string; concurrency: string }) => {
+    const cwd = process.cwd()
+    const config = await loadConfig(cwd)
+    const client = createLLMClient(config)
+
+    const codeDir = path.resolve(cwd, opts.code)
+    const outPath = path.resolve(cwd, opts.out)
+    const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || GENERATE.CONCURRENCY)
+
+    // Derive project title/description from package.json if present
+    let projectTitle = path.basename(cwd)
+    let projectDescription = `${projectTitle} API reference.`
+    try {
+      const pkg = JSON.parse(await fs.readFile(path.join(cwd, 'package.json'), 'utf-8'))
+      if (pkg.name) projectTitle = pkg.name
+      if (pkg.description) projectDescription = pkg.description
+    } catch { /* no package.json — use directory name */ }
+
+    logger.info(`Generating docs for ${path.relative(cwd, codeDir) || '.'} (${concurrency} parallel calls)...`)
+
+    const { symbolCount, fileCount } = await generateDocs({
+      codeDir, outPath, repoDir: cwd, projectTitle, projectDescription, client,
+      model: config.llm.model, concurrency,
+    })
+
+    if (symbolCount === 0) {
+      logger.warn('No symbols found. Check that --code points to your source directory.')
+      return
+    }
+
+    logger.success(`Documented ${symbolCount} symbols across ${fileCount} files → ${path.relative(cwd, outPath)}`)
+    logger.success(`llms.txt written to ${path.join(path.relative(cwd, cwd), 'llms.txt')}`)
+    logger.success(`context7.json written — submit your repo at https://context7.com/add-package`)
+
+    // Rebuild the lookup index so `docsync check` works immediately
+    logger.info('Rebuilding symbol index...')
+    const docsDir = path.dirname(outPath)
+    const codeFiles = await findCodeFiles(codeDir)
+    const map = await buildMap(codeFiles, docsDir)
+    const outDir = path.join(cwd, AUTODOCS_DIR)
+    await fs.mkdir(outDir, { recursive: true })
+    await writeMapFile(path.join(outDir, MAP_FILENAME), map)
+    logger.success(`${map.mappings.filter(m => m.docs.length > 0).length} symbols mapped. Index written to ${MAP_RELATIVE_PATH}`)
   })
 
 program

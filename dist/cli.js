@@ -1208,8 +1208,8 @@ var require_command = __commonJS({
     "use strict";
     var EventEmitter = __require("events").EventEmitter;
     var childProcess = __require("child_process");
-    var path13 = __require("path");
-    var fs11 = __require("fs");
+    var path14 = __require("path");
+    var fs12 = __require("fs");
     var process2 = __require("process");
     var { Argument: Argument2, humanReadableArgName } = require_argument();
     var { CommanderError: CommanderError2 } = require_error();
@@ -2203,7 +2203,7 @@ Expecting one of '${allowedValues.join("', '")}'`);
        * @param {string} subcommandName
        */
       _checkForMissingExecutable(executableFile, executableDir, subcommandName) {
-        if (fs11.existsSync(executableFile)) return;
+        if (fs12.existsSync(executableFile)) return;
         const executableDirMessage = executableDir ? `searched for local subcommand relative to directory '${executableDir}'` : "no directory for search for local subcommand, use .executableDir() to supply a custom directory";
         const executableMissing = `'${executableFile}' does not exist
  - if '${subcommandName}' is not meant to be an executable command, remove description parameter from '.command()' and use '.description()' instead
@@ -2221,11 +2221,11 @@ Expecting one of '${allowedValues.join("', '")}'`);
         let launchWithNode = false;
         const sourceExt = [".js", ".ts", ".tsx", ".mjs", ".cjs"];
         function findFile(baseDir, baseName) {
-          const localBin = path13.resolve(baseDir, baseName);
-          if (fs11.existsSync(localBin)) return localBin;
-          if (sourceExt.includes(path13.extname(baseName))) return void 0;
+          const localBin = path14.resolve(baseDir, baseName);
+          if (fs12.existsSync(localBin)) return localBin;
+          if (sourceExt.includes(path14.extname(baseName))) return void 0;
           const foundExt = sourceExt.find(
-            (ext) => fs11.existsSync(`${localBin}${ext}`)
+            (ext) => fs12.existsSync(`${localBin}${ext}`)
           );
           if (foundExt) return `${localBin}${foundExt}`;
           return void 0;
@@ -2237,21 +2237,21 @@ Expecting one of '${allowedValues.join("', '")}'`);
         if (this._scriptPath) {
           let resolvedScriptPath;
           try {
-            resolvedScriptPath = fs11.realpathSync(this._scriptPath);
+            resolvedScriptPath = fs12.realpathSync(this._scriptPath);
           } catch {
             resolvedScriptPath = this._scriptPath;
           }
-          executableDir = path13.resolve(
-            path13.dirname(resolvedScriptPath),
+          executableDir = path14.resolve(
+            path14.dirname(resolvedScriptPath),
             executableDir
           );
         }
         if (executableDir) {
           let localFile = findFile(executableDir, executableFile);
           if (!localFile && !subcommand._executableFile && this._scriptPath) {
-            const legacyName = path13.basename(
+            const legacyName = path14.basename(
               this._scriptPath,
-              path13.extname(this._scriptPath)
+              path14.extname(this._scriptPath)
             );
             if (legacyName !== this._name) {
               localFile = findFile(
@@ -2262,7 +2262,7 @@ Expecting one of '${allowedValues.join("', '")}'`);
           }
           executableFile = localFile || executableFile;
         }
-        launchWithNode = sourceExt.includes(path13.extname(executableFile));
+        launchWithNode = sourceExt.includes(path14.extname(executableFile));
         let proc;
         if (process2.platform !== "win32") {
           if (launchWithNode) {
@@ -3177,7 +3177,7 @@ Expecting one of '${allowedValues.join("', '")}'`);
        * @return {Command}
        */
       nameFromFilename(filename) {
-        this._name = path13.basename(filename, path13.extname(filename));
+        this._name = path14.basename(filename, path14.extname(filename));
         return this;
       }
       /**
@@ -3191,9 +3191,9 @@ Expecting one of '${allowedValues.join("', '")}'`);
        * @param {string} [path]
        * @return {(string|null|Command)}
        */
-      executableDir(path14) {
-        if (path14 === void 0) return this._executableDir;
-        this._executableDir = path14;
+      executableDir(path15) {
+        if (path15 === void 0) return this._executableDir;
+        this._executableDir = path15;
         return this;
       }
       /**
@@ -4343,8 +4343,8 @@ var {
 } = import_index.default;
 
 // src/cli.ts
-import fs10 from "fs/promises";
-import path12 from "path";
+import fs11 from "fs/promises";
+import path13 from "path";
 import readline from "readline";
 
 // src/extractor/index.ts
@@ -5880,11 +5880,11 @@ async function Module2(moduleArg = {}) {
   }, "quit_");
   var _scriptName = import.meta.url;
   var scriptDirectory = "";
-  function locateFile(path13) {
+  function locateFile(path14) {
     if (Module["locateFile"]) {
-      return Module["locateFile"](path13, scriptDirectory);
+      return Module["locateFile"](path14, scriptDirectory);
     }
-    return scriptDirectory + path13;
+    return scriptDirectory + path14;
   }
   __name(locateFile, "locateFile");
   var readAsync, readBinary;
@@ -8666,6 +8666,14 @@ var CLI = {
   // Column width for symbol names in the `autodocs symbols` output table.
   SYMBOL_COLUMN_WIDTH: 30
 };
+var GENERATE = {
+  // Max parallel LLM calls during symbol documentation generation.
+  CONCURRENCY: 5,
+  // Default output path for generated API docs (relative to cwd).
+  DEFAULT_OUT: "docs/api.md",
+  // Max tokens for initial doc generation (wider than update budget).
+  MAX_TOKENS: 512
+};
 
 // src/scanner/bm25.ts
 function tokenize(text) {
@@ -9874,17 +9882,17 @@ function requestLog(octokit) {
     octokit.log.debug("request", options);
     const start2 = Date.now();
     const requestOptions = octokit.request.endpoint.parse(options);
-    const path13 = requestOptions.url.replace(options.baseUrl, "");
+    const path14 = requestOptions.url.replace(options.baseUrl, "");
     return request2(options).then((response) => {
       const requestId = response.headers["x-github-request-id"];
       octokit.log.info(
-        `${requestOptions.method} ${path13} - ${response.status} with id ${requestId} in ${Date.now() - start2}ms`
+        `${requestOptions.method} ${path14} - ${response.status} with id ${requestId} in ${Date.now() - start2}ms`
       );
       return response;
     }).catch((error) => {
       const requestId = error.response?.headers["x-github-request-id"] || "UNKNOWN";
       octokit.log.error(
-        `${requestOptions.method} ${path13} - ${error.status} with id ${requestId} in ${Date.now() - start2}ms`
+        `${requestOptions.method} ${path14} - ${error.status} with id ${requestId} in ${Date.now() - start2}ms`
       );
       throw error;
     });
@@ -15256,12 +15264,12 @@ function encodeURIPath(str2) {
   return str2.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@]+/g, encodeURIComponent);
 }
 var EMPTY = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.create(null));
-var createPathTagFunction = (pathEncoder = encodeURIPath) => function path13(statics, ...params) {
+var createPathTagFunction = (pathEncoder = encodeURIPath) => function path14(statics, ...params) {
   if (statics.length === 1)
     return statics[0];
   let postPath = false;
   const invalidSegments = [];
-  const path14 = statics.reduce((previousValue, currentValue, index) => {
+  const path15 = statics.reduce((previousValue, currentValue, index) => {
     if (/[?#]/.test(currentValue)) {
       postPath = true;
     }
@@ -15278,7 +15286,7 @@ var createPathTagFunction = (pathEncoder = encodeURIPath) => function path13(sta
     }
     return previousValue + currentValue + (index === params.length ? "" : encoded);
   }, "");
-  const pathOnly = path14.split(/[?#]/, 1)[0];
+  const pathOnly = path15.split(/[?#]/, 1)[0];
   const invalidSegmentPattern = /(?<=^|\/)(?:\.|%2e){1,2}(?=\/|$)/gi;
   let match;
   while ((match = invalidSegmentPattern.exec(pathOnly)) !== null) {
@@ -15299,10 +15307,10 @@ var createPathTagFunction = (pathEncoder = encodeURIPath) => function path13(sta
     }, "");
     throw new AnthropicError(`Path parameters result in path with invalid segments:
 ${invalidSegments.map((e2) => e2.error).join("\n")}
-${path14}
+${path15}
 ${underline}`);
   }
-  return path14;
+  return path15;
 };
 var path9 = /* @__PURE__ */ createPathTagFunction(encodeURIPath);
 
@@ -19846,9 +19854,9 @@ var BaseAnthropic = class {
   makeStatusError(status, error, message, headers) {
     return APIError.generate(status, error, message, headers);
   }
-  buildURL(path13, query, defaultBaseURL) {
+  buildURL(path14, query, defaultBaseURL) {
     const baseURL = !__classPrivateFieldGet(this, _BaseAnthropic_instances, "m", _BaseAnthropic_baseURLOverridden).call(this) && defaultBaseURL || this.baseURL;
-    const url = isAbsoluteURL(path13) ? new URL(path13) : new URL(baseURL + (baseURL.endsWith("/") && path13.startsWith("/") ? path13.slice(1) : path13));
+    const url = isAbsoluteURL(path14) ? new URL(path14) : new URL(baseURL + (baseURL.endsWith("/") && path14.startsWith("/") ? path14.slice(1) : path14));
     const defaultQuery = this.defaultQuery();
     const pathQuery = Object.fromEntries(url.searchParams);
     if (!isEmptyObj(defaultQuery) || !isEmptyObj(pathQuery)) {
@@ -19880,24 +19888,24 @@ var BaseAnthropic = class {
    */
   async prepareRequest(request2, { url, options }) {
   }
-  get(path13, opts) {
-    return this.methodRequest("get", path13, opts);
+  get(path14, opts) {
+    return this.methodRequest("get", path14, opts);
   }
-  post(path13, opts) {
-    return this.methodRequest("post", path13, opts);
+  post(path14, opts) {
+    return this.methodRequest("post", path14, opts);
   }
-  patch(path13, opts) {
-    return this.methodRequest("patch", path13, opts);
+  patch(path14, opts) {
+    return this.methodRequest("patch", path14, opts);
   }
-  put(path13, opts) {
-    return this.methodRequest("put", path13, opts);
+  put(path14, opts) {
+    return this.methodRequest("put", path14, opts);
   }
-  delete(path13, opts) {
-    return this.methodRequest("delete", path13, opts);
+  delete(path14, opts) {
+    return this.methodRequest("delete", path14, opts);
   }
-  methodRequest(method, path13, opts) {
+  methodRequest(method, path14, opts) {
     return this.request(Promise.resolve(opts).then((opts2) => {
-      return { method, path: path13, ...opts2 };
+      return { method, path: path14, ...opts2 };
     }));
   }
   request(options, remainingRetries = null) {
@@ -20001,8 +20009,8 @@ var BaseAnthropic = class {
     }));
     return { response, options, controller, requestLogID, retryOfRequestLogID, startTime };
   }
-  getAPIList(path13, Page3, opts) {
-    return this.requestAPIList(Page3, opts && "then" in opts ? opts.then((opts2) => ({ method: "get", path: path13, ...opts2 })) : { method: "get", path: path13, ...opts });
+  getAPIList(path14, Page3, opts) {
+    return this.requestAPIList(Page3, opts && "then" in opts ? opts.then((opts2) => ({ method: "get", path: path14, ...opts2 })) : { method: "get", path: path14, ...opts });
   }
   requestAPIList(Page3, options) {
     const request2 = this.makeRequest(options, null, void 0);
@@ -20090,8 +20098,8 @@ var BaseAnthropic = class {
   }
   async buildRequest(inputOptions, { retryCount = 0 } = {}) {
     const options = { ...inputOptions };
-    const { method, path: path13, query, defaultBaseURL } = options;
-    const url = this.buildURL(path13, query, defaultBaseURL);
+    const { method, path: path14, query, defaultBaseURL } = options;
+    const url = this.buildURL(path14, query, defaultBaseURL);
     if ("timeout" in options)
       validatePositiveInteger("timeout", options.timeout);
     options.timeout = options.timeout ?? this.timeout;
@@ -21968,12 +21976,12 @@ function encodeURIPath2(str2) {
   return str2.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@]+/g, encodeURIComponent);
 }
 var EMPTY2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.create(null));
-var createPathTagFunction2 = (pathEncoder = encodeURIPath2) => function path13(statics, ...params) {
+var createPathTagFunction2 = (pathEncoder = encodeURIPath2) => function path14(statics, ...params) {
   if (statics.length === 1)
     return statics[0];
   let postPath = false;
   const invalidSegments = [];
-  const path14 = statics.reduce((previousValue, currentValue, index) => {
+  const path15 = statics.reduce((previousValue, currentValue, index) => {
     if (/[?#]/.test(currentValue)) {
       postPath = true;
     }
@@ -21990,7 +21998,7 @@ var createPathTagFunction2 = (pathEncoder = encodeURIPath2) => function path13(s
     }
     return previousValue + currentValue + (index === params.length ? "" : encoded);
   }, "");
-  const pathOnly = path14.split(/[?#]/, 1)[0];
+  const pathOnly = path15.split(/[?#]/, 1)[0];
   const invalidSegmentPattern = /(?<=^|\/)(?:\.|%2e){1,2}(?=\/|$)/gi;
   let match;
   while ((match = invalidSegmentPattern.exec(pathOnly)) !== null) {
@@ -22011,10 +22019,10 @@ var createPathTagFunction2 = (pathEncoder = encodeURIPath2) => function path13(s
     }, "");
     throw new OpenAIError(`Path parameters result in path with invalid segments:
 ${invalidSegments.map((e2) => e2.error).join("\n")}
-${path14}
+${path15}
 ${underline}`);
   }
-  return path14;
+  return path15;
 };
 var path10 = /* @__PURE__ */ createPathTagFunction2(encodeURIPath2);
 
@@ -26987,9 +26995,9 @@ var OpenAI = class {
     this.apiKey = token;
     return true;
   }
-  buildURL(path13, query, defaultBaseURL) {
+  buildURL(path14, query, defaultBaseURL) {
     const baseURL = !__classPrivateFieldGet2(this, _OpenAI_instances, "m", _OpenAI_baseURLOverridden).call(this) && defaultBaseURL || this.baseURL;
-    const url = isAbsoluteURL2(path13) ? new URL(path13) : new URL(baseURL + (baseURL.endsWith("/") && path13.startsWith("/") ? path13.slice(1) : path13));
+    const url = isAbsoluteURL2(path14) ? new URL(path14) : new URL(baseURL + (baseURL.endsWith("/") && path14.startsWith("/") ? path14.slice(1) : path14));
     const defaultQuery = this.defaultQuery();
     const pathQuery = Object.fromEntries(url.searchParams);
     if (!isEmptyObj2(defaultQuery) || !isEmptyObj2(pathQuery)) {
@@ -27014,24 +27022,24 @@ var OpenAI = class {
    */
   async prepareRequest(request2, { url, options }) {
   }
-  get(path13, opts) {
-    return this.methodRequest("get", path13, opts);
+  get(path14, opts) {
+    return this.methodRequest("get", path14, opts);
   }
-  post(path13, opts) {
-    return this.methodRequest("post", path13, opts);
+  post(path14, opts) {
+    return this.methodRequest("post", path14, opts);
   }
-  patch(path13, opts) {
-    return this.methodRequest("patch", path13, opts);
+  patch(path14, opts) {
+    return this.methodRequest("patch", path14, opts);
   }
-  put(path13, opts) {
-    return this.methodRequest("put", path13, opts);
+  put(path14, opts) {
+    return this.methodRequest("put", path14, opts);
   }
-  delete(path13, opts) {
-    return this.methodRequest("delete", path13, opts);
+  delete(path14, opts) {
+    return this.methodRequest("delete", path14, opts);
   }
-  methodRequest(method, path13, opts) {
+  methodRequest(method, path14, opts) {
     return this.request(Promise.resolve(opts).then((opts2) => {
-      return { method, path: path13, ...opts2 };
+      return { method, path: path14, ...opts2 };
     }));
   }
   request(options, remainingRetries = null) {
@@ -27149,8 +27157,8 @@ var OpenAI = class {
     }));
     return { response, options, controller, requestLogID, retryOfRequestLogID, startTime };
   }
-  getAPIList(path13, Page3, opts) {
-    return this.requestAPIList(Page3, opts && "then" in opts ? opts.then((opts2) => ({ method: "get", path: path13, ...opts2 })) : { method: "get", path: path13, ...opts });
+  getAPIList(path14, Page3, opts) {
+    return this.requestAPIList(Page3, opts && "then" in opts ? opts.then((opts2) => ({ method: "get", path: path14, ...opts2 })) : { method: "get", path: path14, ...opts });
   }
   requestAPIList(Page3, options) {
     const request2 = this.makeRequest(options, null, void 0);
@@ -27241,8 +27249,8 @@ var OpenAI = class {
   }
   async buildRequest(inputOptions, { retryCount = 0 } = {}) {
     const options = { ...inputOptions };
-    const { method, path: path13, query, defaultBaseURL } = options;
-    const url = this.buildURL(path13, query, defaultBaseURL);
+    const { method, path: path14, query, defaultBaseURL } = options;
+    const url = this.buildURL(path14, query, defaultBaseURL);
     if ("timeout" in options)
       validatePositiveInteger2("timeout", options.timeout);
     options.timeout = options.timeout ?? this.timeout;
@@ -27485,11 +27493,164 @@ async function buildUpdates(results, beforeContents, agent, repoDir) {
   return updates;
 }
 
+// src/generator/index.ts
+import fs10 from "fs/promises";
+import path12 from "path";
+
+// src/agent/generate-prompts.ts
+var GENERATE_SYSTEM_PROMPT = `You are DocSync, a technical documentation writer for software libraries.
+
+Your role is to write a concise, accurate prose description of a code symbol \u2014 nothing more.
+
+## What you receive
+- The symbol name and kind (function, class, interface, type, variable, or enum)
+- The full source code of the symbol
+
+## What you produce
+One to three sentences of plain prose describing what the symbol does, its parameters (if any), and its return value (if any). No headings. No bullet lists. No code fences. No preamble like "This function...". No explanation of your reasoning. Just the description.
+
+## Rules
+- Base every claim strictly on the provided source code.
+- Do not invent behavior, side effects, or error conditions not visible in the code.
+- Use present tense ("Returns", "Accepts", "Builds").
+- For functions: describe what it does, key parameters, and what it returns.
+- For classes: describe the purpose and main responsibilities.
+- For interfaces/types: describe what they represent.
+- Keep it short \u2014 one paragraph, no more than three sentences.`;
+function buildGenerateUserPrompt(opts) {
+  return `Write a documentation description for the \`${opts.symbol}\` ${opts.kind} in \`${opts.file}\`.
+
+<source>
+${opts.sourceText}
+</source>
+
+Output only the prose description \u2014 no headings, no code fences, no explanation.`;
+}
+
+// src/agent/doc-generate-agent.ts
+var DocGenerateAgent = class {
+  client;
+  model;
+  constructor(client, model) {
+    this.client = client;
+    this.model = model;
+  }
+  generateDoc(request2) {
+    return this.client.complete({
+      model: this.model,
+      system: GENERATE_SYSTEM_PROMPT,
+      messages: [{ role: "user", content: buildGenerateUserPrompt(request2) }],
+      maxTokens: GENERATE.MAX_TOKENS
+    });
+  }
+};
+
+// src/generator/index.ts
+async function generateDocs(opts) {
+  const codeFiles = await findCodeFiles(opts.codeDir);
+  if (codeFiles.length === 0) return { symbolCount: 0, fileCount: 0, outPath: opts.outPath };
+  const fileSymbols = await Promise.all(
+    codeFiles.map(async (file) => {
+      const source = await fs10.readFile(file, "utf-8").catch(() => "");
+      if (!source) return { file, symbols: [] };
+      const symbols = await parseSymbolsWithText(source, file);
+      return { file, symbols };
+    })
+  );
+  const nonEmpty = fileSymbols.filter((f3) => f3.symbols.length > 0);
+  if (nonEmpty.length === 0) return { symbolCount: 0, fileCount: 0, outPath: opts.outPath };
+  const agent = new DocGenerateAgent(opts.client, opts.model);
+  const limit2 = opts.concurrency ?? GENERATE.CONCURRENCY;
+  const tasks = [];
+  for (const { file, symbols } of nonEmpty) {
+    for (const sym of symbols) {
+      tasks.push({
+        file,
+        name: sym.name,
+        kind: sym.kind,
+        run: () => agent.generateDoc({ symbol: sym.name, kind: sym.kind, file, sourceText: sym.text })
+      });
+    }
+  }
+  const prose = await withConcurrency(tasks.map((t2) => t2.run), limit2);
+  const grouped = /* @__PURE__ */ new Map();
+  tasks.forEach((t2, i3) => {
+    const list = grouped.get(t2.file) ?? [];
+    list.push({ name: t2.name, kind: t2.kind, prose: prose[i3] });
+    grouped.set(t2.file, list);
+  });
+  const markdown = renderApiDocs(grouped, opts.repoDir);
+  await fs10.mkdir(path12.dirname(opts.outPath), { recursive: true });
+  await fs10.writeFile(opts.outPath, markdown, "utf-8");
+  await writeLlmsTxt(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription);
+  await writeContext7Json(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription);
+  return { symbolCount: tasks.length, fileCount: nonEmpty.length, outPath: opts.outPath };
+}
+function renderApiDocs(grouped, repoDir) {
+  const date = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+  const lines = [
+    "# API Reference",
+    "",
+    `> Generated by DocSync on ${date}. Updated automatically on every PR via [DocSync](https://github.com/Alok650/docsync).`,
+    ""
+  ];
+  for (const [file, symbols] of grouped) {
+    const rel = path12.relative(repoDir, file);
+    lines.push(`### \`${rel}\``, "");
+    for (const { name: name2, kind, prose } of symbols) {
+      lines.push(`#### ${name2}`, `*${kind}*`, "", prose, "");
+    }
+  }
+  return lines.join("\n");
+}
+async function writeLlmsTxt(repoDir, docsOutPath, title, description) {
+  const docsRel = path12.relative(repoDir, docsOutPath);
+  const content = [
+    `# ${title}`,
+    "",
+    `> ${description}`,
+    "",
+    "## Docs",
+    `- [API Reference](${docsRel}): Full API reference, generated and maintained by DocSync.`,
+    "",
+    "## Optional",
+    "- [Source Code](src): TypeScript/JavaScript/Python source files."
+  ].join("\n");
+  await fs10.writeFile(path12.join(repoDir, "llms.txt"), content + "\n", "utf-8");
+}
+async function writeContext7Json(repoDir, docsOutPath, title, description) {
+  const docsDir = path12.relative(repoDir, path12.dirname(docsOutPath));
+  const config = {
+    $schema: "https://context7.com/schema/context7.json",
+    projectTitle: title,
+    description,
+    folders: [docsDir],
+    excludeFolders: [".autodocs", "node_modules", "dist", ".git"]
+  };
+  await fs10.writeFile(
+    path12.join(repoDir, "context7.json"),
+    JSON.stringify(config, null, 2) + "\n",
+    "utf-8"
+  );
+}
+async function withConcurrency(tasks, limit2) {
+  const results = new Array(tasks.length);
+  let next = 0;
+  async function worker() {
+    while (next < tasks.length) {
+      const idx = next++;
+      results[idx] = await tasks[idx]();
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit2, tasks.length) }, worker));
+  return results;
+}
+
 // src/cli.ts
 var program2 = new Command();
 program2.name("docsync").description("Automatic documentation maintenance for codebases").version("0.1.0");
 program2.command("symbols <file>").description("Extract public symbols from a source file").action(async (file) => {
-  const filePath = path12.resolve(file);
+  const filePath = path13.resolve(file);
   let symbols;
   try {
     symbols = await extractSymbols(filePath);
@@ -27508,11 +27669,11 @@ program2.command("symbols <file>").description("Extract public symbols from a so
 });
 program2.command("init").description("Scan codebase and docs, write .autodocs/map.json and GitHub Actions workflow file").option("--docs <dir>", "Path to docs directory", "docs").option("--code <dir>", "Path to code directory", "src").option("--yes", "Skip prompts and use defaults").action(async (opts) => {
   const cwd = process.cwd();
-  let docsDir = path12.resolve(cwd, opts.docs);
-  let codeDir = path12.resolve(cwd, opts.code);
+  let docsDir = path13.resolve(cwd, opts.docs);
+  let codeDir = path13.resolve(cwd, opts.code);
   if (!opts.yes) {
-    docsDir = path12.resolve(cwd, await prompt2(`Where are your docs? [${opts.docs}] `) || opts.docs);
-    codeDir = path12.resolve(cwd, await prompt2(`Where is your code? [${opts.code}] `) || opts.code);
+    docsDir = path13.resolve(cwd, await prompt2(`Where are your docs? [${opts.docs}] `) || opts.docs);
+    codeDir = path13.resolve(cwd, await prompt2(`Where is your code? [${opts.code}] `) || opts.code);
   }
   const codeFiles = await findCodeFiles(codeDir);
   if (codeFiles.length === 0) {
@@ -27521,15 +27682,57 @@ program2.command("init").description("Scan codebase and docs, write .autodocs/ma
   }
   logger.info(`Scanning ${codeFiles.length} code files and docs in ${docsDir}...`);
   const map = await buildMap(codeFiles, docsDir);
-  const outDir = path12.join(cwd, AUTODOCS_DIR);
-  await fs10.mkdir(outDir, { recursive: true });
-  await writeMapFile(path12.join(outDir, MAP_FILENAME), map);
+  const outDir = path13.join(cwd, AUTODOCS_DIR);
+  await fs11.mkdir(outDir, { recursive: true });
+  await writeMapFile(path13.join(outDir, MAP_FILENAME), map);
   const mapped = map.mappings.filter((m2) => m2.docs.length > 0).length;
   logger.success(`${map.mappings.length} symbols indexed, ${mapped} mapped to doc sections.`);
   logger.info(`Map written to ${MAP_RELATIVE_PATH}`);
   const workflowPath = await generateWorkflow(cwd);
-  logger.info(`Workflow written to ${path12.relative(cwd, workflowPath)}`);
+  logger.info(`Workflow written to ${path13.relative(cwd, workflowPath)}`);
   logger.info("Add ANTHROPIC_API_KEY or OPENAI_API_KEY to your GitHub repository secrets to activate DocSync.");
+});
+program2.command("generate").description("Generate API docs, llms.txt, and context7.json from source code using an LLM").option("--out <file>", "Output markdown file", GENERATE.DEFAULT_OUT).option("--code <dir>", "Path to code directory", "src").option("--concurrency <n>", "Max parallel LLM calls", String(GENERATE.CONCURRENCY)).action(async (opts) => {
+  const cwd = process.cwd();
+  const config = await loadConfig(cwd);
+  const client = createLLMClient(config);
+  const codeDir = path13.resolve(cwd, opts.code);
+  const outPath = path13.resolve(cwd, opts.out);
+  const concurrency = Math.max(1, parseInt(opts.concurrency, 10) || GENERATE.CONCURRENCY);
+  let projectTitle = path13.basename(cwd);
+  let projectDescription = `${projectTitle} API reference.`;
+  try {
+    const pkg = JSON.parse(await fs11.readFile(path13.join(cwd, "package.json"), "utf-8"));
+    if (pkg.name) projectTitle = pkg.name;
+    if (pkg.description) projectDescription = pkg.description;
+  } catch {
+  }
+  logger.info(`Generating docs for ${path13.relative(cwd, codeDir) || "."} (${concurrency} parallel calls)...`);
+  const { symbolCount, fileCount } = await generateDocs({
+    codeDir,
+    outPath,
+    repoDir: cwd,
+    projectTitle,
+    projectDescription,
+    client,
+    model: config.llm.model,
+    concurrency
+  });
+  if (symbolCount === 0) {
+    logger.warn("No symbols found. Check that --code points to your source directory.");
+    return;
+  }
+  logger.success(`Documented ${symbolCount} symbols across ${fileCount} files \u2192 ${path13.relative(cwd, outPath)}`);
+  logger.success(`llms.txt written to ${path13.join(path13.relative(cwd, cwd), "llms.txt")}`);
+  logger.success(`context7.json written \u2014 submit your repo at https://context7.com/add-package`);
+  logger.info("Rebuilding symbol index...");
+  const docsDir = path13.dirname(outPath);
+  const codeFiles = await findCodeFiles(codeDir);
+  const map = await buildMap(codeFiles, docsDir);
+  const outDir = path13.join(cwd, AUTODOCS_DIR);
+  await fs11.mkdir(outDir, { recursive: true });
+  await writeMapFile(path13.join(outDir, MAP_FILENAME), map);
+  logger.success(`${map.mappings.filter((m2) => m2.docs.length > 0).length} symbols mapped. Index written to ${MAP_RELATIVE_PATH}`);
 });
 program2.command("check").description("Check changed symbols against docs and post PR comment").option("--dry-run", "Print proposed updates without posting to GitHub").action(async (opts) => {
   const cwd = process.cwd();
