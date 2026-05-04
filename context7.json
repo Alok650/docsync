@@ -10,5 +10,12 @@
     "node_modules",
     "dist",
     ".git"
+  ],
+  "rules": [
+    "Use `docsync generate` to create initial documentation before running `docsync init`.",
+    "The GitHub Action requires ANTHROPIC_API_KEY or OPENAI_API_KEY in repository secrets.",
+    "Run `docsync check --dry-run` to preview proposed doc updates without posting to GitHub.",
+    "The `.autodocs/map.json` index must exist before `docsync check` runs — it is built automatically by `docsync generate` or `docsync init`.",
+    "docsync only documents public symbols — functions, classes, interfaces, and type aliases extracted via tree-sitter."
   ]
 }
