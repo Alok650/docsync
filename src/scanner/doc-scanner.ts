@@ -1,5 +1,6 @@
 import fs from 'fs/promises'
 import { findDocFiles } from './file-finder.js'
+import { UTF8 } from '../constants.js'
 
 export interface DocSection {
   readonly file: string
@@ -81,7 +82,7 @@ export async function scanDocs(docsDir: string): Promise<DocSection[]> {
   const sections: DocSection[] = []
 
   for (const file of files) {
-    const content = await fs.readFile(file, 'utf-8')
+    const content = await fs.readFile(file, UTF8)
     sections.push(...parseSections(file, content))
   }
 

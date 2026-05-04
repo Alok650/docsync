@@ -4,6 +4,8 @@ import { execSync } from 'child_process'
 import { MarkdownEditor } from '../editor/markdown-editor.js'
 import { createOctokit } from '../github/client.js'
 import { GitHubOutput, extractUpdatesFromComment } from '../github/pr-comment.js'
+import { readFileSafe } from '../utils/fs.js'
+import { UTF8 } from '../constants.js'
 import { logger } from '../logger.js'
 import type { GitHubContext } from '../github/types.js'
 
@@ -43,7 +45,7 @@ export async function runApply(
 
   for (const update of toApply) {
     const docAbsPath = path.resolve(repoDir, update.docFile)
-    const content = await fs.readFile(docAbsPath, 'utf-8').catch(() => null)
+    const content = await readFileSafe(docAbsPath)
     if (!content) {
       logger.warn(`Could not read ${update.docFile} — skipping ${update.symbolName}`)
       continue
@@ -55,7 +57,7 @@ export async function runApply(
       continue
     }
 
-    await fs.writeFile(docAbsPath, updated, 'utf-8')
+    await fs.writeFile(docAbsPath, updated, UTF8)
     modifiedFiles.add(update.docFile)
     applied.push(update.symbolName)
     logger.success(`Applied: ${update.symbolName}`)

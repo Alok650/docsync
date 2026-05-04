@@ -3,6 +3,8 @@ import path from 'path'
 import { parseSymbolsWithText } from '../differ/ast-differ.js'
 import { findCodeFiles } from '../scanner/file-finder.js'
 import { DocGenerateAgent } from '../agent/doc-generate-agent.js'
+import { readFileOrEmpty } from '../utils/fs.js'
+import { UTF8 } from '../constants.js'
 import { GENERATE } from '../defaults.js'
 import type { LLMClient } from '../llm/types.js'
 
@@ -34,7 +36,7 @@ export async function generateDocs(opts: GenerateOptions): Promise<GenerateResul
   // Parse symbols with their source text from every code file
   const fileSymbols = await Promise.all(
     codeFiles.map(async file => {
-      const source = await fs.readFile(file, 'utf-8').catch(() => '')
+      const source = await readFileOrEmpty(file)
       if (!source) return { file, symbols: [] }
       const symbols = await parseSymbolsWithText(source, file)
       return { file, symbols }
@@ -72,7 +74,7 @@ export async function generateDocs(opts: GenerateOptions): Promise<GenerateResul
 
   const markdown = renderApiDocs(grouped, opts.repoDir)
   await fs.mkdir(path.dirname(opts.outPath), { recursive: true })
-  await fs.writeFile(opts.outPath, markdown, 'utf-8')
+  await fs.writeFile(opts.outPath, markdown, UTF8)
 
   await writeLlmsTxt(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription)
   await writeContext7Json(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription)
@@ -115,7 +117,7 @@ async function writeLlmsTxt(
 ): Promise<void> {
   const docsRel = path.relative(repoDir, docsOutPath)
   const hasReadme = await fs.access(path.join(repoDir, 'README.md')).then(() => true).catch(() => false)
-  const apiContent = await fs.readFile(docsOutPath, 'utf-8').catch(() => '')
+  const apiContent = await readFileOrEmpty(docsOutPath)
   const moduleGroups = extractModuleGroups(apiContent, docsRel)
 
   const lines: string[] = [
@@ -150,7 +152,7 @@ async function writeLlmsTxt(
     lines.push('', '## Optional', '- [Source Code](src): TypeScript/JavaScript/Python source files.')
   }
 
-  await fs.writeFile(path.join(repoDir, 'llms.txt'), lines.join('\n') + '\n', 'utf-8')
+  await fs.writeFile(path.join(repoDir, 'llms.txt'), lines.join('\n') + '\n', UTF8)
 }
 
 interface ModuleGroup { label: string; link: string; summary: string }
@@ -224,7 +226,7 @@ async function writeContext7Json(
   await fs.writeFile(
     path.join(repoDir, 'context7.json'),
     JSON.stringify(config, null, 2) + '\n',
-    'utf-8',
+    UTF8,
   )
 }
 

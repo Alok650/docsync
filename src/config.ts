@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-import { CONFIG_FILENAME } from './constants.js'
+import { CONFIG_FILENAME, UTF8 } from './constants.js'
 import { AI, CHECK } from './defaults.js'
 import { logger } from './logger.js'
 
@@ -41,7 +41,7 @@ const DEFAULTS: DocSyncConfig = {
 export async function loadConfig(cwd = process.cwd()): Promise<DocSyncConfig> {
   let raw: string
   try {
-    raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), 'utf-8')
+    raw = await fs.readFile(path.join(cwd, CONFIG_FILENAME), UTF8)
   } catch {
     return DEFAULTS
   }

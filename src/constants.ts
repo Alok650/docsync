@@ -1,3 +1,5 @@
+export const UTF8 = 'utf-8' as const
+
 export const AUTODOCS_DIR = '.autodocs'
 
 // map.json — full bidirectional index (symbol+file → docs). Used by init/update.

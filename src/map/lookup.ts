@@ -1,7 +1,7 @@
 import { createHash } from 'crypto'
 import fs from 'fs/promises'
 import path from 'path'
-import { LOOKUP_DIR } from '../constants.js'
+import { LOOKUP_DIR, UTF8 } from '../constants.js'
 import { LOOKUP } from '../defaults.js'
 import type { MapFile, DocRef, LookupTable } from './types.js'
 
@@ -63,7 +63,7 @@ export async function readLookupForSymbols(
   const entries = await Promise.all(
     shardIds.map(async shard => {
       try {
-        const raw = await fs.readFile(path.join(lookupDir, `${shard}.json`), 'utf-8')
+        const raw = await fs.readFile(path.join(lookupDir, `${shard}.json`), UTF8)
         return Object.entries(JSON.parse(raw) as LookupTable)
       } catch {
         return []

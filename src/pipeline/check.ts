@@ -1,6 +1,6 @@
-import fs from 'fs/promises'
 import path from 'path'
 import { getGitDiff, getBeforeContent } from '../differ/git-differ.js'
+import { readFileSafe, readFileOrEmpty } from '../utils/fs.js'
 import { diffSymbols } from '../differ/ast-differ.js'
 import { StructuralRetriever } from '../retrieval/structural.js'
 import { BM25Retriever } from '../retrieval/bm25-retriever.js'
@@ -54,7 +54,7 @@ async function collectChanges(repoDir: string, baseRef: string): Promise<Collect
       const absolutePath = path.join(repoDir, file)
       const [before, after] = await Promise.all([
         getBeforeContent(repoDir, file, baseRef),
-        fs.readFile(absolutePath, 'utf-8').catch(() => ''),
+        readFileOrEmpty(absolutePath),
       ])
 
       if (!after) {
@@ -105,7 +105,7 @@ async function buildUpdates(
 
   for (const result of results) {
     if (updates.length >= maxUpdates) break
-    const afterCode = await fs.readFile(result.change.file, 'utf-8').catch(() => '')
+    const afterCode = await readFileOrEmpty(result.change.file)
     const beforeCode = beforeContents.get(result.change.file) ?? ''
 
     for (const docRef of result.docs) {
@@ -114,7 +114,7 @@ async function buildUpdates(
       const docAbsPath = path.isAbsolute(docRef.file)
         ? docRef.file
         : path.resolve(repoDir, docRef.file)
-      const docContent = await fs.readFile(docAbsPath, 'utf-8').catch(() => null)
+      const docContent = await readFileSafe(docAbsPath)
       if (!docContent) continue
 
       const body = extractSectionBody(docContent, docRef.section)

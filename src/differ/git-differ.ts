@@ -1,5 +1,5 @@
 import { execSync } from 'child_process'
-import { AUTODOCS_DIR } from '../constants.js'
+import { AUTODOCS_DIR, UTF8 } from '../constants.js'
 import { GIT } from '../defaults.js'
 import type { ChangedFile } from './types.js'
 
@@ -38,7 +38,7 @@ export function getGitDiff(repoDir: string, base = GIT.DEFAULT_BASE_REF): Change
   // Exclude the generated index dir so its churn never triggers doc updates.
   const output = execSync(`git diff ${base}...HEAD -- . ':(exclude)${AUTODOCS_DIR}'`, {
     cwd: repoDir,
-    encoding: 'utf-8',
+    encoding: UTF8,
     maxBuffer: MAX_DIFF_BYTES,
   })
   return parseGitDiff(output)
@@ -52,7 +52,7 @@ export async function getBeforeContent(
   try {
     return execSync(`git show ${base}:${filePath}`, {
       cwd: repoDir,
-      encoding: 'utf-8',
+      encoding: UTF8,
     })
   } catch {
     return ''

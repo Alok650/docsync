@@ -1,11 +1,12 @@
 import { readFileSync } from 'fs'
+import { UTF8 } from '../constants.js'
 import type { GitHubContext } from './types.js'
 
 function readEventBaseSha(): string | undefined {
   const eventPath = process.env.GITHUB_EVENT_PATH
   if (!eventPath) return undefined
   try {
-    const event = JSON.parse(readFileSync(eventPath, 'utf-8'))
+    const event = JSON.parse(readFileSync(eventPath, UTF8))
     return event?.pull_request?.base?.sha
   } catch {
     return undefined

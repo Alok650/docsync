@@ -8463,6 +8463,17 @@ async function getParser(language) {
   return parser;
 }
 
+// src/constants.ts
+var UTF8 = "utf-8";
+var AUTODOCS_DIR = ".autodocs";
+var MAP_FILENAME = "map.json";
+var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
+var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
+var WORKFLOW_DIR = ".github/workflows";
+var WORKFLOW_FILENAME = "docsync.yml";
+var APPLY_WORKFLOW_FILENAME = "docsync-apply.yml";
+var CONFIG_FILENAME = "docsync.config.json";
+
 // src/extractor/languages/node-types.ts
 var TS_NODE = {
   EXPORT_STATEMENT: "export_statement",
@@ -8604,7 +8615,7 @@ function parseSymbols(tree, filePath, language) {
 async function extractSymbols(filePath) {
   const language = resolveLanguage(filePath);
   if (!language) return [];
-  const source = await fs2.readFile(filePath, "utf-8");
+  const source = await fs2.readFile(filePath, UTF8);
   const parser = await getParser(language);
   const tree = parser.parse(source);
   if (!tree) return [];
@@ -8710,7 +8721,7 @@ async function scanDocs(docsDir) {
   const files = await findDocFiles(docsDir);
   const sections = [];
   for (const file of files) {
-    const content3 = await fs4.readFile(file, "utf-8");
+    const content3 = await fs4.readFile(file, UTF8);
     sections.push(...parseSections(file, content3));
   }
   return sections;
@@ -8858,16 +8869,6 @@ async function buildMap(codeFiles, docsDir, rootDir = process.cwd()) {
 import fs6 from "fs/promises";
 import path6 from "path";
 
-// src/constants.ts
-var AUTODOCS_DIR = ".autodocs";
-var MAP_FILENAME = "map.json";
-var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
-var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
-var WORKFLOW_DIR = ".github/workflows";
-var WORKFLOW_FILENAME = "docsync.yml";
-var APPLY_WORKFLOW_FILENAME = "docsync-apply.yml";
-var CONFIG_FILENAME = "docsync.config.json";
-
 // src/map/lookup.ts
 import { createHash } from "crypto";
 import fs5 from "fs/promises";
@@ -8894,7 +8895,7 @@ async function readLookupForSymbols(repoDir, symbolNames) {
   const entries = await Promise.all(
     shardIds.map(async (shard) => {
       try {
-        const raw = await fs5.readFile(path5.join(lookupDir, `${shard}.json`), "utf-8");
+        const raw = await fs5.readFile(path5.join(lookupDir, `${shard}.json`), UTF8);
         return Object.entries(JSON.parse(raw));
       } catch {
         return [];
@@ -8919,7 +8920,7 @@ async function writeMapFile(filePath, map4) {
 async function atomicWrite(filePath, content3) {
   const tmpPath = `${filePath}.${process.pid}.tmp`;
   try {
-    await fs6.writeFile(tmpPath, content3, "utf-8");
+    await fs6.writeFile(tmpPath, content3, UTF8);
     await fs6.rename(tmpPath, filePath);
   } catch (err2) {
     await fs6.unlink(tmpPath).catch(() => {
@@ -12586,7 +12587,7 @@ function extractUpdatesFromComment(body2) {
   const match = body2.match(DATA_RE);
   if (!match) return [];
   try {
-    return JSON.parse(Buffer.from(match[1], "base64").toString("utf-8"));
+    return JSON.parse(Buffer.from(match[1], "base64").toString(UTF8));
   } catch {
     return [];
   }
@@ -12765,8 +12766,8 @@ async function generateWorkflow(repoDir) {
   const checkPath = path7.join(workflowDir, WORKFLOW_FILENAME);
   const applyPath = path7.join(workflowDir, APPLY_WORKFLOW_FILENAME);
   await Promise.all([
-    fs7.writeFile(checkPath, checkWorkflowContent(), "utf-8"),
-    fs7.writeFile(applyPath, applyWorkflowContent(), "utf-8")
+    fs7.writeFile(checkPath, checkWorkflowContent(), UTF8),
+    fs7.writeFile(applyPath, applyWorkflowContent(), UTF8)
   ]);
   return checkPath;
 }
@@ -12777,7 +12778,7 @@ function readEventBaseSha() {
   const eventPath = process.env.GITHUB_EVENT_PATH;
   if (!eventPath) return void 0;
   try {
-    const event = JSON.parse(readFileSync(eventPath, "utf-8"));
+    const event = JSON.parse(readFileSync(eventPath, UTF8));
     return event?.pull_request?.base?.sha;
   } catch {
     return void 0;
@@ -12801,7 +12802,6 @@ function readGitHubContext() {
 }
 
 // src/pipeline/check.ts
-import fs9 from "fs/promises";
 import path11 from "path";
 
 // src/differ/git-differ.ts
@@ -12833,7 +12833,7 @@ function parseGitDiff(diffOutput) {
 function getGitDiff(repoDir, base = GIT.DEFAULT_BASE_REF) {
   const output = execSync(`git diff ${base}...HEAD -- . ':(exclude)${AUTODOCS_DIR}'`, {
     cwd: repoDir,
-    encoding: "utf-8",
+    encoding: UTF8,
     maxBuffer: MAX_DIFF_BYTES
   });
   return parseGitDiff(output);
@@ -12842,11 +12842,24 @@ async function getBeforeContent(repoDir, filePath, base = GIT.DEFAULT_BASE_REF) 
   try {
     return execSync(`git show ${base}:${filePath}`, {
       cwd: repoDir,
-      encoding: "utf-8"
+      encoding: UTF8
     });
   } catch {
     return "";
   }
+}
+
+// src/utils/fs.ts
+import fs8 from "fs/promises";
+async function readFileSafe(filePath) {
+  try {
+    return await fs8.readFile(filePath, UTF8);
+  } catch {
+    return null;
+  }
+}
+async function readFileOrEmpty(filePath) {
+  return await readFileSafe(filePath) ?? "";
 }
 
 // src/differ/ast-differ.ts
@@ -13018,7 +13031,7 @@ function toDocSection(ref, body2) {
 }
 
 // src/config.ts
-import fs8 from "fs/promises";
+import fs9 from "fs/promises";
 import path8 from "path";
 
 // node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/core.mjs
@@ -14145,7 +14158,7 @@ var DEFAULTS2 = {
 async function loadConfig(cwd = process.cwd()) {
   let raw;
   try {
-    raw = await fs8.readFile(path8.join(cwd, CONFIG_FILENAME), "utf-8");
+    raw = await fs9.readFile(path8.join(cwd, CONFIG_FILENAME), UTF8);
   } catch {
     return DEFAULTS2;
   }
@@ -27633,7 +27646,7 @@ async function collectChanges(repoDir, baseRef) {
       const absolutePath = path11.join(repoDir, file);
       const [before, after] = await Promise.all([
         getBeforeContent(repoDir, file, baseRef),
-        fs9.readFile(absolutePath, "utf-8").catch(() => "")
+        readFileOrEmpty(absolutePath)
       ]);
       if (!after) {
         skippedFiles.push(file);
@@ -27665,12 +27678,12 @@ async function buildUpdates(results, beforeContents, agent, repoDir, maxUpdates)
   const updates = [];
   for (const result of results) {
     if (updates.length >= maxUpdates) break;
-    const afterCode = await fs9.readFile(result.change.file, "utf-8").catch(() => "");
+    const afterCode = await readFileOrEmpty(result.change.file);
     const beforeCode = beforeContents.get(result.change.file) ?? "";
     for (const docRef of result.docs) {
       if (updates.length >= maxUpdates) break;
       const docAbsPath = path11.isAbsolute(docRef.file) ? docRef.file : path11.resolve(repoDir, docRef.file);
-      const docContent = await fs9.readFile(docAbsPath, "utf-8").catch(() => null);
+      const docContent = await readFileSafe(docAbsPath);
       if (!docContent) continue;
       const body2 = extractSectionBody(docContent, docRef.section);
       if (!body2) continue;
@@ -37773,7 +37786,7 @@ async function runApply(symbols, ctx, repoDir) {
   const modifiedFiles = /* @__PURE__ */ new Set();
   for (const update of toApply) {
     const docAbsPath = path12.resolve(repoDir, update.docFile);
-    const content3 = await fs10.readFile(docAbsPath, "utf-8").catch(() => null);
+    const content3 = await readFileSafe(docAbsPath);
     if (!content3) {
       logger.warn(`Could not read ${update.docFile} \u2014 skipping ${update.symbolName}`);
       continue;
@@ -37783,7 +37796,7 @@ async function runApply(symbols, ctx, repoDir) {
       logger.warn(`Section "${update.section}" not found in ${update.docFile} \u2014 skipping`);
       continue;
     }
-    await fs10.writeFile(docAbsPath, updated, "utf-8");
+    await fs10.writeFile(docAbsPath, updated, UTF8);
     modifiedFiles.add(update.docFile);
     applied.push(update.symbolName);
     logger.success(`Applied: ${update.symbolName}`);
@@ -37871,7 +37884,7 @@ async function generateDocs(opts) {
   if (codeFiles.length === 0) return { symbolCount: 0, fileCount: 0, outPath: opts.outPath };
   const fileSymbols = await Promise.all(
     codeFiles.map(async (file) => {
-      const source = await fs11.readFile(file, "utf-8").catch(() => "");
+      const source = await readFileOrEmpty(file);
       if (!source) return { file, symbols: [] };
       const symbols = await parseSymbolsWithText(source, file);
       return { file, symbols };
@@ -37901,7 +37914,7 @@ async function generateDocs(opts) {
   });
   const markdown = renderApiDocs(grouped, opts.repoDir);
   await fs11.mkdir(path13.dirname(opts.outPath), { recursive: true });
-  await fs11.writeFile(opts.outPath, markdown, "utf-8");
+  await fs11.writeFile(opts.outPath, markdown, UTF8);
   await writeLlmsTxt(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription);
   await writeContext7Json(opts.repoDir, opts.outPath, opts.projectTitle, opts.projectDescription);
   return { symbolCount: tasks.length, fileCount: nonEmpty.length, outPath: opts.outPath };
@@ -37926,7 +37939,7 @@ function renderApiDocs(grouped, repoDir) {
 async function writeLlmsTxt(repoDir, docsOutPath, title, description) {
   const docsRel = path13.relative(repoDir, docsOutPath);
   const hasReadme = await fs11.access(path13.join(repoDir, "README.md")).then(() => true).catch(() => false);
-  const apiContent = await fs11.readFile(docsOutPath, "utf-8").catch(() => "");
+  const apiContent = await readFileOrEmpty(docsOutPath);
   const moduleGroups = extractModuleGroups(apiContent, docsRel);
   const lines = [
     `# ${title}`,
@@ -37957,7 +37970,7 @@ async function writeLlmsTxt(repoDir, docsOutPath, title, description) {
   } else {
     lines.push("", "## Optional", "- [Source Code](src): TypeScript/JavaScript/Python source files.");
   }
-  await fs11.writeFile(path13.join(repoDir, "llms.txt"), lines.join("\n") + "\n", "utf-8");
+  await fs11.writeFile(path13.join(repoDir, "llms.txt"), lines.join("\n") + "\n", UTF8);
 }
 function extractModuleGroups(apiContent, docsRel) {
   const fileHeadingRe = /^### `([^`]+)`$/gm;
@@ -38012,7 +38025,7 @@ async function writeContext7Json(repoDir, docsOutPath, title, description) {
   await fs11.writeFile(
     path13.join(repoDir, "context7.json"),
     JSON.stringify(config, null, 2) + "\n",
-    "utf-8"
+    UTF8
   );
 }
 async function withConcurrency(tasks, limit2) {
@@ -38084,7 +38097,7 @@ program2.command("generate").description("Generate API docs, llms.txt, and conte
   let projectTitle = path14.basename(cwd);
   let projectDescription = `${projectTitle} API reference.`;
   try {
-    const pkg = JSON.parse(await fs12.readFile(path14.join(cwd, "package.json"), "utf-8"));
+    const pkg = JSON.parse(await fs12.readFile(path14.join(cwd, "package.json"), UTF8));
     if (pkg.name) projectTitle = pkg.name;
     if (pkg.description) projectDescription = pkg.description;
   } catch {

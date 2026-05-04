@@ -14,7 +14,7 @@ import { runApply, runDismiss } from './pipeline/apply.js'
 import { loadConfig } from './config.js'
 import { generateDocs } from './generator/index.js'
 import { createLLMClient } from './llm/factory.js'
-import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH } from './constants.js'
+import { AUTODOCS_DIR, MAP_FILENAME, MAP_RELATIVE_PATH, UTF8 } from './constants.js'
 import { CLI, GENERATE } from './defaults.js'
 import { logger } from './logger.js'
 
@@ -104,7 +104,7 @@ program
     let projectTitle = path.basename(cwd)
     let projectDescription = `${projectTitle} API reference.`
     try {
-      const pkg = JSON.parse(await fs.readFile(path.join(cwd, 'package.json'), 'utf-8'))
+      const pkg = JSON.parse(await fs.readFile(path.join(cwd, 'package.json'), UTF8))
       if (pkg.name) projectTitle = pkg.name
       if (pkg.description) projectDescription = pkg.description
     } catch { /* no package.json — use directory name */ }

@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-import { WORKFLOW_DIR, WORKFLOW_FILENAME, APPLY_WORKFLOW_FILENAME } from '../constants.js'
+import { WORKFLOW_DIR, WORKFLOW_FILENAME, APPLY_WORKFLOW_FILENAME, UTF8 } from '../constants.js'
 
 function checkWorkflowContent(): string {
   return `name: DocSync
@@ -68,8 +68,8 @@ export async function generateWorkflow(repoDir: string): Promise<string> {
   const applyPath = path.join(workflowDir, APPLY_WORKFLOW_FILENAME)
 
   await Promise.all([
-    fs.writeFile(checkPath, checkWorkflowContent(), 'utf-8'),
-    fs.writeFile(applyPath, applyWorkflowContent(), 'utf-8'),
+    fs.writeFile(checkPath, checkWorkflowContent(), UTF8),
+    fs.writeFile(applyPath, applyWorkflowContent(), UTF8),
   ])
 
   return checkPath

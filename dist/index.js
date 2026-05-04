@@ -5001,6 +5001,17 @@ async function getParser(language) {
   return parser;
 }
 
+// src/constants.ts
+var UTF8 = "utf-8";
+var AUTODOCS_DIR = ".autodocs";
+var MAP_FILENAME = "map.json";
+var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
+var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
+var WORKFLOW_DIR = ".github/workflows";
+var WORKFLOW_FILENAME = "docsync.yml";
+var APPLY_WORKFLOW_FILENAME = "docsync-apply.yml";
+var CONFIG_FILENAME = "docsync.config.json";
+
 // src/extractor/languages/node-types.ts
 var TS_NODE = {
   EXPORT_STATEMENT: "export_statement",
@@ -5142,7 +5153,7 @@ function parseSymbols(tree, filePath, language) {
 async function extractSymbols(filePath) {
   const language = resolveLanguage(filePath);
   if (!language) return [];
-  const source = await fs2.readFile(filePath, "utf-8");
+  const source = await fs2.readFile(filePath, UTF8);
   const parser = await getParser(language);
   const tree = parser.parse(source);
   if (!tree) return [];
@@ -5248,7 +5259,7 @@ async function scanDocs(docsDir) {
   const files = await findDocFiles(docsDir);
   const sections = [];
   for (const file of files) {
-    const content3 = await fs4.readFile(file, "utf-8");
+    const content3 = await fs4.readFile(file, UTF8);
     sections.push(...parseSections(file, content3));
   }
   return sections;
@@ -5423,18 +5434,6 @@ async function diffSymbols(filePath, before, after) {
 
 // src/differ/git-differ.ts
 import { execSync } from "child_process";
-
-// src/constants.ts
-var AUTODOCS_DIR = ".autodocs";
-var MAP_FILENAME = "map.json";
-var MAP_RELATIVE_PATH = `${AUTODOCS_DIR}/${MAP_FILENAME}`;
-var LOOKUP_DIR = `${AUTODOCS_DIR}/lookup`;
-var WORKFLOW_DIR = ".github/workflows";
-var WORKFLOW_FILENAME = "docsync.yml";
-var APPLY_WORKFLOW_FILENAME = "docsync-apply.yml";
-var CONFIG_FILENAME = "docsync.config.json";
-
-// src/differ/git-differ.ts
 var DIFF_FILE_HEADER = /^diff --git a\/.+ b\/(.+)$/;
 var HUNK_HEADER = /^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/;
 var MAX_DIFF_BYTES = 100 * 1024 * 1024;
@@ -5462,7 +5461,7 @@ function parseGitDiff(diffOutput) {
 function getGitDiff(repoDir, base = GIT.DEFAULT_BASE_REF) {
   const output = execSync(`git diff ${base}...HEAD -- . ':(exclude)${AUTODOCS_DIR}'`, {
     cwd: repoDir,
-    encoding: "utf-8",
+    encoding: UTF8,
     maxBuffer: MAX_DIFF_BYTES
   });
   return parseGitDiff(output);
@@ -5471,7 +5470,7 @@ async function getBeforeContent(repoDir, filePath, base = GIT.DEFAULT_BASE_REF) 
   try {
     return execSync(`git show ${base}:${filePath}`, {
       cwd: repoDir,
-      encoding: "utf-8"
+      encoding: UTF8
     });
   } catch {
     return "";
@@ -16775,7 +16774,7 @@ var DEFAULTS = {
 async function loadConfig(cwd = process.cwd()) {
   let raw;
   try {
-    raw = await fs5.readFile(path5.join(cwd, CONFIG_FILENAME), "utf-8");
+    raw = await fs5.readFile(path5.join(cwd, CONFIG_FILENAME), UTF8);
   } catch {
     return DEFAULTS;
   }
@@ -30289,7 +30288,7 @@ async function readLookupForSymbols(repoDir, symbolNames) {
   const entries = await Promise.all(
     shardIds.map(async (shard) => {
       try {
-        const raw = await fs6.readFile(path8.join(lookupDir, `${shard}.json`), "utf-8");
+        const raw = await fs6.readFile(path8.join(lookupDir, `${shard}.json`), UTF8);
         return Object.entries(JSON.parse(raw));
       } catch {
         return [];
@@ -30314,7 +30313,7 @@ async function writeMapFile(filePath, map4) {
 async function atomicWrite(filePath, content3) {
   const tmpPath = `${filePath}.${process.pid}.tmp`;
   try {
-    await fs7.writeFile(tmpPath, content3, "utf-8");
+    await fs7.writeFile(tmpPath, content3, UTF8);
     await fs7.rename(tmpPath, filePath);
   } catch (err2) {
     await fs7.unlink(tmpPath).catch(() => {
@@ -30324,10 +30323,24 @@ async function atomicWrite(filePath, content3) {
 }
 
 // src/map/updater.ts
-import fs8 from "fs/promises";
 import path10 from "path";
+
+// src/utils/fs.ts
+import fs8 from "fs/promises";
+async function readFileSafe(filePath) {
+  try {
+    return await fs8.readFile(filePath, UTF8);
+  } catch {
+    return null;
+  }
+}
+async function readFileOrEmpty(filePath) {
+  return await readFileSafe(filePath) ?? "";
+}
+
+// src/map/updater.ts
 async function updateMapForChangedFiles(mapFilePath, changedFiles) {
-  const raw = await fs8.readFile(mapFilePath, "utf-8");
+  const raw = await readFileOrEmpty(mapFilePath);
   let map4 = JSON.parse(raw);
   for (const filePath of changedFiles) {
     const absolutePath = path10.resolve(filePath);
@@ -30343,7 +30356,7 @@ async function updateMapForChangedFiles(mapFilePath, changedFiles) {
       map4 = { ...map4, mappings: remaining };
       continue;
     }
-    const content3 = await fs8.readFile(absolutePath, "utf-8").catch(() => "");
+    const content3 = await readFileOrEmpty(absolutePath);
     const newEntries = currentSymbols.map((s2) => {
       const symbolText = content3.split("\n").slice(s2.startLine - 1, s2.endLine).join("\n");
       const fingerprint = computeFingerprint(symbolText);
@@ -34184,8 +34197,8 @@ async function generateWorkflow(repoDir) {
   const checkPath = path11.join(workflowDir, WORKFLOW_FILENAME);
   const applyPath = path11.join(workflowDir, APPLY_WORKFLOW_FILENAME);
   await Promise.all([
-    fs9.writeFile(checkPath, checkWorkflowContent(), "utf-8"),
-    fs9.writeFile(applyPath, applyWorkflowContent(), "utf-8")
+    fs9.writeFile(checkPath, checkWorkflowContent(), UTF8),
+    fs9.writeFile(applyPath, applyWorkflowContent(), UTF8)
   ]);
   return checkPath;
 }
@@ -34196,7 +34209,7 @@ function readEventBaseSha() {
   const eventPath = process.env.GITHUB_EVENT_PATH;
   if (!eventPath) return void 0;
   try {
-    const event = JSON.parse(readFileSync(eventPath, "utf-8"));
+    const event = JSON.parse(readFileSync(eventPath, UTF8));
     return event?.pull_request?.base?.sha;
   } catch {
     return void 0;
@@ -34220,7 +34233,6 @@ function readGitHubContext() {
 }
 
 // src/pipeline/check.ts
-import fs10 from "fs/promises";
 import path12 from "path";
 
 // src/map/types.ts
@@ -34251,7 +34263,7 @@ async function collectChanges(repoDir, baseRef) {
       const absolutePath = path12.join(repoDir, file);
       const [before, after] = await Promise.all([
         getBeforeContent(repoDir, file, baseRef),
-        fs10.readFile(absolutePath, "utf-8").catch(() => "")
+        readFileOrEmpty(absolutePath)
       ]);
       if (!after) {
         skippedFiles.push(file);
@@ -34283,12 +34295,12 @@ async function buildUpdates(results, beforeContents, agent, repoDir, maxUpdates)
   const updates = [];
   for (const result of results) {
     if (updates.length >= maxUpdates) break;
-    const afterCode = await fs10.readFile(result.change.file, "utf-8").catch(() => "");
+    const afterCode = await readFileOrEmpty(result.change.file);
     const beforeCode = beforeContents.get(result.change.file) ?? "";
     for (const docRef of result.docs) {
       if (updates.length >= maxUpdates) break;
       const docAbsPath = path12.isAbsolute(docRef.file) ? docRef.file : path12.resolve(repoDir, docRef.file);
-      const docContent = await fs10.readFile(docAbsPath, "utf-8").catch(() => null);
+      const docContent = await readFileSafe(docAbsPath);
       if (!docContent) continue;
       const body2 = extractSectionBody(docContent, docRef.section);
       if (!body2) continue;

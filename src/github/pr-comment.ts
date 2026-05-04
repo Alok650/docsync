@@ -1,4 +1,5 @@
 import { GITHUB } from '../defaults.js'
+import { UTF8 } from '../constants.js'
 import type { Octokit } from '@octokit/rest'
 import type { GitHubContext, ProposedDocUpdate } from './types.js'
 
@@ -27,7 +28,7 @@ export function extractUpdatesFromComment(body: string): StoredUpdate[] {
   const match = body.match(DATA_RE)
   if (!match) return []
   try {
-    return JSON.parse(Buffer.from(match[1], 'base64').toString('utf-8')) as StoredUpdate[]
+    return JSON.parse(Buffer.from(match[1], 'base64').toString(UTF8)) as StoredUpdate[]
   } catch {
     return []
   }
