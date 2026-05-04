@@ -1,15 +1,13 @@
 {
-  "GitHubOutput": [
+  "RetrievalResult": [
     {
       "file": "docs/api.md",
-      "section": "#### GitHubOutput",
+      "section": "#### RetrievalResult",
       "lines": [
-        324,
-        328
+        503,
+        507
       ]
-    }
-  ],
-  "TieredRetriever": [
+    },
     {
       "file": "docs/api.md",
       "section": "#### TieredRetriever",

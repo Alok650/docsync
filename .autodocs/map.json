@@ -2,24 +2,300 @@
   "version": 1,
   "mappings": [
     {
+      "symbol": "DocGenerateRequest",
+      "file": "src/agent/doc-generate-agent.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "DocGenerateAgent",
+      "file": "src/agent/doc-generate-agent.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
+          ]
+        }
+      ]
+    },
+    {
       "symbol": "DocUpdateRequest",
       "file": "src/agent/doc-update-agent.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateRequest",
+          "lines": [
+            19,
+            23
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        }
+      ]
     },
     {
       "symbol": "DocUpdateAgent",
       "file": "src/agent/doc-update-agent.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GENERATE_SYSTEM_PROMPT",
+      "file": "src/agent/generate-prompts.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE_SYSTEM_PROMPT",
+          "lines": [
+            31,
+            35
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SYSTEM_PROMPT",
+          "lines": [
+            43,
+            47
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildGenerateUserPrompt",
+          "lines": [
+            36,
+            40
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP_DIR",
+          "lines": [
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE",
+          "lines": [
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMCompletionOptions",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildUserPrompt",
+          "lines": [
+            48,
+            52
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### OpenAIClient",
+          "lines": [
+            364,
+            368
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AnthropicClient",
+          "lines": [
+            350,
+            354
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "buildGenerateUserPrompt",
+      "file": "src/agent/generate-prompts.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### buildGenerateUserPrompt",
+          "lines": [
+            36,
+            40
+          ]
+        }
+      ]
     },
     {
       "symbol": "SYSTEM_PROMPT",
       "file": "src/agent/prompts.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE_SYSTEM_PROMPT",
+          "lines": [
+            31,
+            35
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SYSTEM_PROMPT",
+          "lines": [
+            43,
+            47
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildGenerateUserPrompt",
+          "lines": [
+            36,
+            40
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP_DIR",
+          "lines": [
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMCompletionOptions",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildUserPrompt",
+          "lines": [
+            48,
+            52
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### OpenAIClient",
+          "lines": [
+            364,
+            368
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AnthropicClient",
+          "lines": [
+            350,
+            354
+          ]
+        }
+      ]
     },
     {
       "symbol": "buildUserPrompt",
       "file": "src/agent/prompts.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### buildUserPrompt",
+          "lines": [
+            48,
+            52
+          ]
+        }
+      ]
     },
     {
       "symbol": "LLM_PROVIDER",
@@ -27,10 +303,74 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### LLMProvider",
           "lines": [
-            31,
-            34
+            60,
+            64
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLM_PROVIDER",
+          "lines": [
+            55,
+            59
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMConfig",
+          "lines": [
+            65,
+            69
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### createLLMClient",
+          "lines": [
+            357,
+            361
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AI",
+          "lines": [
+            124,
+            128
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE",
+          "lines": [
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### loadConfig",
+          "lines": [
+            75,
+            79
           ]
         }
       ]
@@ -38,12 +378,30 @@
     {
       "symbol": "LLMProvider",
       "file": "src/config.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMProvider",
+          "lines": [
+            60,
+            64
+          ]
+        }
+      ]
     },
     {
       "symbol": "LLMConfig",
       "file": "src/config.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMConfig",
+          "lines": [
+            65,
+            69
+          ]
+        }
+      ]
     },
     {
       "symbol": "DocSyncConfig",
@@ -51,10 +409,34 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### createLLMClient",
           "lines": [
-            31,
-            34
+            357,
+            361
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### loadConfig",
+          "lines": [
+            75,
+            79
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### runCheck",
+          "lines": [
+            475,
+            479
           ]
         }
       ]
@@ -62,7 +444,16 @@
     {
       "symbol": "loadConfig",
       "file": "src/config.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### loadConfig",
+          "lines": [
+            75,
+            79
+          ]
+        }
+      ]
     },
     {
       "symbol": "AUTODOCS_DIR",
@@ -70,18 +461,74 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### LOOKUP_DIR",
           "lines": [
-            27,
-            30
+            97,
+            101
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### AUTODOCS_DIR",
           "lines": [
-            3,
-            8
+            82,
+            86
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_DIR",
+          "lines": [
+            102,
+            106
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### findCodeFiles",
+          "lines": [
+            554,
+            558
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### CLI",
+          "lines": [
+            144,
+            148
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GITHUB",
+          "lines": [
+            134,
+            138
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AI",
+          "lines": [
+            124,
+            128
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
           ]
         }
       ]
@@ -89,7 +536,104 @@
     {
       "symbol": "MAP_FILENAME",
       "file": "src/constants.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_FILENAME",
+          "lines": [
+            87,
+            91
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_FILENAME",
+          "lines": [
+            107,
+            111
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### CONFIG_FILENAME",
+          "lines": [
+            112,
+            116
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### updateMapForChangedFiles",
+          "lines": [
+            456,
+            460
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### resolveLanguage",
+          "lines": [
+            236,
+            240
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MapFile",
+          "lines": [
+            439,
+            443
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalResult",
+          "lines": [
+            503,
+            507
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25",
+          "lines": [
+            119,
+            123
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        }
+      ]
     },
     {
       "symbol": "MAP_RELATIVE_PATH",
@@ -97,34 +641,274 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### MAP_RELATIVE_PATH",
           "lines": [
-            3,
-            8
+            92,
+            96
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### WORKFLOW_DIR",
           "lines": [
-            23,
-            26
+            102,
+            106
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## parseSymbols",
+          "section": "#### resolveLanguage",
+          "lines": [
+            236,
+            240
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_FILENAME",
+          "lines": [
+            87,
+            91
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### updateMapForChangedFiles",
+          "lines": [
+            456,
+            460
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE",
+          "lines": [
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### runCheck",
+          "lines": [
+            475,
+            479
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getBeforeContent",
+          "lines": [
+            183,
+            187
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MapFile",
+          "lines": [
+            439,
+            443
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalResult",
+          "lines": [
+            503,
+            507
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25",
+          "lines": [
+            119,
+            123
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ChangedFile",
+          "lines": [
+            200,
+            204
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateWorkflow",
+          "lines": [
+            343,
+            347
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP_DIR",
+          "lines": [
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### findCodeFiles",
+          "lines": [
+            554,
+            558
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateRequest",
           "lines": [
             19,
-            22
+            23
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### DocSection",
           "lines": [
-            15,
-            18
+            527,
+            531
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### scanDocs",
+          "lines": [
+            537,
+            541
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateResult",
+          "lines": [
+            293,
+            297
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractPythonSymbols",
+          "lines": [
+            265,
+            269
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getParser",
+          "lines": [
+            279,
+            283
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getGitDiff",
+          "lines": [
+            178,
+            182
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseGitDiff",
+          "lines": [
+            173,
+            177
           ]
         }
       ]
@@ -135,10 +919,98 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### LOOKUP_DIR",
           "lines": [
-            27,
-            30
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AUTODOCS_DIR",
+          "lines": [
+            82,
+            86
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_DIR",
+          "lines": [
+            102,
+            106
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP",
+          "lines": [
+            139,
+            143
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### computeFingerprint",
+          "lines": [
+            407,
+            411
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### findCodeFiles",
+          "lines": [
+            554,
+            558
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### symbolShard",
+          "lines": [
+            402,
+            406
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
           ]
         }
       ]
@@ -146,17 +1018,172 @@
     {
       "symbol": "WORKFLOW_DIR",
       "file": "src/constants.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_DIR",
+          "lines": [
+            102,
+            106
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_FILENAME",
+          "lines": [
+            107,
+            111
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateWorkflow",
+          "lines": [
+            343,
+            347
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP_DIR",
+          "lines": [
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AUTODOCS_DIR",
+          "lines": [
+            82,
+            86
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### findCodeFiles",
+          "lines": [
+            554,
+            558
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        }
+      ]
     },
     {
       "symbol": "WORKFLOW_FILENAME",
       "file": "src/constants.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_FILENAME",
+          "lines": [
+            107,
+            111
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateWorkflow",
+          "lines": [
+            343,
+            347
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_DIR",
+          "lines": [
+            102,
+            106
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### CONFIG_FILENAME",
+          "lines": [
+            112,
+            116
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_FILENAME",
+          "lines": [
+            87,
+            91
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        }
+      ]
     },
     {
       "symbol": "CONFIG_FILENAME",
       "file": "src/constants.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### CONFIG_FILENAME",
+          "lines": [
+            112,
+            116
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_FILENAME",
+          "lines": [
+            107,
+            111
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_FILENAME",
+          "lines": [
+            87,
+            91
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MAP_RELATIVE_PATH",
+          "lines": [
+            92,
+            96
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AI",
+          "lines": [
+            124,
+            128
+          ]
+        }
+      ]
     },
     {
       "symbol": "BM25",
@@ -164,10 +1191,50 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### BM25",
           "lines": [
-            27,
-            30
+            119,
+            123
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Matcher",
+          "lines": [
+            520,
+            524
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Result",
+          "lines": [
+            515,
+            519
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalResult",
+          "lines": [
+            503,
+            507
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
           ]
         }
       ]
@@ -175,7 +1242,24 @@
     {
       "symbol": "AI",
       "file": "src/defaults.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### AI",
+          "lines": [
+            124,
+            128
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE_SYSTEM_PROMPT",
+          "lines": [
+            31,
+            35
+          ]
+        }
+      ]
     },
     {
       "symbol": "GIT",
@@ -183,10 +1267,34 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### GIT",
           "lines": [
-            3,
-            8
+            129,
+            133
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getBeforeContent",
+          "lines": [
+            183,
+            187
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getGitDiff",
+          "lines": [
+            178,
+            182
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseGitDiff",
+          "lines": [
+            173,
+            177
           ]
         }
       ]
@@ -197,10 +1305,66 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### readGitHubContext",
           "lines": [
-            3,
-            8
+            317,
+            321
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### WORKFLOW_DIR",
+          "lines": [
+            102,
+            106
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GITHUB",
+          "lines": [
+            134,
+            138
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubContext",
+          "lines": [
+            331,
+            335
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "# API Reference",
+          "lines": [
+            1,
+            4
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### createOctokit",
+          "lines": [
+            310,
+            314
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateWorkflow",
+          "lines": [
+            343,
+            347
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubOutput",
+          "lines": [
+            324,
+            328
           ]
         }
       ]
@@ -211,10 +1375,66 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### LOOKUP_DIR",
           "lines": [
-            27,
-            30
+            97,
+            101
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP",
+          "lines": [
+            139,
+            143
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### computeFingerprint",
+          "lines": [
+            407,
+            411
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### symbolShard",
+          "lines": [
+            402,
+            406
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
           ]
         }
       ]
@@ -222,17 +1442,134 @@
     {
       "symbol": "CLI",
       "file": "src/defaults.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### CLI",
+          "lines": [
+            144,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GENERATE",
+      "file": "src/defaults.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE",
+          "lines": [
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE_SYSTEM_PROMPT",
+          "lines": [
+            31,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "SymbolWithText",
+      "file": "src/differ/ast-differ.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolWithText",
+          "lines": [
+            156,
+            160
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "parseSymbolsWithText",
+      "file": "src/differ/ast-differ.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
+          ]
+        }
+      ]
     },
     {
       "symbol": "diffSymbols",
       "file": "src/differ/ast-differ.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### diffSymbols",
+          "lines": [
+            166,
+            170
+          ]
+        }
+      ]
     },
     {
       "symbol": "parseGitDiff",
       "file": "src/differ/git-differ.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### getGitDiff",
+          "lines": [
+            178,
+            182
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseGitDiff",
+          "lines": [
+            173,
+            177
+          ]
+        }
+      ]
     },
     {
       "symbol": "getGitDiff",
@@ -240,10 +1577,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### getGitDiff",
           "lines": [
-            3,
-            8
+            178,
+            182
           ]
         }
       ]
@@ -251,17 +1588,76 @@
     {
       "symbol": "getBeforeContent",
       "file": "src/differ/git-differ.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### getBeforeContent",
+          "lines": [
+            183,
+            187
+          ]
+        }
+      ]
     },
     {
       "symbol": "ChangeType",
       "file": "src/differ/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### ChangeType",
+          "lines": [
+            190,
+            194
+          ]
+        }
+      ]
     },
     {
       "symbol": "SymbolChange",
       "file": "src/differ/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### TieredRetriever",
+          "lines": [
+            489,
+            493
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalAdapter",
+          "lines": [
+            508,
+            512
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolChange",
+          "lines": [
+            195,
+            199
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### diffSymbols",
+          "lines": [
+            166,
+            170
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        }
+      ]
     },
     {
       "symbol": "ChangedFile",
@@ -269,10 +1665,26 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### ChangedFile",
           "lines": [
-            3,
-            8
+            200,
+            204
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### getGitDiff",
+          "lines": [
+            178,
+            182
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseGitDiff",
+          "lines": [
+            173,
+            177
           ]
         }
       ]
@@ -280,7 +1692,16 @@
     {
       "symbol": "MarkdownEditor",
       "file": "src/editor/markdown-editor.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### MarkdownEditor",
+          "lines": [
+            207,
+            211
+          ]
+        }
+      ]
     },
     {
       "symbol": "LANGUAGE",
@@ -288,26 +1709,130 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### Language",
           "lines": [
-            23,
-            26
+            219,
+            223
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## parseSymbols",
+          "section": "#### resolveLanguage",
           "lines": [
-            19,
-            22
+            236,
+            240
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### getParser",
           "lines": [
-            15,
-            18
+            279,
+            283
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbols",
+          "lines": [
+            241,
+            245
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractSymbols",
+          "lines": [
+            246,
+            250
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractTypeScriptSymbols",
+          "lines": [
+            272,
+            276
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMClient",
+          "lines": [
+            381,
+            385
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMConfig",
+          "lines": [
+            65,
+            69
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LANGUAGE",
+          "lines": [
+            214,
+            218
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLM_PROVIDER",
+          "lines": [
+            55,
+            59
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMCompletionOptions",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMMessage",
+          "lines": [
+            371,
+            375
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
           ]
         }
       ]
@@ -318,26 +1843,130 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### Language",
           "lines": [
-            23,
-            26
+            219,
+            223
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## parseSymbols",
+          "section": "#### resolveLanguage",
           "lines": [
-            19,
-            22
+            236,
+            240
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### getParser",
           "lines": [
-            15,
-            18
+            279,
+            283
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbols",
+          "lines": [
+            241,
+            245
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractSymbols",
+          "lines": [
+            246,
+            250
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractTypeScriptSymbols",
+          "lines": [
+            272,
+            276
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMClient",
+          "lines": [
+            381,
+            385
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMConfig",
+          "lines": [
+            65,
+            69
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LANGUAGE",
+          "lines": [
+            214,
+            218
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLM_PROVIDER",
+          "lines": [
+            55,
+            59
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMCompletionOptions",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMMessage",
+          "lines": [
+            371,
+            375
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
           ]
         }
       ]
@@ -348,26 +1977,234 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### SymbolKind",
           "lines": [
-            9,
-            14
+            229,
+            233
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## parseSymbols",
+          "section": "#### SYMBOL_KIND",
+          "lines": [
+            224,
+            228
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolChange",
+          "lines": [
+            195,
+            199
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateRequest",
           "lines": [
             19,
-            22
+            23
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### CLI",
           "lines": [
-            27,
-            30
+            144,
+            148
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolWithText",
+          "lines": [
+            156,
+            160
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractPythonSymbols",
+          "lines": [
+            265,
+            269
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildGenerateUserPrompt",
+          "lines": [
+            36,
+            40
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### diffSymbols",
+          "lines": [
+            166,
+            170
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractTypeScriptSymbols",
+          "lines": [
+            272,
+            276
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### symbolShard",
+          "lines": [
+            402,
+            406
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalAdapter",
+          "lines": [
+            508,
+            512
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ProposedDocUpdate",
+          "lines": [
+            336,
+            340
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalResult",
+          "lines": [
+            503,
+            507
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MapEntry",
+          "lines": [
+            434,
+            438
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE",
+          "lines": [
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LOOKUP",
+          "lines": [
+            139,
+            143
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Matcher",
+          "lines": [
+            520,
+            524
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildUserPrompt",
+          "lines": [
+            48,
+            52
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
           ]
         }
       ]
@@ -375,7 +2212,16 @@
     {
       "symbol": "SymbolKind",
       "file": "src/extractor/constants.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolKind",
+          "lines": [
+            229,
+            233
+          ]
+        }
+      ]
     },
     {
       "symbol": "resolveLanguage",
@@ -383,10 +2229,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### resolveLanguage",
           "lines": [
-            15,
-            18
+            236,
+            240
           ]
         }
       ]
@@ -397,10 +2243,18 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## parseSymbols",
+          "section": "#### parseSymbols",
           "lines": [
-            19,
-            22
+            241,
+            245
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbolsWithText",
+          "lines": [
+            161,
+            165
           ]
         }
       ]
@@ -411,18 +2265,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### extractSymbols",
           "lines": [
-            15,
-            18
-          ]
-        },
-        {
-          "file": "docs/api.md",
-          "section": "## extractSymbols",
-          "lines": [
-            9,
-            14
+            246,
+            250
           ]
         }
       ]
@@ -433,18 +2279,26 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### TS_NODE",
           "lines": [
-            23,
-            26
+            253,
+            257
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### PY_NODE",
           "lines": [
-            9,
-            14
+            258,
+            262
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### CODE_EXTENSIONS",
+          "lines": [
+            544,
+            548
           ]
         }
       ]
@@ -455,18 +2309,26 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### PY_NODE",
           "lines": [
-            23,
-            26
+            258,
+            262
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### TS_NODE",
           "lines": [
-            9,
-            14
+            253,
+            257
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### CODE_EXTENSIONS",
+          "lines": [
+            544,
+            548
           ]
         }
       ]
@@ -474,12 +2336,30 @@
     {
       "symbol": "extractPythonSymbols",
       "file": "src/extractor/languages/python.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### extractPythonSymbols",
+          "lines": [
+            265,
+            269
+          ]
+        }
+      ]
     },
     {
       "symbol": "extractTypeScriptSymbols",
       "file": "src/extractor/languages/typescript.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### extractTypeScriptSymbols",
+          "lines": [
+            272,
+            276
+          ]
+        }
+      ]
     },
     {
       "symbol": "getParser",
@@ -487,10 +2367,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## getParser",
+          "section": "#### getParser",
           "lines": [
-            23,
-            26
+            279,
+            283
           ]
         }
       ]
@@ -501,10 +2381,108 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### SymbolWithText",
           "lines": [
-            9,
-            14
+            156,
+            160
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractPythonSymbols",
+          "lines": [
+            265,
+            269
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### parseSymbols",
+          "lines": [
+            241,
+            245
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractSymbols",
+          "lines": [
+            246,
+            250
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### extractTypeScriptSymbols",
+          "lines": [
+            272,
+            276
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GenerateResult",
+      "file": "src/generator/index.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateResult",
+          "lines": [
+            293,
+            297
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "GenerateOptions",
+      "file": "src/generator/index.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "generateDocs",
+      "file": "src/generator/index.ts",
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
           ]
         }
       ]
@@ -512,17 +2490,44 @@
     {
       "symbol": "createOctokit",
       "file": "src/github/client.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### createOctokit",
+          "lines": [
+            310,
+            314
+          ]
+        }
+      ]
     },
     {
       "symbol": "readGitHubContext",
       "file": "src/github/context.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### readGitHubContext",
+          "lines": [
+            317,
+            321
+          ]
+        }
+      ]
     },
     {
       "symbol": "GitHubOutput",
       "file": "src/github/pr-comment.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubOutput",
+          "lines": [
+            324,
+            328
+          ]
+        }
+      ]
     },
     {
       "symbol": "GitHubContext",
@@ -530,10 +2535,50 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### GIT",
           "lines": [
-            31,
-            34
+            129,
+            133
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### createOctokit",
+          "lines": [
+            310,
+            314
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubContext",
+          "lines": [
+            331,
+            335
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### runCheck",
+          "lines": [
+            475,
+            479
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubOutput",
+          "lines": [
+            324,
+            328
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readGitHubContext",
+          "lines": [
+            317,
+            321
           ]
         }
       ]
@@ -544,10 +2589,18 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### ProposedDocUpdate",
           "lines": [
-            31,
-            34
+            336,
+            340
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GitHubOutput",
+          "lines": [
+            324,
+            328
           ]
         }
       ]
@@ -555,42 +2608,194 @@
     {
       "symbol": "generateWorkflow",
       "file": "src/github/workflow-generator.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### generateWorkflow",
+          "lines": [
+            343,
+            347
+          ]
+        }
+      ]
     },
     {
       "symbol": "AnthropicClient",
       "file": "src/llm/anthropic.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### createLLMClient",
+          "lines": [
+            357,
+            361
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AnthropicClient",
+          "lines": [
+            350,
+            354
+          ]
+        }
+      ]
     },
     {
       "symbol": "createLLMClient",
       "file": "src/llm/factory.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### createLLMClient",
+          "lines": [
+            357,
+            361
+          ]
+        }
+      ]
     },
     {
       "symbol": "OpenAIClient",
       "file": "src/llm/openai.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### createLLMClient",
+          "lines": [
+            357,
+            361
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### OpenAIClient",
+          "lines": [
+            364,
+            368
+          ]
+        }
+      ]
     },
     {
       "symbol": "LLMMessage",
       "file": "src/llm/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMMessage",
+          "lines": [
+            371,
+            375
+          ]
+        }
+      ]
     },
     {
       "symbol": "LLMCompletionOptions",
       "file": "src/llm/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMClient",
+          "lines": [
+            381,
+            385
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMCompletionOptions",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### OpenAIClient",
+          "lines": [
+            364,
+            368
+          ]
+        }
+      ]
     },
     {
       "symbol": "LLMClient",
       "file": "src/llm/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LLMClient",
+          "lines": [
+            381,
+            385
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### createLLMClient",
+          "lines": [
+            357,
+            361
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateAgent",
+          "lines": [
+            24,
+            28
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### OpenAIClient",
+          "lines": [
+            364,
+            368
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### AnthropicClient",
+          "lines": [
+            350,
+            354
+          ]
+        }
+      ]
     },
     {
       "symbol": "logger",
       "file": "src/logger.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### logger",
+          "lines": [
+            388,
+            392
+          ]
+        }
+      ]
     },
     {
       "symbol": "buildMap",
@@ -598,10 +2803,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### buildMap",
           "lines": [
-            27,
-            30
+            395,
+            399
           ]
         }
       ]
@@ -609,67 +2814,344 @@
     {
       "symbol": "symbolShard",
       "file": "src/map/lookup.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### symbolShard",
+          "lines": [
+            402,
+            406
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        }
+      ]
     },
     {
       "symbol": "computeFingerprint",
       "file": "src/map/lookup.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### computeFingerprint",
+          "lines": [
+            407,
+            411
+          ]
+        }
+      ]
     },
     {
       "symbol": "buildShards",
       "file": "src/map/lookup.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        }
+      ]
     },
     {
       "symbol": "buildLookup",
       "file": "src/map/lookup.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        }
+      ]
     },
     {
       "symbol": "readLookupForSymbols",
       "file": "src/map/lookup.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        }
+      ]
     },
     {
       "symbol": "DocRef",
       "file": "src/map/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### toDocSection",
+          "lines": [
+            449,
+            453
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocRef",
+          "lines": [
+            429,
+            433
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalAdapter",
+          "lines": [
+            508,
+            512
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### LookupTable",
+          "lines": [
+            444,
+            448
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        }
+      ]
     },
     {
       "symbol": "MapEntry",
       "file": "src/map/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### MapFile",
+          "lines": [
+            439,
+            443
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### MapEntry",
+          "lines": [
+            434,
+            438
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
+          ]
+        }
+      ]
     },
     {
       "symbol": "MapFile",
       "file": "src/map/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### MapFile",
+          "lines": [
+            439,
+            443
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### updateMapForChangedFiles",
+          "lines": [
+            456,
+            460
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
+          ]
+        }
+      ]
     },
     {
       "symbol": "LookupTable",
       "file": "src/map/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### LookupTable",
+          "lines": [
+            444,
+            448
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildLookup",
+          "lines": [
+            417,
+            421
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildShards",
+          "lines": [
+            412,
+            416
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### readLookupForSymbols",
+          "lines": [
+            422,
+            426
+          ]
+        }
+      ]
     },
     {
       "symbol": "toDocSection",
       "file": "src/map/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### toDocSection",
+          "lines": [
+            449,
+            453
+          ]
+        }
+      ]
     },
     {
       "symbol": "updateMapForChangedFiles",
       "file": "src/map/updater.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### updateMapForChangedFiles",
+          "lines": [
+            456,
+            460
+          ]
+        }
+      ]
     },
     {
       "symbol": "writeMapFile",
       "file": "src/map/writer.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### writeMapFile",
+          "lines": [
+            463,
+            467
+          ]
+        }
+      ]
     },
     {
       "symbol": "CheckResult",
       "file": "src/pipeline/check.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### CheckResult",
+          "lines": [
+            470,
+            474
+          ]
+        }
+      ]
     },
     {
       "symbol": "runCheck",
@@ -677,10 +3159,10 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### runCheck",
           "lines": [
-            31,
-            34
+            475,
+            479
           ]
         }
       ]
@@ -688,52 +3170,238 @@
     {
       "symbol": "BM25Retriever",
       "file": "src/retrieval/bm25-retriever.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        }
+      ]
     },
     {
       "symbol": "TieredRetriever",
       "file": "src/retrieval/index.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### TieredRetriever",
+          "lines": [
+            489,
+            493
+          ]
+        }
+      ]
     },
     {
       "symbol": "StructuralRetriever",
       "file": "src/retrieval/structural.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        }
+      ]
     },
     {
       "symbol": "RetrievalResult",
       "file": "src/retrieval/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalResult",
+          "lines": [
+            503,
+            507
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### TieredRetriever",
+          "lines": [
+            489,
+            493
+          ]
+        }
+      ]
     },
     {
       "symbol": "RetrievalAdapter",
       "file": "src/retrieval/types.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### RetrievalAdapter",
+          "lines": [
+            508,
+            512
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### StructuralRetriever",
+          "lines": [
+            496,
+            500
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### TieredRetriever",
+          "lines": [
+            489,
+            493
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        }
+      ]
     },
     {
       "symbol": "BM25Result",
       "file": "src/scanner/bm25.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Result",
+          "lines": [
+            515,
+            519
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Matcher",
+          "lines": [
+            520,
+            524
+          ]
+        }
+      ]
     },
     {
       "symbol": "BM25Matcher",
       "file": "src/scanner/bm25.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Matcher",
+          "lines": [
+            520,
+            524
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        }
+      ]
     },
     {
       "symbol": "DocSection",
       "file": "src/scanner/doc-scanner.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### toDocSection",
+          "lines": [
+            449,
+            453
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Result",
+          "lines": [
+            515,
+            519
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateRequest",
+          "lines": [
+            19,
+            23
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSection",
+          "lines": [
+            527,
+            531
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### scanDocs",
+          "lines": [
+            537,
+            541
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Matcher",
+          "lines": [
+            520,
+            524
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### BM25Retriever",
+          "lines": [
+            482,
+            486
+          ]
+        }
+      ]
     },
     {
       "symbol": "extractSectionBody",
       "file": "src/scanner/doc-scanner.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### extractSectionBody",
+          "lines": [
+            532,
+            536
+          ]
+        }
+      ]
     },
     {
       "symbol": "scanDocs",
       "file": "src/scanner/doc-scanner.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### scanDocs",
+          "lines": [
+            537,
+            541
+          ]
+        }
+      ]
     },
     {
       "symbol": "CODE_EXTENSIONS",
@@ -741,34 +3409,146 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### CODE_EXTENSIONS",
           "lines": [
-            15,
-            18
+            544,
+            548
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### findCodeFiles",
           "lines": [
-            9,
-            14
+            554,
+            558
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### DOC_EXTENSIONS",
           "lines": [
-            27,
-            30
+            549,
+            553
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### findDocFiles",
+          "lines": [
+            559,
+            563
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildGenerateUserPrompt",
+          "lines": [
+            36,
+            40
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocUpdateRequest",
+          "lines": [
+            19,
+            23
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildUserPrompt",
+          "lines": [
+            48,
+            52
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateRequest",
+          "lines": [
+            7,
+            11
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ProposedDocUpdate",
+          "lines": [
+            336,
+            340
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SymbolChange",
+          "lines": [
+            195,
+            199
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocSyncConfig",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### DocGenerateAgent",
+          "lines": [
+            12,
+            16
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### ExtractedSymbol",
+          "lines": [
+            286,
+            290
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GENERATE_SYSTEM_PROMPT",
           "lines": [
             31,
-            34
+            35
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### GenerateOptions",
+          "lines": [
+            298,
+            302
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### SYSTEM_PROMPT",
+          "lines": [
+            43,
+            47
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### generateDocs",
+          "lines": [
+            303,
+            307
           ]
         }
       ]
@@ -779,42 +3559,58 @@
       "docs": [
         {
           "file": "docs/api.md",
-          "section": "## resolveLanguage",
+          "section": "#### DOC_EXTENSIONS",
           "lines": [
-            15,
-            18
+            549,
+            553
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## buildMap",
+          "section": "#### findDocFiles",
           "lines": [
-            27,
-            30
+            559,
+            563
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## runCheck",
+          "section": "#### CODE_EXTENSIONS",
           "lines": [
-            31,
-            34
+            544,
+            548
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## extractSymbols",
+          "section": "#### findCodeFiles",
           "lines": [
-            9,
-            14
+            554,
+            558
           ]
         },
         {
           "file": "docs/api.md",
-          "section": "## getGitDiff",
+          "section": "#### GENERATE",
           "lines": [
-            3,
-            8
+            149,
+            153
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### updateMapForChangedFiles",
+          "lines": [
+            456,
+            460
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### buildMap",
+          "lines": [
+            395,
+            399
           ]
         }
       ]
@@ -822,12 +3618,38 @@
     {
       "symbol": "findCodeFiles",
       "file": "src/scanner/file-finder.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### findCodeFiles",
+          "lines": [
+            554,
+            558
+          ]
+        }
+      ]
     },
     {
       "symbol": "findDocFiles",
       "file": "src/scanner/file-finder.ts",
-      "docs": []
+      "docs": [
+        {
+          "file": "docs/api.md",
+          "section": "#### findDocFiles",
+          "lines": [
+            559,
+            563
+          ]
+        },
+        {
+          "file": "docs/api.md",
+          "section": "#### scanDocs",
+          "lines": [
+            537,
+            541
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,35 +1,157 @@
 {
+  "extractTypeScriptSymbols": [
+    {
+      "file": "docs/api.md",
+      "section": "#### extractTypeScriptSymbols",
+      "lines": [
+        272,
+        276
+      ]
+    }
+  ],
   "CODE_EXTENSIONS": [
     {
       "file": "docs/api.md",
-      "section": "## resolveLanguage",
+      "section": "#### CODE_EXTENSIONS",
       "lines": [
-        15,
-        18
+        544,
+        548
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## extractSymbols",
+      "section": "#### findCodeFiles",
       "lines": [
-        9,
-        14
+        554,
+        558
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### DOC_EXTENSIONS",
       "lines": [
-        27,
-        30
+        549,
+        553
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### findDocFiles",
+      "lines": [
+        559,
+        563
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildGenerateUserPrompt",
+      "lines": [
+        36,
+        40
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateRequest",
+      "lines": [
+        19,
+        23
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildUserPrompt",
+      "lines": [
+        48,
+        52
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### buildMap",
+      "lines": [
+        395,
+        399
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateRequest",
+      "lines": [
+        7,
+        11
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ProposedDocUpdate",
+      "lines": [
+        336,
+        340
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### SymbolChange",
+      "lines": [
+        195,
+        199
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocSyncConfig",
+      "lines": [
+        70,
+        74
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocGenerateAgent",
+      "lines": [
+        12,
+        16
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ExtractedSymbol",
+      "lines": [
+        286,
+        290
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE_SYSTEM_PROMPT",
       "lines": [
         31,
-        34
+        35
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GenerateOptions",
+      "lines": [
+        298,
+        302
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### SYSTEM_PROMPT",
+      "lines": [
+        43,
+        47
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateDocs",
+      "lines": [
+        303,
+        307
       ]
     }
   ]

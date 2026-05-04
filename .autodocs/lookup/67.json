@@ -2,10 +2,10 @@
   "buildMap": [
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### buildMap",
       "lines": [
-        27,
-        30
+        395,
+        399
       ]
     }
   ]

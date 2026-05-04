@@ -1,19 +1,11 @@
 {
-  "Mine": [
+  "readLookupForSymbols": [
     {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "## Forecasting: Finding Valuable Signals/Patterns",
+      "file": "docs/api.md",
+      "section": "#### readLookupForSymbols",
       "lines": [
-        419,
-        425
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/Documents/workspace/qlib/README.md",
-      "section": "### Introducing <a href=\"https://github.com/microsoft/RD-Agent\"><img src=\"docs/_static/img/rdagent_logo.png\" alt=\"RD_Agent\" style=\"height: 2em\"></a>: LLM-Based Autonomous Evolving Agents for Industrial Data-Driven R&D",
-      "lines": [
-        14,
-        136
+        422,
+        426
       ]
     }
   ]

@@ -1,11 +1,11 @@
 {
   "updateMapForChangedFiles": [
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### `map.json`",
+      "file": "docs/api.md",
+      "section": "#### updateMapForChangedFiles",
       "lines": [
-        354,
-        373
+        456,
+        460
       ]
     }
   ]

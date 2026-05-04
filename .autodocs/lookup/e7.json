@@ -1,35 +1,11 @@
 {
   "CLI": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## Task 7: CLI Command",
+      "file": "docs/api.md",
+      "section": "#### CLI",
       "lines": [
-        786,
-        857
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## File Structure",
-      "lines": [
-        13,
-        40
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## M1 Done When",
-      "lines": [
-        858,
-        864
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## Task 1: Project Scaffold",
-      "lines": [
-        41,
-        162
+        144,
+        148
       ]
     }
   ]

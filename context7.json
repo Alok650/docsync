@@ -1,0 +1,14 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "@dev_ap/docsync",
+  "description": "Keeps your documentation in sync with your code — LLM-powered doc updates on every PR",
+  "folders": [
+    "docs"
+  ],
+  "excludeFolders": [
+    ".autodocs",
+    "node_modules",
+    "dist",
+    ".git"
+  ]
+}

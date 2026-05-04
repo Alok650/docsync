@@ -2,10 +2,20 @@
   "getParser": [
     {
       "file": "docs/api.md",
-      "section": "## getParser",
+      "section": "#### getParser",
       "lines": [
-        23,
-        26
+        279,
+        283
+      ]
+    }
+  ],
+  "findCodeFiles": [
+    {
+      "file": "docs/api.md",
+      "section": "#### findCodeFiles",
+      "lines": [
+        554,
+        558
       ]
     }
   ]

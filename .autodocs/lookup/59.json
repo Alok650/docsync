@@ -1,11 +1,35 @@
 {
   "RetrievalAdapter": [
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### Adapter Interfaces",
+      "file": "docs/api.md",
+      "section": "#### RetrievalAdapter",
       "lines": [
-        174,
-        211
+        508,
+        512
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
+      "lines": [
+        496,
+        500
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### TieredRetriever",
+      "lines": [
+        489,
+        493
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### BM25Retriever",
+      "lines": [
+        482,
+        486
       ]
     }
   ]

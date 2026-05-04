@@ -1,23 +1,39 @@
 {
-  "SymbolWithText": [
+  "LLMMessage": [
     {
       "file": "docs/api.md",
-      "section": "#### SymbolWithText",
+      "section": "#### LLMMessage",
       "lines": [
-        156,
-        160
+        371,
+        375
+      ]
+    }
+  ],
+  "DocRef": [
+    {
+      "file": "docs/api.md",
+      "section": "#### toDocSection",
+      "lines": [
+        449,
+        453
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "#### parseSymbolsWithText",
+      "section": "#### DocRef",
       "lines": [
-        161,
-        165
+        429,
+        433
       ]
-    }
-  ],
-  "LookupTable": [
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### RetrievalAdapter",
+      "lines": [
+        508,
+        512
+      ]
+    },
     {
       "file": "docs/api.md",
       "section": "#### LookupTable",
@@ -52,20 +68,10 @@
     },
     {
       "file": "docs/api.md",
-      "section": "#### readLookupForSymbols",
+      "section": "#### BM25Retriever",
       "lines": [
-        422,
-        426
-      ]
-    }
-  ],
-  "extractSectionBody": [
-    {
-      "file": "docs/api.md",
-      "section": "#### extractSectionBody",
-      "lines": [
-        532,
-        536
+        482,
+        486
       ]
     }
   ]

@@ -1,0 +1,9 @@
+# @dev_ap/docsync
+
+> Keeps your documentation in sync with your code — LLM-powered doc updates on every PR
+
+## Docs
+- [API Reference](docs/api.md): Full API reference, generated and maintained by DocSync.
+
+## Optional
+- [Source Code](src): TypeScript/JavaScript/Python source files.

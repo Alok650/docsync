@@ -2,18 +2,74 @@
   "AUTODOCS_DIR": [
     {
       "file": "docs/api.md",
-      "section": "## buildMap",
+      "section": "#### LOOKUP_DIR",
       "lines": [
-        27,
-        30
+        97,
+        101
       ]
     },
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### AUTODOCS_DIR",
       "lines": [
-        3,
-        8
+        82,
+        86
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### MAP_RELATIVE_PATH",
+      "lines": [
+        92,
+        96
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_DIR",
+      "lines": [
+        102,
+        106
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### findCodeFiles",
+      "lines": [
+        554,
+        558
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### CLI",
+      "lines": [
+        144,
+        148
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GITHUB",
+      "lines": [
+        134,
+        138
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AI",
+      "lines": [
+        124,
+        128
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### writeMapFile",
+      "lines": [
+        463,
+        467
       ]
     }
   ]

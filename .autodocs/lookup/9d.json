@@ -2,10 +2,86 @@
   "GITHUB": [
     {
       "file": "docs/api.md",
-      "section": "## getGitDiff",
+      "section": "#### readGitHubContext",
       "lines": [
-        3,
-        8
+        317,
+        321
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_DIR",
+      "lines": [
+        102,
+        106
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GITHUB",
+      "lines": [
+        134,
+        138
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GitHubContext",
+      "lines": [
+        331,
+        335
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "# API Reference",
+      "lines": [
+        1,
+        4
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### createOctokit",
+      "lines": [
+        310,
+        314
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### generateWorkflow",
+      "lines": [
+        343,
+        347
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GitHubOutput",
+      "lines": [
+        324,
+        328
+      ]
+    }
+  ],
+  "StructuralRetriever": [
+    {
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
+      "lines": [
+        496,
+        500
+      ]
+    }
+  ],
+  "scanDocs": [
+    {
+      "file": "docs/api.md",
+      "section": "#### scanDocs",
+      "lines": [
+        537,
+        541
       ]
     }
   ]

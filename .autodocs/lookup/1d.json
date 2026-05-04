@@ -1,219 +1,99 @@
 {
   "MAP_FILENAME": [
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### 6.6 Map Maintenance",
+      "file": "docs/api.md",
+      "section": "#### MAP_RELATIVE_PATH",
       "lines": [
-        113,
-        118
+        92,
+        96
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "## Milestone 7 — GitHub Actions Integration + Map Maintenance",
+      "file": "docs/api.md",
+      "section": "#### MAP_FILENAME",
       "lines": [
-        156,
-        159
+        87,
+        91
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "## Milestone 2 — Map Building (`autodocs init`)",
+      "file": "docs/api.md",
+      "section": "#### WORKFLOW_FILENAME",
       "lines": [
-        31,
-        34
+        107,
+        111
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### CONFIG_FILENAME",
       "lines": [
-        95,
-        100
+        112,
+        116
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### updateMapForChangedFiles",
       "lines": [
-        35,
-        41
+        456,
+        460
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Tasks",
+      "file": "docs/api.md",
+      "section": "#### resolveLanguage",
       "lines": [
-        160,
-        165
+        236,
+        240
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### Done when",
+      "file": "docs/api.md",
+      "section": "#### MapFile",
       "lines": [
-        62,
-        66
+        439,
+        443
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Step 2 — Initialize docsync",
+      "file": "docs/api.md",
+      "section": "#### RetrievalResult",
       "lines": [
-        134,
-        156
+        503,
+        507
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "### map.json shape",
+      "file": "docs/api.md",
+      "section": "#### buildShards",
       "lines": [
-        42,
-        61
+        412,
+        416
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Step 3 — Inspect what was indexed",
+      "file": "docs/api.md",
+      "section": "#### writeMapFile",
       "lines": [
-        157,
-        169
+        463,
+        467
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 5. Solution Overview",
+      "file": "docs/api.md",
+      "section": "#### BM25",
       "lines": [
-        55,
-        64
+        119,
+        123
       ]
     },
     {
-      "file": "/Users/alokprasad/autodocs/MILESTONES.md",
-      "section": "## Summary",
+      "file": "docs/api.md",
+      "section": "#### StructuralRetriever",
       "lines": [
-        190,
-        203
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 15. Appendix — File Structure After Init",
-      "lines": [
-        362,
-        377
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### One-time setup (~2 minutes)",
-      "lines": [
-        269,
-        286
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### Adding a language",
-      "lines": [
-        432,
-        440
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### 3. Open a pull request",
-      "lines": [
-        68,
-        83
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### `map.json`",
-      "lines": [
-        354,
-        373
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "### 1. Run init in your repo",
-      "lines": [
-        42,
-        60
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### 6.3 Three-Tier Retrieval",
-      "lines": [
-        83,
-        100
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### 6.1 Initialisation — `autodocs init`",
-      "lines": [
-        67,
-        75
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 11. Success Metrics",
-      "lines": [
-        315,
-        326
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 10. Non-Functional Requirements",
-      "lines": [
-        300,
-        314
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "### Adapter Interfaces",
-      "lines": [
-        174,
-        211
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 14. Open Questions",
-      "lines": [
-        351,
-        361
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 12. Research Foundation",
-      "lines": [
-        327,
-        338
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/PRD.md",
-      "section": "## 7. Technical Architecture",
-      "lines": [
-        129,
-        173
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/README.md",
-      "section": "## Debugging",
-      "lines": [
-        389,
-        408
+        496,
+        500
       ]
     }
   ]

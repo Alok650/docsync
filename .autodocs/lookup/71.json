@@ -2,10 +2,28 @@
   "parseSymbols": [
     {
       "file": "docs/api.md",
-      "section": "## parseSymbols",
+      "section": "#### parseSymbols",
       "lines": [
-        19,
-        22
+        241,
+        245
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbolsWithText",
+      "lines": [
+        161,
+        165
+      ]
+    }
+  ],
+  "extractPythonSymbols": [
+    {
+      "file": "docs/api.md",
+      "section": "#### extractPythonSymbols",
+      "lines": [
+        265,
+        269
       ]
     }
   ]

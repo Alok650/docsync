@@ -1,11 +1,11 @@
 {
-  "GenerateOptions": [
+  "GenerateResult": [
     {
       "file": "docs/api.md",
-      "section": "#### GenerateOptions",
+      "section": "#### GenerateResult",
       "lines": [
-        298,
-        302
+        293,
+        297
       ]
     },
     {

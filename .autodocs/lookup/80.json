@@ -1,27 +1,11 @@
 {
   "SymbolKind": [
     {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## Task 2: Types",
+      "file": "docs/api.md",
+      "section": "#### SymbolKind",
       "lines": [
-        163,
-        199
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## File Structure",
-      "lines": [
-        13,
-        40
-      ]
-    },
-    {
-      "file": "/Users/alokprasad/autodocs/docs/plans/2026-05-02-m1-symbol-extraction.md",
-      "section": "## Task 5: TypeScript Extractor",
-      "lines": [
-        401,
-        630
+        229,
+        233
       ]
     }
   ]

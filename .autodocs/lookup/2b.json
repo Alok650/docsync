@@ -1,0 +1,12 @@
+{
+  "parseSymbolsWithText": [
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbolsWithText",
+      "lines": [
+        161,
+        165
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 {
-  "symbolShard": [
+  "buildShards": [
     {
       "file": "docs/api.md",
-      "section": "#### symbolShard",
+      "section": "#### buildLookup",
       "lines": [
-        402,
-        406
+        417,
+        421
       ]
     },
     {

@@ -2,10 +2,74 @@
   "LLM_PROVIDER": [
     {
       "file": "docs/api.md",
-      "section": "## runCheck",
+      "section": "#### LLMProvider",
       "lines": [
-        31,
-        34
+        60,
+        64
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLM_PROVIDER",
+      "lines": [
+        55,
+        59
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### LLMConfig",
+      "lines": [
+        65,
+        69
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### createLLMClient",
+      "lines": [
+        357,
+        361
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### AI",
+      "lines": [
+        124,
+        128
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocSyncConfig",
+      "lines": [
+        70,
+        74
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### GENERATE",
+      "lines": [
+        149,
+        153
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### DocUpdateAgent",
+      "lines": [
+        24,
+        28
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### loadConfig",
+      "lines": [
+        75,
+        79
       ]
     }
   ]

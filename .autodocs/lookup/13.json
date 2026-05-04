@@ -2,10 +2,50 @@
   "ExtractedSymbol": [
     {
       "file": "docs/api.md",
-      "section": "## extractSymbols",
+      "section": "#### SymbolWithText",
       "lines": [
-        9,
-        14
+        156,
+        160
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractPythonSymbols",
+      "lines": [
+        265,
+        269
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### parseSymbols",
+      "lines": [
+        241,
+        245
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### ExtractedSymbol",
+      "lines": [
+        286,
+        290
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractSymbols",
+      "lines": [
+        246,
+        250
+      ]
+    },
+    {
+      "file": "docs/api.md",
+      "section": "#### extractTypeScriptSymbols",
+      "lines": [
+        272,
+        276
       ]
     }
   ]

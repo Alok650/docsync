@@ -1,11 +1,11 @@
 {
-  "GenerateOptions": [
+  "DocGenerateAgent": [
     {
       "file": "docs/api.md",
-      "section": "#### GenerateOptions",
+      "section": "#### DocGenerateAgent",
       "lines": [
-        298,
-        302
+        12,
+        16
       ]
     },
     {
